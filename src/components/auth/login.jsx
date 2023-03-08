@@ -12,9 +12,7 @@ const Login = () => {
 
     setLoginData(tempLoginData);
   };
-  const handleSubmit = () => {
-    login(loginData);
-  };
+  const handleSubmit = () => {};
 
   return (
     <Container maxWidth={"sm"}>
