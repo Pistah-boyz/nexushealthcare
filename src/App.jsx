@@ -10,12 +10,12 @@ import Contact from "./components/Contact";
 const App = () => {
   return (
     <ErrorBoundary>
-        <Routes>
-          <Route path="/home" exact element={<Dashboard />} />
-          <Route path="/about" exact element={<About />} />
-          <Route path="/career" exact element={<Career />} />
-          <Route path="/contact" exact element={<Contact />} />
-        </Routes>
+      <Routes>
+        <Route path="*" exact element={<Dashboard />} />
+        <Route path="/about" exact element={<About />} />
+        <Route path="/career" exact element={<Career />} />
+        <Route path="/contact" exact element={<Contact />} />
+      </Routes>
     </ErrorBoundary>
   );
 };

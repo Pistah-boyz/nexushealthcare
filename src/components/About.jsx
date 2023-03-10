@@ -44,7 +44,7 @@ const useStyles = makeStyles({
   },
   section_p: {
     padding: "0.5rem",
-  }
+  },
 });
 
 const About = () => {
