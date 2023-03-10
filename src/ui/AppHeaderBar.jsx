@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   AppBar,
   Box,
@@ -21,6 +21,8 @@ import {
   Instagram as InstagramIcon,
   Twitter as TwitterIcon,
   LinkedIn as LinkedinIcon,
+  Phone,
+  Email,
 } from "@mui/icons-material";
 import { Logo } from "../components/auth/Logo";
 
@@ -31,9 +33,36 @@ const styles = {
     justifyContent: "center",
     fontSize: "24px",
   },
+  headerBoxIcon: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "15px",
+  },
 };
 
-const navItems = ["Home", "About", "Career", "Contact"];
+const navItems = [
+  {
+    id: 1,
+    navlabel: "Home",
+    to: "/home",
+  },
+  {
+    id: 2,
+    navlabel: "About Us",
+    to: "/about",
+  },
+  {
+    id: 3,
+    navlabel: "career",
+    to: "/career",
+  },
+  {
+    id: 4,
+    navlabel: "Contact",
+    to: "/contact",
+  },
+];
 
 const drawerWidth = 240;
 
@@ -52,10 +81,10 @@ const AppHeaderBar = ({ window }) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map(({ id, navlabel, to }) => (
+          <ListItem key={id} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={navlabel} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -86,7 +115,12 @@ const AppHeaderBar = ({ window }) => {
               mountOnEnter
               unmountOnExit
             >
-              <Box sx={styles.headerBox}>404-806-8164</Box>
+              <Box sx={styles.headerBoxIcon}>
+                <Phone />
+                <Box sx={{ mx: 1 }}>404-806-8164</Box>
+                <Email />
+                <Box sx={{ mx: 1 }}>info@nexusstaffingsolution.ca</Box>
+              </Box>
             </Slide>
           </Grid>
           <Grid item xs={4}>
@@ -146,10 +180,10 @@ const AppHeaderBar = ({ window }) => {
               <MenuIcon />
             </IconButton>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#fff" }}>
-                  {item}
-                </Button>
+              {navItems.map(({ id, navlabel, to }) => (
+                <Link to={to} className="navbar-link">
+                  {navlabel}
+                </Link>
               ))}
             </Box>
           </Toolbar>
