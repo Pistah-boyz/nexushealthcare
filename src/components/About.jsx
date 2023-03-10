@@ -3,8 +3,9 @@ import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
-import img1 from "../images/about_img1.jpg";
 import Footer from "./Footer";
+import img1 from "../images/about_img1.jpg";
+import CommonBoxImg from "./CommonBoxImg";
 
 const useStyles = makeStyles({
   imgtranscolor: {
@@ -51,50 +52,11 @@ const About = () => {
   const classes = useStyles();
   return (
     <>
-      <Box
-        className={classes.imgtranscolor}
-        sx={{
-          backgroundImage: `url(${img1})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          height: 400,
-        }}
-      >
-        <Box
-          sx={{
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <Box>
-            <Typography
-              variant="h3"
-              color="white"
-              sx={{ textAlign: "center", fontWeight: 400, padding: "10px" }}
-            >
-              ABOUT OUR{" "}
-              <Box component="span" sx={{ fontWeight: 700 }}>
-                ORGANIZATION
-              </Box>
-            </Typography>
-            <Typography
-              variant="h5"
-              color="white"
-              sx={{ textAlign: "center", fontWeight: 700 }}
-            >
-              AN EXPERIENCED HEALTHCARE STAFFING AGENCY IN ATLANTA, GA
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
+      <CommonBoxImg
+        img={img1}
+        txt1="ABOUT OUR ORGANIZATION"
+        txt2="AN EXPERIENCED HEALTHCARE STAFFING AGENCY IN ATLANTA, GA"
+      />
       <div className={classes.root}>
         <Grid container>
           <Grid item xs={12} md={6}>

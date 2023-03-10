@@ -1,7 +1,12 @@
-.navbar-link{
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px 10px;
-    font-size: 14px;
-    color: #fff;
+.navbar-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  font-size: 14px;
+  color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .container_flex {
+    width: 1140px;
+  }
 }
