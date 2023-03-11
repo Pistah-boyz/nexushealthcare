@@ -15,6 +15,7 @@ import img1 from "../images/about_img1.jpg";
 import JobBoard from "./JobBoard";
 import Footer from "./Footer";
 import { COLORS } from "../ui/Theme/colors.js";
+import ScrollToTopOnMount from "./ScrollToTopMount";
 
 const style = {
   c_container: {
@@ -82,6 +83,7 @@ const Career = () => {
   }, [pagename]);
   return (
     <>
+      <ScrollToTopOnMount />
       <CommonBoxImg
         img={img1}
         txt1="JOB BOARD"

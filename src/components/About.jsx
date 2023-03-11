@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Box, Typography, Grid } from "@mui/material";
 
@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import img1 from "../images/about_img1.jpg";
 import CommonBoxImg from "./CommonBoxImg";
 import { COLORS } from "../ui/Theme/colors";
+import ScrollToTopOnMount from "./ScrollToTopMount";
 
 const styles = {
   sectiondiv_1: {
@@ -47,6 +48,7 @@ const styles = {
 const About = () => {
   return (
     <>
+      <ScrollToTopOnMount />
       <CommonBoxImg
         img={img1}
         txt1="ABOUT OUR ORGANIZATION"
@@ -105,11 +107,7 @@ const About = () => {
               <Typography component="h2" variant="h5" sx={styles.section_h5}>
                 COMMITTED TO SUPPORTING THE HEALTHCARE INDUSTRY
               </Typography>
-              <Typography
-                component="h2"
-                variant="h5"
-                sx={styles.section_h6}
-              >
+              <Typography component="h2" variant="h5" sx={styles.section_h6}>
                 Ellsworth Healthcare Staffing recruits everyone from
                 highly-skilled nurses to all allied health professionals and any
                 other clinical and administrative staff in the healthcare

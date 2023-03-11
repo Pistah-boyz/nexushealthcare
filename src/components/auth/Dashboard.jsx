@@ -8,6 +8,7 @@ import {
   Slide,
 } from "@mui/material";
 import { Person as PersonIcon } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 import { HomeSlider } from "./Slider";
 import Footer from "../Footer";
@@ -93,6 +94,7 @@ const offers = [
 ];
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Box>
@@ -223,11 +225,19 @@ const Dashboard = () => {
         <Box
           sx={{ display: "flex", justifyContent: "center", padding: "16px" }}
         >
-          <Button variant="contained" sx={{ margin: "8px" }}>
+          <Button
+            variant="contained"
+            sx={{ margin: "8px" }}
+            onClick={() => navigate("/about")}
+          >
             More About Us
           </Button>
 
-          <Button variant="contained" sx={{ margin: "8px" }}>
+          <Button
+            variant="contained"
+            sx={{ margin: "8px" }}
+            onClick={() => navigate("/career/applynow")}
+          >
             Apply Now!
           </Button>
         </Box>
