@@ -1,11 +1,11 @@
 import React from "react";
 
 import { Box, Typography, Grid } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+
 
 import img2 from "../images/action-bg.jpg";
 
-const useStyles = makeStyles({
+const styles = {
   imgtranscolor: {
     position: "relative",
     "&::before": {
@@ -44,13 +44,12 @@ const useStyles = makeStyles({
     fontWeight: "600 !important",
     width: "72%",
   },
-});
+};
 
 const Footer = () => {
-  const classes = useStyles();
   return (
     <Box
-      className={classes.imgtranscolor}
+      className={styles.imgtranscolor}
       sx={{
         backgroundImage: `url(${img2})`,
         backgroundSize: "cover",
@@ -75,14 +74,14 @@ const Footer = () => {
           <Typography
             variant="h3"
             color="white"
-            className={classes.section2_h3}
+            className={styles.section2_h3}
           >
             PUT OUR EXTENSIVE NETWORK OF PARTNERS AND RESOURCES TO WORK FOR YOU!
           </Typography>
           <Typography
             component="p"
             color="white"
-            className={classes.section2_p}
+            className={styles.section2_p}
           >
             Whether you are interested in a temporary assignment, per diem work,
             or a permanent role, our team is dedicated to learning who you are

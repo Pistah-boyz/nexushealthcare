@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Grid,
@@ -11,6 +11,7 @@ import { CloudUpload } from "@mui/icons-material";
 
 import CommonBoxImg from "./CommonBoxImg";
 import img1 from "../images/about_img1.jpg";
+import JobBoard from "./JobBoard";
 import Footer from "./Footer";
 
 const style = {
@@ -66,8 +67,13 @@ const style = {
     margin: "auto",
     width: "80%",
   },
+  jobbformfield: {
+    margin: "auto",
+    width: "60%",
+  },
 };
 const Career = () => {
+  const [jobBoard, setJobBoard] = useState(false);
   return (
     <>
       <CommonBoxImg
@@ -103,81 +109,87 @@ const Career = () => {
           </Typography>
         </Typography>
       </Typography>
-      <Typography component="div" sx={style.root}>
-        <Grid container justify="center" spacing={3} sx={style.formfield}>
-          <Grid item xs={12}>
-            <IconButton color="primary" aria-label="Upload Resume">
-              <CloudUpload />
-            </IconButton>
-            <Typography component="span" sx={{ fontSize: "14px" }}>
-              Upload Resume
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper className={style.paper}>
-              <TextField fullWidth label="First Name" />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper className={style.paper}>
-              <TextField fullWidth label="Last Name" />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper className={style.paper}>
-              <TextField fullWidth label="City" />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper className={style.paper}>
-              <TextField fullWidth label="State" />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper className={style.paper}>
-              <TextField fullWidth label="Email" />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper className={style.paper}>
-              <TextField fullWidth label="Phone" />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper className={style.paper}>
-              <TextField fullWidth label="Zip Code" />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Paper className={style.paper}>
-              <TextField fullWidth label="Job Title" />
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={12} sx={style.submitButton}>
-            <Button
-              variant="contained"
-              sx={{
-                borderRadius: "5px",
-                backgroundColor: "#28A19A",
-                color: "#fff",
-              }}
-            >
-              <Typography
-                component="span"
-                sx={{
-                  width: "150px",
-                  height: "30px",
-                  lineHeight: "30px",
-                  textTransform: "none",
-                }}
-              >
-                Submit
-              </Typography>
-            </Button>
-          </Grid>
-        </Grid>
-      </Typography>
-      <Typography component="div" sx={{marginTop:"50px"}}>
+      {jobBoard ? (
+        <>
+          <Typography component="div" sx={style.root}>
+            <Grid container justify="center" spacing={3} sx={style.formfield}>
+              <Grid item xs={12}>
+                <IconButton color="primary" aria-label="Upload Resume">
+                  <CloudUpload />
+                </IconButton>
+                <Typography component="span" sx={{ fontSize: "14px" }}>
+                  Upload Resume
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Paper className={style.paper}>
+                  <TextField fullWidth label="First Name" />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Paper className={style.paper}>
+                  <TextField fullWidth label="Last Name" />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Paper className={style.paper}>
+                  <TextField fullWidth label="City" />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Paper className={style.paper}>
+                  <TextField fullWidth label="State" />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Paper className={style.paper}>
+                  <TextField fullWidth label="Email" />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Paper className={style.paper}>
+                  <TextField fullWidth label="Phone" />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Paper className={style.paper}>
+                  <TextField fullWidth label="Zip Code" />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Paper className={style.paper}>
+                  <TextField fullWidth label="Job Title" />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={12} sx={style.submitButton}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    borderRadius: "5px",
+                    backgroundColor: "#28A19A",
+                    color: "#fff",
+                  }}
+                >
+                  <Typography
+                    component="span"
+                    sx={{
+                      width: "150px",
+                      height: "30px",
+                      lineHeight: "30px",
+                      textTransform: "none",
+                    }}
+                  >
+                    Submit
+                  </Typography>
+                </Button>
+              </Grid>
+            </Grid>
+          </Typography>
+        </>
+      ) : (
+        <JobBoard />
+      )}
+      <Typography component="div" sx={{ marginTop: "50px" }}>
         <Footer />
       </Typography>
     </>

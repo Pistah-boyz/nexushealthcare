@@ -1,13 +1,12 @@
 import React from "react";
 
 import { Box, Typography, Grid } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 
 import Footer from "./Footer";
 import img1 from "../images/about_img1.jpg";
 import CommonBoxImg from "./CommonBoxImg";
 
-const useStyles = makeStyles({
+const styles = {
   imgtranscolor: {
     position: "relative",
     "&::before": {
@@ -46,10 +45,9 @@ const useStyles = makeStyles({
   section_p: {
     padding: "0.5rem",
   },
-});
+};
 
 const About = () => {
-  const classes = useStyles();
   return (
     <>
       <CommonBoxImg
@@ -57,27 +55,19 @@ const About = () => {
         txt1="ABOUT OUR ORGANIZATION"
         txt2="AN EXPERIENCED HEALTHCARE STAFFING AGENCY IN ATLANTA, GA"
       />
-      <div className={classes.root}>
+      <Typography component="div" sx={styles.root}>
         <Grid container>
           <Grid item xs={12} md={6}>
-            <Typography component="div" className={classes.sectiondiv_1}>
-              <Typography
-                component="h2"
-                variant="h5"
-                className={classes.section_h5}
-              >
+            <Typography component="div" sx={styles.sectiondiv_1}>
+              <Typography component="h2" variant="h5" sx={styles.section_h5}>
                 WHO WE ARE AND WHAT WE STAND FOR
               </Typography>
-              <Typography
-                component="h2"
-                variant="h6"
-                className={classes.section_h6}
-              >
+              <Typography component="h2" variant="h6" sx={styles.section_h6}>
                 Ellsworth Healthcare Staffing is a full-service healthcare
                 staffing agency committed to providing strategic solutions for
                 all medical staffing needs.
               </Typography>
-              <Typography component="p" className={classes.section_p}>
+              <Typography component="p" sx={styles.section_p}>
                 Our team works around-the-clock to provide outstanding staffing
                 solutions and quality service. It is our mission to leverage our
                 direct experience and knowledge of the industry to provide
@@ -86,7 +76,7 @@ const About = () => {
                 across the state of Georgia or local Atlanta residents in need
                 of healthcare.
               </Typography>
-              <Typography component="p" className={classes.section_p}>
+              <Typography component="p" sx={styles.section_p}>
                 Ellsworth Healthcare Staffing was founded in Tucker, Georgia
                 with the mission of providing “Superior People and Superior
                 Service.” At Ellsworth, our employees, partner facilities, and
@@ -96,7 +86,7 @@ const About = () => {
                 also giving our clients the employees they need to deliver
                 exceptional care to their own patients.
               </Typography>
-              <Typography component="p" className={classes.section_pcustom}>
+              <Typography component="p" sx={styles.section_pcustom}>
                 If you’re interested in partnering with Ellsworth Healthcare
                 Staffing, give us a call today at 404-806-8164 or visit our
                 Contact Page.
@@ -104,25 +94,17 @@ const About = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Typography component="div" className={classes.sectiondiv_2}>
-              <Typography
-                component="h2"
-                variant="h5"
-                className={classes.section_h5}
-              >
+            <Typography component="div" sx={styles.sectiondiv_2}>
+              <Typography component="h2" variant="h5" sx={styles.section_h5}>
                 COMMITTED TO SUPPORTING THE HEALTHCARE INDUSTRY
               </Typography>
-              <Typography
-                component="h2"
-                variant="h5"
-                className={classes.section_h6}
-              >
+              <Typography component="h2" variant="h5" sx={styles.section_h6}>
                 Ellsworth Healthcare Staffing recruits everyone from
                 highly-skilled nurses to all allied health professionals and any
                 other clinical and administrative staff in the healthcare
                 industry.
               </Typography>
-              <Typography component="p" className={classes.section_p}>
+              <Typography component="p" sx={styles.section_p}>
                 Our team works quickly and skillfully to place the highest
                 qualified candidates in medical facilities across the state of
                 Georgia. In addition, we make certain that our caregivers are
@@ -134,7 +116,7 @@ const About = () => {
                 our clients an excellent healthcare experience when they need it
                 most.
               </Typography>
-              <Typography component="p" className={classes.section_p}>
+              <Typography component="p" sx={styles.section_p}>
                 Ellsworth Healthcare Staffing was founded in Tucker, Georgia
                 with the mission of providing “Superior People and Superior
                 Service.” At Ellsworth, our employees, partner facilities, and
@@ -144,7 +126,7 @@ const About = () => {
                 also giving our clients the employees they need to deliver
                 exceptional care to their own patients.
               </Typography>
-              <Typography component="p" className={classes.section_p}>
+              <Typography component="p" sx={styles.section_p}>
                 We understand it’s more than just placing employees, but also
                 about the quality of care for the patients, who are included in
                 our promise of “Superior People and Superior Service.” Allow us
@@ -156,7 +138,7 @@ const About = () => {
             </Typography>
           </Grid>
         </Grid>
-      </div>
+      </Typography>
       <Footer />
     </>
   );
