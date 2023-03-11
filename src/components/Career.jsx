@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Grid,
@@ -8,17 +8,19 @@ import {
   IconButton,
 } from "@mui/material";
 import { CloudUpload } from "@mui/icons-material";
+import { useParams } from "react-router-dom";
 
 import CommonBoxImg from "./CommonBoxImg";
 import img1 from "../images/about_img1.jpg";
 import JobBoard from "./JobBoard";
 import Footer from "./Footer";
+import { COLORS } from "../ui/Theme/colors.js";
 
 const style = {
   c_container: {
-    border: "1px solid #28a19a",
+    border: `1px solid ${COLORS.primary}`,
     padding: "3rem",
-    background: "#28a19a",
+    background: `${COLORS.primary}`,
     borderRadius: "5px",
   },
   career_h3: {
@@ -73,7 +75,11 @@ const style = {
   },
 };
 const Career = () => {
-  const [jobBoard, setJobBoard] = useState(false);
+  const { pagename } = useParams();
+  const [jobBoard, setJobBoard] = useState("");
+  useEffect(() => {
+    setJobBoard(pagename);
+  }, [pagename]);
   return (
     <>
       <CommonBoxImg
@@ -109,7 +115,7 @@ const Career = () => {
           </Typography>
         </Typography>
       </Typography>
-      {jobBoard ? (
+      {jobBoard === "applynow" ? (
         <>
           <Typography component="div" sx={style.root}>
             <Grid container justify="center" spacing={3} sx={style.formfield}>

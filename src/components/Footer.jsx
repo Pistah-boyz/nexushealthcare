@@ -94,20 +94,6 @@ const styles = {
   footerIcons: {
     color: COLORS.white,
   },
-  imgtranscolor: {
-    position: "relative",
-    "&::before": {
-      content: "''",
-      position: "absolute",
-      top: 0,
-      left: 0,
-      opacity: 0.5,
-      width: "100%",
-      height: "100%",
-      background: "rgb(1 255 210 / 50%)",
-      transition: "opacity 0.5s ease",
-    },
-  },
   section_pcustom: {
     padding: "0.5rem",
     border: "1px solid #5555",

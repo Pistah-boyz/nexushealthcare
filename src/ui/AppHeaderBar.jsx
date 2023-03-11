@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   AppBar,
@@ -11,9 +11,12 @@ import {
   CssBaseline,
   Toolbar,
   IconButton,
+  Menu,
+  MenuItem,
   Button,
   Grid,
   Slide,
+  Typography,
 } from "@mui/material";
 import {
   Menu as MenuIcon,
@@ -23,6 +26,7 @@ import {
   LinkedIn as LinkedinIcon,
   Phone,
   Email,
+  ArrowDropDown,
 } from "@mui/icons-material";
 import { Logo } from "../components/auth/Logo";
 
@@ -39,6 +43,47 @@ const styles = {
     justifyContent: "center",
     fontSize: "15px",
   },
+  menu: {
+    "& .MuiPaper-root": {
+      top: "11.2rem !important",
+      left: "46.5rem !important",
+    },
+    "& .MuiMenu-list": {
+      backgroundColor: "#fff",
+    },
+    "& .MuiMenuItem-root": {
+      "&:hover": {
+        backgroundColor: "#555",
+        color: "#fff",
+      },
+    },
+    "& .MuiListItem-root": {
+      "&:hover": {
+        backgroundColor: "#555",
+        color: "#fff",
+      },
+    },
+  },
+  dropdownMenu: {
+    position: "absolute",
+    top: "100%",
+    background: "#fff",
+    zIndex: 9,
+  },
+  dropdownMenu_ul: {
+    padding: "5px 15px 10px 15px",
+    margin: "0px",
+    display: "flex",
+    flexDirection: "column",
+  },
+  dropdownMenu_li: {
+    listStyle: "none",
+    padding: "3px 2px",
+  },
+  dropdownMenu_a: {
+    textDecoration: "none",
+    color: "blue",
+  },
 };
 
 const navItems = [
@@ -46,29 +91,52 @@ const navItems = [
     id: 1,
     navlabel: "Home",
     to: "/home",
+    submenu: [],
   },
   {
     id: 2,
     navlabel: "About Us",
     to: "/about",
+    submenu: [],
   },
   {
     id: 3,
-    navlabel: "career",
+    navlabel: "Career",
     to: "/career",
+    submenu: [
+      {
+        id: 1,
+        navlabel: "Apply Now",
+        to: "/career/applynow",
+      },
+      {
+        id: 2,
+        navlabel: "Job Board",
+        to: "/career/jobboard",
+      },
+    ],
   },
   {
     id: 4,
     navlabel: "Contact",
     to: "/contact",
+    submenu: [],
   },
 ];
 
 const drawerWidth = 240;
 
 const AppHeaderBar = ({ window }) => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const navigate = useNavigate();
 
   const container =
@@ -84,13 +152,20 @@ const AppHeaderBar = ({ window }) => {
         {navItems.map(({ id, navlabel, to }) => (
           <ListItem key={id} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={navlabel} />
+              <Link to={to} className="navbar-link_mobile">
+                {navlabel}
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
       </List>
     </Box>
   );
+
+  const onNav = (to) => {
+    navigate(to);
+    setAnchorEl(null);
+  };
 
   return (
     <>
@@ -180,11 +255,43 @@ const AppHeaderBar = ({ window }) => {
               <MenuIcon />
             </IconButton>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map(({ id, navlabel, to }) => (
-                <Link to={to} className="navbar-link">
-                  {navlabel}
-                </Link>
-              ))}
+              {navItems.map(({ id, navlabel, to, submenu }) =>
+                submenu.length === 0 ? (
+                  <Link to={to} className="navbar-link" key={id}>
+                    {navlabel}
+                  </Link>
+                ) : (
+                  <>
+                    <Button
+                      endIcon={<ArrowDropDown />}
+                      id="basic-button"
+                      aria-haspopup="true"
+                      aria-expanded={open ? "true" : undefined}
+                      onClick={handleClick}
+                      sx={{ color: "#fff" }}
+                    >
+                      {navlabel}
+                    </Button>
+                    {open && (
+                      <Menu
+                        id="basic-menu"
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        MenuListProps={{
+                          "aria-labelledby": "basic-button",
+                        }}
+                      >
+                        {submenu.map(({ id, navlabel, to }) => (
+                          <MenuItem key={id} onClick={() => onNav(to)}>
+                            {navlabel}
+                          </MenuItem>
+                        ))}
+                      </Menu>
+                    )}
+                  </>
+                )
+              )}
             </Box>
           </Toolbar>
         </AppBar>

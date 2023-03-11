@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Grid, Paper, Typography, TextField } from "@mui/material";
+import { Link } from "react-router-dom";
 import JobBoardTable from "./JobBoardTable";
 
 const style = {
@@ -25,6 +26,13 @@ const style = {
     margin: "auto",
     width: "60%",
   },
+  jobformcontainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "14px",
+    fontWeight: "500",
+  },
 };
 const JobBoard = () => {
   const [keyword, setKeyword] = useState("");
@@ -42,19 +50,18 @@ const JobBoard = () => {
   const onSearch = () => {
     setSearchValue(keyword);
   };
-
+  const linkTo = `/career/applynow`;
   return (
     <>
-      <Typography
-        component="div"
-        sx={{ display: "flex", justifyContent: "center" }}
-      >
+      <Typography component="div" sx={style.jobformcontainer}>
         Don't see any current opportunities that meet your requirements?
-        <a href="#">&nbsp;Submit your information for future opportunities.</a>
+        <Link to={linkTo}>
+          &nbsp;Submit your information for future opportunities.
+        </Link>
       </Typography>
       <Typography component="div" sx={style.root}>
         <Grid container justify="center" spacing={3} sx={style.jobbformfield}>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} sm={8}>
             <Paper className={style.paper}>
               <TextField
                 fullWidth
@@ -65,7 +72,7 @@ const JobBoard = () => {
               />
             </Paper>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} sm={8}>
             <Paper className={style.paper}>
               <TextField
                 fullWidth

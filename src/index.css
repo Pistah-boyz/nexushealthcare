@@ -5,6 +5,13 @@
   font-size: 14px;
   color: #fff;
 }
+.navbar-link_mobile{
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #555;
+}
 @media screen and (min-width: 1200px) {
   .container_flex {
     width: 1140px;

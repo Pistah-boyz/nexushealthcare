@@ -5,22 +5,9 @@ import { Box, Typography, Grid } from "@mui/material";
 import Footer from "./Footer";
 import img1 from "../images/about_img1.jpg";
 import CommonBoxImg from "./CommonBoxImg";
+import { COLORS } from "../ui/Theme/colors";
 
 const styles = {
-  imgtranscolor: {
-    position: "relative",
-    "&::before": {
-      content: "''",
-      position: "absolute",
-      top: 0,
-      left: 0,
-      opacity: 0.5,
-      width: "100%",
-      height: "100%",
-      background: "rgb(1 255 210 / 50%)",
-      transition: "opacity 0.5s ease",
-    },
-  },
   sectiondiv_1: {
     height: "100%",
     backgroundColor: "#fff",
@@ -39,11 +26,21 @@ const styles = {
   },
   section_h6: {
     fontSize: "20px !important",
-    fontWeight: "500 !important",
+    fontWeight: "600 !important",
     padding: "0.5rem",
   },
   section_p: {
     padding: "0.5rem",
+  },
+  section_pcustom: {
+    fontSize: "20px",
+    padding: "1rem",
+    fontWeight: "600",
+    background: "#3b3b3b",
+    color: "#fff",
+    borderLeft: "5px solid #31c6ff",
+    borderTopLeftRadius: "10px",
+    borderBottomLeftRadius: "10px",
   },
 };
 
@@ -59,10 +56,20 @@ const About = () => {
         <Grid container>
           <Grid item xs={12} md={6}>
             <Typography component="div" sx={styles.sectiondiv_1}>
-              <Typography component="h2" variant="h5" sx={styles.section_h5}>
+              <Typography
+                component="h2"
+                variant="h5"
+                sx={styles.section_h5}
+                style={{ color: `${COLORS.peal}` }}
+              >
                 WHO WE ARE AND WHAT WE STAND FOR
               </Typography>
-              <Typography component="h2" variant="h6" sx={styles.section_h6}>
+              <Typography
+                component="h2"
+                variant="h6"
+                sx={styles.section_h6}
+                style={{ color: `${COLORS.teal}` }}
+              >
                 Ellsworth Healthcare Staffing is a full-service healthcare
                 staffing agency committed to providing strategic solutions for
                 all medical staffing needs.
@@ -98,7 +105,11 @@ const About = () => {
               <Typography component="h2" variant="h5" sx={styles.section_h5}>
                 COMMITTED TO SUPPORTING THE HEALTHCARE INDUSTRY
               </Typography>
-              <Typography component="h2" variant="h5" sx={styles.section_h6}>
+              <Typography
+                component="h2"
+                variant="h5"
+                sx={styles.section_h6}
+              >
                 Ellsworth Healthcare Staffing recruits everyone from
                 highly-skilled nurses to all allied health professionals and any
                 other clinical and administrative staff in the healthcare
