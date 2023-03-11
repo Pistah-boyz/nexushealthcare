@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { Button, Grid, Paper, Typography, TextField } from "@mui/material";
 import { Link } from "react-router-dom";
+
 import JobBoardTable from "./JobBoardTable";
+import { COLORS } from "../ui/Theme/colors";
 
 const style = {
   root: {
     flexGrow: 1,
     padding: "10px",
+    width: "100%",
+    display: "flex",
   },
   paper: {
     padding: "10px",
@@ -24,7 +28,7 @@ const style = {
   },
   jobbformfield: {
     margin: "auto",
-    width: "60%",
+    width: "auto",
   },
   jobformcontainer: {
     display: "flex",
@@ -32,6 +36,7 @@ const style = {
     alignItems: "center",
     fontSize: "14px",
     fontWeight: "500",
+    padding: "1rem",
   },
 };
 const JobBoard = () => {
@@ -54,14 +59,16 @@ const JobBoard = () => {
   return (
     <>
       <Typography component="div" sx={style.jobformcontainer}>
-        Don't see any current opportunities that meet your requirements?
-        <Link to={linkTo}>
-          &nbsp;Submit your information for future opportunities.
-        </Link>
+        <Typography component="div" sx={{fontSize:"14px",fontWeight:"500"}}>
+          Don't see any current opportunities that meet your requirements?
+          <Link to={linkTo}>
+            &nbsp;Submit your information for future opportunities.
+          </Link>
+        </Typography>
       </Typography>
       <Typography component="div" sx={style.root}>
         <Grid container justify="center" spacing={3} sx={style.jobbformfield}>
-          <Grid item xs={12} md={4} sm={8}>
+          <Grid item xs={12} md={5} sm={8}>
             <Paper className={style.paper}>
               <TextField
                 fullWidth
@@ -72,7 +79,7 @@ const JobBoard = () => {
               />
             </Paper>
           </Grid>
-          <Grid item xs={12} md={4} sm={8}>
+          <Grid item xs={12} md={5} sm={8}>
             <Paper className={style.paper}>
               <TextField
                 fullWidth
@@ -83,13 +90,13 @@ const JobBoard = () => {
               />
             </Paper>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={2}>
             <Button
               variant="contained"
               sx={{
                 borderRadius: "5px",
-                backgroundColor: "#28A19A",
-                color: "#fff",
+                backgroundColor: `${COLORS.primary}`,
+                color: `${COLORS.white}`,
               }}
               onClick={() => onSearch()}
             >

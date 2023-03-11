@@ -24,9 +24,9 @@ import {
   Instagram as InstagramIcon,
   Twitter as TwitterIcon,
   LinkedIn as LinkedinIcon,
-  Phone,
-  Email,
   ArrowDropDown,
+  PhoneOutlined,
+  EmailOutlined,
 } from "@mui/icons-material";
 import { Logo } from "../components/auth/Logo";
 
@@ -41,48 +41,18 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontSize: "15px",
+    fontSize: "0.85rem",
+    fontWeight: "500",
   },
   menu: {
     "& .MuiPaper-root": {
-      top: "11.2rem !important",
-      left: "46.5rem !important",
-    },
-    "& .MuiMenu-list": {
-      backgroundColor: "#fff",
-    },
-    "& .MuiMenuItem-root": {
-      "&:hover": {
-        backgroundColor: "#555",
-        color: "#fff",
-      },
-    },
-    "& .MuiListItem-root": {
-      "&:hover": {
-        backgroundColor: "#555",
-        color: "#fff",
-      },
+      width: "12%",
     },
   },
-  dropdownMenu: {
-    position: "absolute",
-    top: "100%",
-    background: "#fff",
-    zIndex: 9,
-  },
-  dropdownMenu_ul: {
-    padding: "5px 15px 10px 15px",
-    margin: "0px",
+  c_icon: {
     display: "flex",
-    flexDirection: "column",
-  },
-  dropdownMenu_li: {
-    listStyle: "none",
-    padding: "3px 2px",
-  },
-  dropdownMenu_a: {
-    textDecoration: "none",
-    color: "blue",
+    justifyContent: "center",
+    alignItems: "center",
   },
 };
 
@@ -190,11 +160,15 @@ const AppHeaderBar = ({ window }) => {
               mountOnEnter
               unmountOnExit
             >
-              <Box sx={styles.headerBoxIcon}>
-                <Phone />
-                <Box sx={{ mx: 1 }}>404-806-8164</Box>
-                <Email />
-                <Box sx={{ mx: 1 }}>info@nexusstaffingsolution.ca</Box>
+              <Box sx={styles.headerBoxIcon} className="c_mview">
+                <Box style={styles.c_icon} sx={{ mx: 1 }}>
+                  <PhoneOutlined />
+                  &nbsp;404-806-8164
+                </Box>
+                <Box style={styles.c_icon} sx={{ mx: 1 }}>
+                  <EmailOutlined />
+                  &nbsp;info@nexusstaffingsolution.ca
+                </Box>
               </Box>
             </Slide>
           </Grid>
@@ -274,6 +248,7 @@ const AppHeaderBar = ({ window }) => {
                     </Button>
                     {open && (
                       <Menu
+                        sx={styles.menu}
                         id="basic-menu"
                         anchorEl={anchorEl}
                         open={open}

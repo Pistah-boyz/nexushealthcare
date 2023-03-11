@@ -174,8 +174,8 @@ const Career = () => {
                   variant="contained"
                   sx={{
                     borderRadius: "5px",
-                    backgroundColor: "#28A19A",
-                    color: "#fff",
+                    backgroundColor: `${COLORS.primary}`,
+                    color: `${COLORS.white}`,
                   }}
                 >
                   <Typography
