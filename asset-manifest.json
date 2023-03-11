@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/nexushealthcare/static/css/main.ce7c62cd.css",
+    "main.js": "/nexushealthcare/static/js/main.bea308b2.js",
+    "static/media/card2.png": "/nexushealthcare/static/media/card2.65efa2563d01e50f9bf4.png",
+    "static/media/slide4.jpg": "/nexushealthcare/static/media/slide4.6dedb112972abfe41a7c.jpg",
+    "static/media/about_img1.jpg": "/nexushealthcare/static/media/about_img1.b3ee7b837827fc8b51bc.jpg",
+    "static/media/action-bg.jpg": "/nexushealthcare/static/media/action-bg.f8f6b3dd07074fdc5bad.jpg",
+    "static/media/slide3.jpg": "/nexushealthcare/static/media/slide3.526a1953bd952e748dae.jpg",
+    "static/media/slide2.jpg": "/nexushealthcare/static/media/slide2.1def597abd8d4309bc2c.jpg",
+    "static/media/slide1.jpg": "/nexushealthcare/static/media/slide1.592e062f526b3d73c93f.jpg",
+    "static/media/card5.jpg": "/nexushealthcare/static/media/card5.6d38ecc21bc30130a260.jpg",
+    "static/media/card1.jpg": "/nexushealthcare/static/media/card1.2a31a791868a08f9e980.jpg",
+    "static/media/card6.jpg": "/nexushealthcare/static/media/card6.6a7b108adcdb53cc2cb9.jpg",
+    "static/media/card4.jpg": "/nexushealthcare/static/media/card4.619b81bfe69e981caa2b.jpg",
+    "static/media/card3.jpg": "/nexushealthcare/static/media/card3.399e4ed24458c34e9eb5.jpg",
+    "index.html": "/nexushealthcare/index.html",
+    "main.ce7c62cd.css.map": "/nexushealthcare/static/css/main.ce7c62cd.css.map",
+    "main.bea308b2.js.map": "/nexushealthcare/static/js/main.bea308b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce7c62cd.css",
+    "static/js/main.bea308b2.js"
+  ]
+}
