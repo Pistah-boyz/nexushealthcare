@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   AppBar,
@@ -25,10 +25,11 @@ import {
   Twitter as TwitterIcon,
   LinkedIn as LinkedinIcon,
   ArrowDropDown,
-  PhoneOutlined,
-  EmailOutlined,
+  PhoneOutlined as Phone,
+  EmailOutlined as Email,
 } from "@mui/icons-material";
 import { Logo } from "../components/auth/Logo";
+import { SlideComponent } from "../components/SlideComponent";
 
 const styles = {
   headerBox: {
@@ -153,24 +154,14 @@ const AppHeaderBar = ({ window }) => {
           spacing={12}
         >
           <Grid item xs={4}>
-            <Slide
-              direction="right"
-              timeout={1000}
-              in={true}
-              mountOnEnter
-              unmountOnExit
-            >
-              <Box sx={styles.headerBoxIcon} className="c_mview">
-                <Box style={styles.c_icon} sx={{ mx: 1 }}>
-                  <PhoneOutlined />
-                  &nbsp;404-806-8164
-                </Box>
-                <Box style={styles.c_icon} sx={{ mx: 1 }}>
-                  <EmailOutlined />
-                  &nbsp;info@nexusstaffingsolution.ca
-                </Box>
+            <SlideComponent direction="right">
+              <Box sx={styles.headerBoxIcon}>
+                <Phone />
+                <Box sx={{ mx: 1 }}>404-806-8164</Box>
+                <Email />
+                <Box sx={{ mx: 1 }}>info@nexusstaffingsolution.ca</Box>
               </Box>
-            </Slide>
+            </SlideComponent>
           </Grid>
           <Grid item xs={4}>
             <Box sx={styles.headerBox}>
@@ -178,13 +169,7 @@ const AppHeaderBar = ({ window }) => {
             </Box>
           </Grid>
           <Grid item xs={4}>
-            <Slide
-              direction="left"
-              timeout={1000}
-              in={true}
-              mountOnEnter
-              unmountOnExit
-            >
+            <SlideComponent direction="left">
               <Box sx={{ display: "flex" }}>
                 <IconButton>
                   <FacebookIcon />
@@ -202,13 +187,13 @@ const AppHeaderBar = ({ window }) => {
                   <LinkedinIcon />
                 </IconButton>
               </Box>
-            </Slide>
+            </SlideComponent>
           </Grid>
         </Grid>
       </Box>
       <Box sx={{ display: "flex" }}>
         <CssBaseline />
-        <AppBar component="nav" sx={{ top: "15%" }} position="relative">
+        <AppBar component="nav" sx={{ top: "15%" }} position="sticky">
           <Toolbar
             sx={{
               justifyContent: {
@@ -235,7 +220,7 @@ const AppHeaderBar = ({ window }) => {
                     {navlabel}
                   </Link>
                 ) : (
-                  <>
+                  <Fragment key={id}>
                     <Button
                       endIcon={<ArrowDropDown />}
                       id="basic-button"
@@ -264,7 +249,7 @@ const AppHeaderBar = ({ window }) => {
                         ))}
                       </Menu>
                     )}
-                  </>
+                  </Fragment>
                 )
               )}
             </Box>

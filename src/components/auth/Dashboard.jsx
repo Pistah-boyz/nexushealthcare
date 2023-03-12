@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { HomeSlider } from "./Slider";
 import Footer from "../Footer";
 import { Card, Container } from "../../ui";
-import { BackgroundComponent } from "./BackgroundComponent";
+import { SlideComponent } from "../SlideComponent";
 import { COLORS } from "../../ui/Theme/colors";
 import img2 from "../../images/action-bg.jpg";
 import MyLogo from "../../images/Nexus.jpeg";
@@ -103,7 +103,7 @@ const Dashboard = () => {
 
       <Box sx={styles.section}>
         <Grid container spacing={8}>
-          <Grid item md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Box sx={{ padding: "32px" }}>
               <Typography
                 variant="h5"
@@ -127,7 +127,7 @@ const Dashboard = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Card
               actionButton={"LearMore"}
               sx={styles.card}
@@ -146,7 +146,7 @@ const Dashboard = () => {
               </Typography>
             </Card>
           </Grid>
-          <Grid item md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Card
               actionButton={"LearMore"}
               sx={styles.card}
@@ -173,40 +173,42 @@ const Dashboard = () => {
         disableGutters={false}
         sx={styles.centerContainer}
       >
-        <Slide
-          direction="down"
-          timeout={1000}
-          in={true}
-          mountOnEnter
-          unmountOnExit
-        >
+        <SlideComponent direction="down">
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <img src={MyLogo} width="500px" height="180px" />
           </Box>
-        </Slide>
-        <Box sx={styles.padding}>
-          <Typography variant="h6" sx={{ color: "#88c036" }}>
-            Ellsworth Healthcare Staffing is fully committed to understanding
-            the needs of our clients and our employees to match the right
-            candidate with today’s most essential healthcare positions. It’s our
-            goal to provide superior healthcare professionals and remarkable
-            care for patients.
-          </Typography>
-        </Box>
-        <Box sx={styles.padding}>
-          <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-            SERVING ATLANTA, GA AND BEYOND
-          </Typography>
-          <Typography variant="h6">
-            Ellsworth Healthcare Staffing is a full-service healthcare staffing
-            agency committed to providing strategic staffing solutions for
-            Georgia-based healthcare facilities and patients. Our team works
-            around-the-clock to provide outstanding service and quality care. It
-            is our mission to leverage our industry experience to provide
-            excellent customer service and to deliver rewarding results to our
-            employees and the greater healthcare community.
-          </Typography>
-        </Box>
+        </SlideComponent>
+        <SlideComponent direction="down">
+          <Box sx={styles.padding}>
+            <Typography variant="h6" sx={{ color: "#88c036" }}>
+              Ellsworth Healthcare Staffing is fully committed to understanding
+              the needs of our clients and our employees to match the right
+              candidate with today’s most essential healthcare positions. It’s
+              our goal to provide superior healthcare professionals and
+              remarkable care for patients.
+            </Typography>
+          </Box>
+        </SlideComponent>
+        <SlideComponent direction="down">
+          <Box sx={styles.padding}>
+            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+              SERVING ATLANTA, GA AND BEYOND
+            </Typography>
+
+            <SlideComponent direction="down">
+              <Typography variant="h6">
+                Ellsworth Healthcare Staffing is a full-service healthcare
+                staffing agency committed to providing strategic staffing
+                solutions for Georgia-based healthcare facilities and patients.
+                Our team works around-the-clock to provide outstanding service
+                and quality care. It is our mission to leverage our industry
+                experience to provide excellent customer service and to deliver
+                rewarding results to our employees and the greater healthcare
+                community.
+              </Typography>
+            </SlideComponent>
+          </Box>
+        </SlideComponent>
         <Box sx={styles.padding}>
           <Typography variant="h4" sx={{ fontWeight: "bold" }}>
             OUR ORGANIZATION’S MISSION
@@ -244,14 +246,14 @@ const Dashboard = () => {
       </Container>
 
       <Box sx={styles.section}>
-        <Container maxWidth={"lg"} disableGutters="false">
+        <Container maxWidth={"lg"} disableGutters={false}>
           <Box sx={{ padding: "16px" }}>
             <Typography variant="h3">WHY CHOOSE</Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Grid container spacing={8}>
               {offers.map((val) => (
-                <Grid item xs={12} sm={12} md={4}>
+                <Grid key={val.title} item xs={12} sm={12} md={4}>
                   <Box className="flip-card">
                     <Box className="flip-card-inner">
                       <Box

@@ -16,7 +16,8 @@ const theme = createTheme({
         error: {
             main: COLORS.error
         }
-    }
+    },
+
 })
 
 export { theme }

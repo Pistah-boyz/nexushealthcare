@@ -25,6 +25,7 @@ import { COLORS } from "../ui/Theme/colors";
 
 import MyLogo from "../images/Nexus.jpeg";
 import { BackgroundComponent } from "./auth/BackgroundComponent";
+import { SlideComponent } from "./SlideComponent";
 import card1 from "../images/card1.jpg";
 import card2 from "../images/card2.png";
 import card3 from "../images/card3.jpg";
@@ -134,7 +135,7 @@ const Footer = () => {
     <>
       <BackgroundComponent />
       <Box sx={styles.offerContainer}>
-        <Container maxWidth={"lg"} disableGutters="false">
+        <Container maxWidth={"lg"} disableGutters={false}>
           <Box>
             <Typography variant="h3">
               WHAT <span style={{ fontWeight: "bold" }}>WE OFFER</span>
@@ -152,21 +153,26 @@ const Footer = () => {
           <Box sx={{ padding: "16px" }}>
             <Grid container spacing={8}>
               {offers.map((val) => (
-                <Grid item md={4}>
-                  <Card sx={styles.offer}>
-                    <img src={val.img} style={styles.media} />
-                    <Box className={"content"} style={styles.overlay}>
-                      <Typography variant="h6">{val.title}</Typography>
-                      <Typography
-                        className={"subTitle"}
-                        variant="h6"
-                        sx={{ fontWeight: "bold", display: "none" }}
-                      >
-                        {val.subTitle}
-                      </Typography>
-                    </Box>
-                    <Box className={"overlay"} style={styles.boxOverlay}></Box>
-                  </Card>
+                <Grid key={val.title} item md={4}>
+                  <SlideComponent direction="right">
+                    <Card sx={styles.offer}>
+                      <img src={val.img} style={styles.media} />
+                      <Box className={"content"} style={styles.overlay}>
+                        <Typography variant="h6">{val.title}</Typography>
+                        <Typography
+                          className={"subTitle"}
+                          variant="h6"
+                          sx={{ fontWeight: "bold", display: "none" }}
+                        >
+                          {val.subTitle}
+                        </Typography>
+                      </Box>
+                      <Box
+                        className={"overlay"}
+                        style={styles.boxOverlay}
+                      ></Box>
+                    </Card>
+                  </SlideComponent>
                 </Grid>
               ))}
             </Grid>
@@ -290,35 +296,45 @@ const Footer = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <img src={MyLogo} width="500px" height="180px" />
-          </Box>
-          <Box
-            sx={{ display: "flex", justifyContent: "center", padding: "8px" }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-              SERVING LOCAL HEALTHCARE FACILITIES AND HOME PATIENTS
-            </Typography>
-          </Box>
-          <Box
-            sx={{ display: "flex", justifyContent: "center", padding: "16px" }}
-          >
-            <IconButton sx={styles.footerIcons}>
-              <FacebookIcon />
-            </IconButton>
+          <SlideComponent direction={"up"}>
+            <Box sx={{ display: "flex", justifyContent: "center" }}>
+              <img src={MyLogo} width="500px" height="180px" />
+            </Box>
+          </SlideComponent>
+          <SlideComponent direction={"up"}>
+            <Box
+              sx={{ display: "flex", justifyContent: "center", padding: "8px" }}
+            >
+              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                SERVING LOCAL HEALTHCARE FACILITIES AND HOME PATIENTS
+              </Typography>
+            </Box>
+          </SlideComponent>
+          <SlideComponent direction={"up"}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                padding: "16px",
+              }}
+            >
+              <IconButton sx={styles.footerIcons}>
+                <FacebookIcon />
+              </IconButton>
 
-            <IconButton sx={styles.footerIcons}>
-              <InstagramIcon />
-            </IconButton>
+              <IconButton sx={styles.footerIcons}>
+                <InstagramIcon />
+              </IconButton>
 
-            <IconButton sx={styles.footerIcons}>
-              <TwitterIcon />
-            </IconButton>
+              <IconButton sx={styles.footerIcons}>
+                <TwitterIcon />
+              </IconButton>
 
-            <IconButton sx={styles.footerIcons}>
-              <LinkedinIcon />
-            </IconButton>
-          </Box>
+              <IconButton sx={styles.footerIcons}>
+                <LinkedinIcon />
+              </IconButton>
+            </Box>
+          </SlideComponent>
         </Container>
       </Box>
       <Box sx={{ background: "#000", color: COLORS.white }}>
