@@ -6,6 +6,8 @@ const COLORS = {
   white: "#ffffff",
   peal: "#94c11f",
   teal: "#28a19a",
+  dangerlight:"#ed5249",
+  danger:"#D90000"
 };
 
 export { COLORS };

@@ -45,13 +45,13 @@ const CommonBoxImg = ({ img, txt1, txt2 }) => {
           >
             {txt1}
           </Typography>
-          <Typography
+          {/* <Typography
             variant="h5"
             color="white"
             sx={{ textAlign: "center", fontWeight: 500 }}
           >
             {txt2}
-          </Typography>
+  </Typography>*/}
         </Box>
       </Box>
     </Box>

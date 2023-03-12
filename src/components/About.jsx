@@ -95,11 +95,6 @@ const About = () => {
                 also giving our clients the employees they need to deliver
                 exceptional care to their own patients.
               </Typography>
-              <Typography component="p" sx={styles.section_pcustom}>
-                If you’re interested in partnering with Ellsworth Healthcare
-                Staffing, give us a call today at 404-806-8164 or visit our
-                Contact Page.
-              </Typography>
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
