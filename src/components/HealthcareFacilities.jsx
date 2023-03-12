@@ -49,7 +49,7 @@ const HealthcareFacilities = () => {
   return (
     <>
       <ScrollToTopOnMount />
-      <CommonBoxImg img={img1} txt1="Healthcare Facilities" />
+      {/* <CommonBoxImg img={img1} txt1="Healthcare Facilities" /> */}
       <Typography component="div" sx={styles.root}>
         <Grid container>
           <Grid>

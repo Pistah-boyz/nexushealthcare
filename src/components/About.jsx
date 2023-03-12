@@ -56,7 +56,7 @@ const About = () => {
       />
       <Typography component="div" sx={styles.root}>
         <Grid container>
-          <Grid item xs={12} md={12} >
+          <Grid item xs={12} md={12}>
             <Typography component="div" sx={styles.sectiondiv_1}>
               <Typography
                 component="h2"

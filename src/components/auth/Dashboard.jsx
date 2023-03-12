@@ -16,7 +16,7 @@ import { Card, Container } from "../../ui";
 import { SlideComponent } from "../SlideComponent";
 import { COLORS } from "../../ui/Theme/colors";
 import img2 from "../../images/action-bg.jpg";
-import MyLogo from "../../images/Nexus.jpeg";
+import MyLogo from "../../images/Nexus.png";
 import card1 from "../../images/card1.jpg";
 import card2 from "../../images/card2.png";
 import card3 from "../../images/card3.jpg";
@@ -86,11 +86,9 @@ const styles = {
 
 const offers = [
   { title: "STAFFING", subTitle: "VIEW SERVICES", img: card1 },
-  { title: "GOVERMENT", subTitle: "VIEW SERVICES", img: card2 },
-  { title: "CANDIDATES", subTitle: "LEARN MORE", img: card3 },
-  { title: "EMPLOYERS", subTitle: "LEARN MORE", img: card4 },
-  { title: "JOB BOARD", subTitle: "VIEW OPEN POSITIONS", img: card5 },
-  { title: "APPLY NOW!", subTitle: "LETS GET STARTED", img: card6 },
+  { title: "CANDIDATES", subTitle: "LEARN MORE", img: card2 },
+  { title: "EMPLOYERS", subTitle: "LEARN MORE", img: card3 },
+  { title: "APPLY NOW!", subTitle: "LETS GET STARTED", img: card4 },
 ];
 
 const Dashboard = () => {
@@ -174,8 +172,10 @@ const Dashboard = () => {
         sx={styles.centerContainer}
       >
         <SlideComponent direction="down">
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <img src={MyLogo} width="500px" height="180px" />
+          <Box
+            sx={{ display: "flex", justifyContent: "center", padding: "15px" }}
+          >
+            <img src={MyLogo} width="300px" height="180px" />
           </Box>
         </SlideComponent>
         <SlideComponent direction="down">
@@ -253,7 +253,7 @@ const Dashboard = () => {
           <Box sx={{ padding: "16px" }}>
             <Grid container spacing={8}>
               {offers.map((val) => (
-                <Grid key={val.title} item xs={12} sm={12} md={4}>
+                <Grid key={val.title} item xs={12} sm={12} md={6}>
                   <Box className="flip-card">
                     <Box className="flip-card-inner">
                       <Box

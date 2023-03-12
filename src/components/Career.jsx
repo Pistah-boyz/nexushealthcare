@@ -108,7 +108,7 @@ const Career = () => {
     email: "",
     phone: "",
     zipCode: "",
-    jobTitle: ""
+    jobTitle: "",
   });
   const [errors, setErrors] = useState({});
   const inputRefResume = useRef(null);
@@ -118,9 +118,9 @@ const Career = () => {
 
   const handleAgreeChange = (event) => {
     setAgree(event.target.checked);
-    errors.agree="";
+    errors.agree = "";
     setErrors(errors);
-  }
+  };
 
   const handleChange = (event) => {
     setFormValues({

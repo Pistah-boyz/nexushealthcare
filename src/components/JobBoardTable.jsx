@@ -3,10 +3,12 @@ import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
+import Link from "@mui/material/Link";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
+import JobDetails from "./JobDetails";
 
 const StickyHeadTable = ({ searchkeyval }) => {
   const columns = [
@@ -120,6 +122,7 @@ const StickyHeadTable = ({ searchkeyval }) => {
   const [rowdata, setRowData] = useState([]);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [showJobDetailsComponent, setJobDetailsShowComponent] = useState(false);
 
   useEffect(() => {
     setRowData(rows);
@@ -141,6 +144,10 @@ const StickyHeadTable = ({ searchkeyval }) => {
     setPage(0);
   };
 
+  const handleJobTitleClick = () => {
+    setJobDetailsShowComponent(true);
+  };
+
   return (
     <Paper
       sx={{
@@ -150,52 +157,79 @@ const StickyHeadTable = ({ searchkeyval }) => {
         marginLeft: "10%",
       }}
     >
-      <TableContainer sx={{ maxHeight: 660 }}>
-        <Table stickyHeader aria-label="sticky table">
-          <TableHead>
-            <TableRow>
-              {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  align={column.align}
-                  style={{ minWidth: column.minWidth, fontWeight: "bolder" }}
-                >
-                  {column.label}
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rowdata
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row) => {
-                return (
-                  <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-                    {columns.map((column) => {
-                      const value = row[column.id];
-                      return (
-                        <TableCell key={column.id} align={column.align}>
-                          {column.format && typeof value === "number"
-                            ? column.format(value)
-                            : value}
-                        </TableCell>
-                      );
-                    })}
-                  </TableRow>
-                );
-              })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
-        component="div"
-        count={rows.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onPageChange={handleChangePage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
-      />
+      {showJobDetailsComponent ? (
+        <JobDetails />
+      ) : (
+        <>
+          <TableContainer sx={{ maxHeight: 660 }}>
+            <Table stickyHeader aria-label="sticky table">
+              <TableHead>
+                <TableRow>
+                  {columns.map((column) => (
+                    <TableCell
+                      key={column.id}
+                      align={column.align}
+                      style={{
+                        minWidth: column.minWidth,
+                        fontWeight: "bolder",
+                      }}
+                    >
+                      {column.label}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rowdata
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row) => {
+                    return (
+                      <TableRow
+                        hover
+                        role="checkbox"
+                        tabIndex={-1}
+                        key={row.code}
+                      >
+                        {columns.map((column) => {
+                          const value = row[column.id];
+                          return column.id == "jobtitle" ? (
+                            <TableCell key={column.id} align={column.align}>
+                              <Link
+                                onClick={handleJobTitleClick}
+                                sx={{
+                                  cursor: "pointer",
+                                }}
+                              >
+                                {column.format && typeof value === "number"
+                                  ? column.format(value)
+                                  : value}
+                              </Link>
+                            </TableCell>
+                          ) : (
+                            <TableCell key={column.id} align={column.align}>
+                              {column.format && typeof value === "number"
+                                ? column.format(value)
+                                : value}
+                            </TableCell>
+                          );
+                        })}
+                      </TableRow>
+                    );
+                  })}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <TablePagination
+            rowsPerPageOptions={[10, 25, 100]}
+            component="div"
+            count={rows.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onPageChange={handleChangePage}
+            onRowsPerPageChange={handleChangeRowsPerPage}
+          />
+        </>
+      )}
     </Paper>
   );
 };
