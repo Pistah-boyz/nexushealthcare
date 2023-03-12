@@ -220,10 +220,6 @@ const Footer = () => {
             </IconButton>
 
             <IconButton sx={styles.footerIcons}>
-              <TwitterIcon />
-            </IconButton>
-
-            <IconButton sx={styles.footerIcons}>
               <LinkedinIcon />
             </IconButton>
           </Box>
@@ -322,10 +318,6 @@ const Footer = () => {
 
               <IconButton sx={styles.footerIcons}>
                 <InstagramIcon />
-              </IconButton>
-
-              <IconButton sx={styles.footerIcons}>
-                <TwitterIcon />
               </IconButton>
 
               <IconButton sx={styles.footerIcons}>

@@ -86,8 +86,8 @@ const styles = {
 
 const offers = [
   { title: "STAFFING", subTitle: "VIEW SERVICES", img: card1 },
-  { title: "CANDIDATES", subTitle: "LEARN MORE", img: card2 },
-  { title: "EMPLOYERS", subTitle: "LEARN MORE", img: card3 },
+  { title: "HEALTHCARE JOB SEEKERS", subTitle: "LEARN MORE", img: card2 },
+  { title: "HEALTHCARE FACILITIES", subTitle: "LEARN MORE", img: card3 },
   { title: "APPLY NOW!", subTitle: "LETS GET STARTED", img: card4 },
 ];
 
@@ -108,20 +108,21 @@ const Dashboard = () => {
                 component="div"
                 sx={{ color: COLORS.primary }}
               >
-                NEXUS HEALTHCARE{" "}
-                <span style={{ fontWeight: "bold" }}>STAFFING</span>
+                <span style={{ fontWeight: "bold" }}>
+                  NEXUS STAFFING SOLUTION
+                </span>
               </Typography>
               <Typography
                 variant="h6"
                 component="div"
                 sx={{ fontWeight: "bold" }}
               >
-                A Trusted Network of Healthcare Professionals
+                A Reliable Network of Medical Experts
               </Typography>
               <Typography variant="body2">
-                We serve healthcare professionals looking for work as well as
-                local healthcare facilities and hospitals with critical staffing
-                needs.
+                We believe and emphasis on the statement of “In staffing, the
+                right person is recruited for the right jobs, therefore it leads
+                to maximum productivity and higher performance.
               </Typography>
             </Box>
           </Grid>
@@ -136,11 +137,12 @@ const Dashboard = () => {
                 <PersonIcon fontSize="large" />
               </IconButton>
               <Typography variant="h5" component="div">
-                Candidates
+                HEALTHCARE JOB SEEKERS
               </Typography>
               <Typography variant="body2">
-                Trust our team to take the stress and hassle out of the
-                healthcare application process.
+                We are committed to attracting, involving, and keeping talent by
+                fostering a culture that fosters achievement and professional
+                development.
               </Typography>
             </Card>
           </Grid>
@@ -155,11 +157,11 @@ const Dashboard = () => {
                 <PersonIcon fontSize="large" />
               </IconButton>
               <Typography variant="h5" component="div">
-                EMPLOYERS
+                HEALTHCARE FACILITIES
               </Typography>
               <Typography variant="body2">
-                We’re ready to find the right candidates for your immediate
-                openings and staffing needs.
+                Our mission is to find the ideal applicant for every need, from
+                hospital staffing to research laboratory employment.
               </Typography>
             </Card>
           </Grid>
@@ -181,30 +183,27 @@ const Dashboard = () => {
         <SlideComponent direction="down">
           <Box sx={styles.padding}>
             <Typography variant="h6" sx={{ color: "#88c036" }}>
-              Ellsworth Healthcare Staffing is fully committed to understanding
-              the needs of our clients and our employees to match the right
-              candidate with today’s most essential healthcare positions. It’s
-              our goal to provide superior healthcare professionals and
-              remarkable care for patients.
+              Nexus staffing solution provides staffing solutions for medical
+              facilities including hospitals and nursing homes that need to fill
+              open positions in their establishments. We also have experienced
+              health care recruiters with a background in hiring for hospitals
+              and long-term care facilities. With each client, we use a
+              collaborative approach and put special emphasis on developing
+              staffing plans that bring the most value.
             </Typography>
           </Box>
         </SlideComponent>
         <SlideComponent direction="down">
           <Box sx={styles.padding}>
-            <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-              SERVING ATLANTA, GA AND BEYOND
-            </Typography>
-
             <SlideComponent direction="down">
               <Typography variant="h6">
-                Ellsworth Healthcare Staffing is a full-service healthcare
-                staffing agency committed to providing strategic staffing
-                solutions for Georgia-based healthcare facilities and patients.
-                Our team works around-the-clock to provide outstanding service
-                and quality care. It is our mission to leverage our industry
-                experience to provide excellent customer service and to deliver
-                rewarding results to our employees and the greater healthcare
-                community.
+                Dedicated to providing strategic staffing solutions for Canadian
+                healthcare facilities and patients, Nexus Staffing Solution is a
+                full-service healthcare staffing business. To deliver
+                exceptional service and high-quality treatment, our team is on
+                the clock. Our goal is to use our industry expertise to create
+                top-notch customer service, satisfying outcomes for our staff,
+                and to the larger healthcare community.
               </Typography>
             </SlideComponent>
           </Box>
@@ -214,14 +213,11 @@ const Dashboard = () => {
             OUR ORGANIZATION’S MISSION
           </Typography>
           <Typography variant="h6">
-            Our company was founded in Tucker, Georgia with the mission of
-            providing “Superior People and Superior Service.” At Ellsworth
-            Healthcare Staffing, our employees, our partner facilities, and the
-            patients we ultimately serve are our top priority. We offer rapid
-            scheduling turnaround time to place the best healthcare
-            professionals with jobs and assignments that match their interests,
-            while also giving our clients the essential employees they need and
-            depend on.
+            Our goal is to fill healthcare institutions with qualified and
+            effective personnel who can provide effective help to their
+            patients. By making sure that their healthcare team only consists of
+            the most skilled employees, we also work to boost people&#39;s
+            health.
           </Typography>
         </Box>
         <Box

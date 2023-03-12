@@ -173,10 +173,6 @@ const Contact = () => {
             </IconButton>
 
             <IconButton sx={styles.footerIcons}>
-              <TwitterIcon />
-            </IconButton>
-
-            <IconButton sx={styles.footerIcons}>
               <LinkedinIcon />
             </IconButton>
           </Box>
@@ -322,10 +318,6 @@ const Contact = () => {
 
               <IconButton sx={styles.footerIcons}>
                 <InstagramIcon />
-              </IconButton>
-
-              <IconButton sx={styles.footerIcons}>
-                <TwitterIcon />
               </IconButton>
 
               <IconButton sx={styles.footerIcons}>

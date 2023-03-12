@@ -1,5 +1,6 @@
 import React, { useState, useRef, Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {
   AppBar,
   Box,
@@ -30,6 +31,7 @@ import {
 } from "@mui/icons-material";
 import { Logo } from "../components/auth/Logo";
 import { SlideComponent } from "../components/SlideComponent";
+import { color } from "@mui/system";
 
 const styles = {
   headerBox: {
@@ -37,6 +39,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     fontSize: "24px",
+    cursor: "pointer",
   },
   headerBoxIcon: {
     display: "flex",
@@ -116,6 +119,7 @@ const navItems = [
 const drawerWidth = 240;
 
 const AppHeaderBar = ({ window }) => {
+  const location = useLocation();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -156,6 +160,14 @@ const AppHeaderBar = ({ window }) => {
     setAnchorEl(null);
   };
 
+  const handlePhoneNumberClick = () => {
+    location.href = "tel:" + "404-806-8164";
+  };
+
+  const handleMailClick = () => {
+    window.open("mailto:" + "info@nexusstaffingsolution.ca", "_blank");
+  };
+
   return (
     <>
       <Box
@@ -175,30 +187,36 @@ const AppHeaderBar = ({ window }) => {
             <SlideComponent direction="right">
               <Box sx={styles.headerBoxIcon}>
                 <Phone />
-                <Box sx={{ mx: 1 }}>404-806-8164</Box>
+                <Box
+                  sx={{ mx: 1, cursor: "pointer" }}
+                  onClick={handlePhoneNumberClick}
+                >
+                  404-806-8164
+                </Box>
                 <Email />
-                <Box sx={{ mx: 1 }}>info@nexusstaffingsolution.ca</Box>
+                <Box
+                  sx={{ mx: 1, cursor: "pointer" }}
+                  onClick={handleMailClick}
+                >
+                  info@nexusstaffingsolution.ca
+                </Box>
               </Box>
             </SlideComponent>
           </Grid>
           <Grid item xs={4}>
-            <Box sx={styles.headerBox}>
+            <Box sx={styles.headerBox} onClick={() => navigate("/home")}>
               <Logo />
             </Box>
           </Grid>
           <Grid item xs={4}>
             <SlideComponent direction="left">
-              <Box sx={{ display: "flex" }}>
+              <Box sx={{ display: "flex", mx: 20 }}>
                 <IconButton>
                   <FacebookIcon />
                 </IconButton>
 
                 <IconButton>
                   <InstagramIcon />
-                </IconButton>
-
-                <IconButton>
-                  <TwitterIcon />
                 </IconButton>
 
                 <IconButton>
