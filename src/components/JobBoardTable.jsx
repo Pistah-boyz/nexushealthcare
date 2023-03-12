@@ -10,7 +10,7 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import JobDetails from "./JobDetails";
 
-const StickyHeadTable = ({ searchkeyval }) => {
+const StickyHeadTable = ({ searchkeyval, IsJobDetailsPage }) => {
   const columns = [
     { id: "jobtitle", label: "Job Title", minWidth: 170 },
     { id: "location", label: "Location", minWidth: 100 },
@@ -29,7 +29,12 @@ const StickyHeadTable = ({ searchkeyval }) => {
   ];
 
   function createData(jobtitle, location, jobtype, dateposted) {
-    return { jobtitle, location, jobtype, dateposted };
+    return {
+      jobtitle,
+      location,
+      jobtype,
+      dateposted,
+    };
   }
 
   let rows = [
@@ -119,6 +124,13 @@ const StickyHeadTable = ({ searchkeyval }) => {
     ),
   ];
 
+  const paperCSS = !IsJobDetailsPage && {
+    width: "80%",
+    overflow: "hidden",
+    marginTop: "2%",
+    marginLeft: "10%",
+  };
+
   const [rowdata, setRowData] = useState([]);
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -149,14 +161,7 @@ const StickyHeadTable = ({ searchkeyval }) => {
   };
 
   return (
-    <Paper
-      sx={{
-        width: "80%",
-        overflow: "hidden",
-        marginTop: "2%",
-        marginLeft: "10%",
-      }}
-    >
+    <Paper sx={paperCSS}>
       {showJobDetailsComponent ? (
         <JobDetails />
       ) : (

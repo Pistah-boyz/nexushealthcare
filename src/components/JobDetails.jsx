@@ -14,9 +14,8 @@ import {
   AccessTime as AccessTimeIcon,
   FiberManualRecord,
 } from "@mui/icons-material";
-import Paper from "@mui/material/Paper";
-import { useNavigate } from "react-router-dom";
 import StickyHeadTable from "./JobBoardTable";
+import { useNavigate } from "react-router-dom";
 const style = {
   JobDescription: {
     backgroundColor: "#fff",
@@ -40,8 +39,31 @@ const listItemIconStyle = {
   marginRight: "16px",
 };
 
+const responsilityItems = [
+  { text: "Develop new user-facing features" },
+  { text: "Build reusable components and libraries for future use" },
+  { text: "Ensure the technical feasibility of UI/UX designs" },
+];
+
+const RequirementItems = [
+  {
+    text: "Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model",
+  },
+  {
+    text: "Thorough understanding of React.js and its core principles",
+  },
+  {
+    text: "Experience with popular React.js workflows (such as Flux or Redux)",
+  },
+  {
+    text: "Familiarity with newer specifications of EcmaScript",
+  },
+  {
+    text: "Experience with data structure libraries (e.g., Immutable.js)",
+  },
+];
+
 const JobDetails = () => {
-  const navigate = useNavigate();
   const [openJobBoard, setJobBoardOpen] = useState(false);
 
   const handleBackClick = () => {
@@ -52,11 +74,25 @@ const JobDetails = () => {
     setJobBoardOpen(false);
   };
 
-  const firstTime = true;
+  const listResponsibilitesItems = responsilityItems.map((item, index) => (
+    <ListItem key={index}>
+      <FiberManualRecord sx={listItemIconStyle} />
+      <ListItemText primary={item.text} />
+    </ListItem>
+  ));
+
+  const listRequirementItems = RequirementItems.map((item, index) => (
+    <ListItem key={index}>
+      <FiberManualRecord sx={listItemIconStyle} />
+      <ListItemText primary={item.text} />
+    </ListItem>
+  ));
+
+  const navigate = useNavigate();
   return (
     <>
       {openJobBoard ? (
-        <StickyHeadTable handleClose={handleClose} />
+        <StickyHeadTable IsJobDetailsPage="true" handleClose={handleClose} />
       ) : (
         <Typography sx={style.JobDescription} component="div">
           {
@@ -114,18 +150,7 @@ const JobDetails = () => {
             <List>
               <ListItem sx={{ display: "list-item" }}>
                 <List alignItems="flex-start" dense>
-                  <ListItem>
-                    <FiberManualRecord sx={listItemIconStyle} />
-                    <ListItemText primary="Develop new user-facing features" />
-                  </ListItem>
-                  <ListItem>
-                    <FiberManualRecord sx={listItemIconStyle} />
-                    <ListItemText primary="Build reusable components and libraries for future use" />
-                  </ListItem>
-                  <ListItem>
-                    <FiberManualRecord sx={listItemIconStyle} />
-                    <ListItemText primary="Ensure the technical feasibility of UI/UX designs" />
-                  </ListItem>
+                  {listResponsibilitesItems}
                 </List>
               </ListItem>
               <Typography variant="h6" sx={style.JobDetailstitle}>
@@ -133,26 +158,7 @@ const JobDetails = () => {
               </Typography>
               <ListItem>
                 <List sx={style.JobDetailsubtitle} dense>
-                  <ListItem>
-                    <FiberManualRecord sx={listItemIconStyle} />
-                    <ListItemText primary="Strong proficiency in JavaScript, including DOM manipulation and the JavaScript object model" />
-                  </ListItem>
-                  <ListItem>
-                    <FiberManualRecord sx={listItemIconStyle} />
-                    <ListItemText primary="Thorough understanding of React.js and its core principles" />
-                  </ListItem>
-                  <ListItem>
-                    <FiberManualRecord sx={listItemIconStyle} />
-                    <ListItemText primary="Experience with popular React.js workflows (such as Flux or Redux)" />
-                  </ListItem>
-                  <ListItem>
-                    <FiberManualRecord sx={listItemIconStyle} />
-                    <ListItemText primary="Familiarity with newer specifications of EcmaScript" />
-                  </ListItem>
-                  <ListItem>
-                    <FiberManualRecord sx={listItemIconStyle} />
-                    <ListItemText primary="Experience with data structure libraries (e.g., Immutable.js)" />
-                  </ListItem>
+                  {listRequirementItems}
                 </List>
               </ListItem>
             </List>
