@@ -72,6 +72,24 @@ const navItems = [
   },
   {
     id: 3,
+    navlabel: "Healthcare Job Seekers",
+    to: "/healthcarejobseekers",
+    submenu: [],
+  },
+  {
+    id: 4,
+    navlabel: "Healthcare Facilities",
+    to: "/healthcarefacilities",
+    submenu: [],
+  },
+  {
+    id: 5,
+    navlabel: "Register Now",
+    to: "/career/applynow",
+    submenu: [],
+  },
+  {
+    id: 6,
     navlabel: "Career",
     to: "/career",
     submenu: [
@@ -88,7 +106,7 @@ const navItems = [
     ],
   },
   {
-    id: 4,
+    id: 7,
     navlabel: "Contact",
     to: "/contact",
     submenu: [],
