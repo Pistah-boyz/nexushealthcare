@@ -27,7 +27,7 @@ import MyLogo from "../images/Nexus.png";
 import { BackgroundComponent } from "./auth/BackgroundComponent";
 import { SlideComponent } from "./SlideComponent";
 import card1 from "../images/card1.jpg";
-import card2 from "../images/card2.png";
+import card2 from "../images/card2.jpg";
 import card3 from "../images/card3.jpg";
 import card4 from "../images/card4.jpg";
 import card5 from "../images/card5.jpg";
@@ -128,6 +128,8 @@ const offers = [
   { title: "JOB BOARD", subTitle: "VIEW OPEN POSITIONS", img: card4 },
 ];
 
+const browserWindow = window;
+
 const Footer = () => {
   return (
     <>
@@ -136,16 +138,16 @@ const Footer = () => {
         <Container maxWidth={"lg"} disableGutters={false}>
           <Box>
             <Typography variant="h3">
-              WHAT <span style={{ fontWeight: "bold" }}>WE OFFER</span>
+              <span style={{ fontWeight: "bold" }}>OUR SERVICES</span>
             </Typography>
             <hr />
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Typography variant="h6">
-              Ellsworth Healthcare Staffing offers a comprehensive suite of
-              services designed to support local healthcare facilities, connect
-              the best applicants with each opportunity, and deliver the best
-              care to patients across Atlanta.
+              The driving force behind the Nexus Staffing Solution initiative is
+              our commitment and compassion to serve our customers. We are proud
+              to serve, deliver care, and bridge the gap between healthcare
+              providers and facilities.
             </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
@@ -186,16 +188,19 @@ const Footer = () => {
               component="div"
               sx={{ color: COLORS.WHITE }}
             >
-              NEXUS HEALTHCARE{" "}
-              <span style={{ fontWeight: "bold" }}>STAFFING</span>
+              <span style={{ fontWeight: "bold" }}>
+                NEXUS STAFFING SOLUTION
+              </span>
             </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Typography variant="h6">
-              We welcome healthcare facilities and healthcare professionals
-              looking for employment opportunities into our trusted network. Get
-              in touch with us today to learn more about Ellsworth Healthcare
-              Staffing.
+              Nexus Staffing Solution is a leader in providing workforce
+              solutions and staffing services to the healthcare industry. Our
+              mission is to connect clients with qualified medical professionals
+              to ensure superior patient deliveries. A rewarding career path for
+              healthcare professionals. Staffing expertise in healthcare
+              facilities.
             </Typography>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
@@ -211,15 +216,39 @@ const Footer = () => {
             </Typography>
           </Box>
           <Box sx={{ display: "flex", padding: "16px" }}>
-            <IconButton sx={styles.footerIcons}>
+            <IconButton
+              sx={styles.footerIcons}
+              onClick={() => {
+                browserWindow.open(
+                  "https://www.facebook.com/100090927846452",
+                  "_blank"
+                );
+              }}
+            >
               <FacebookIcon />
             </IconButton>
 
-            <IconButton sx={styles.footerIcons}>
+            <IconButton
+              sx={styles.footerIcons}
+              onClick={() => {
+                browserWindow.open(
+                  "https://instagram.com/nexus_staffing?igshid=ZDdkNTZiNTM= ",
+                  "_blank"
+                );
+              }}
+            >
               <InstagramIcon />
             </IconButton>
 
-            <IconButton sx={styles.footerIcons}>
+            <IconButton
+              sx={styles.footerIcons}
+              onClick={() => {
+                browserWindow.open(
+                  "https://www.facebook.com/100090927846452",
+                  "_blank"
+                );
+              }}
+            >
               <LinkedinIcon />
             </IconButton>
           </Box>
@@ -231,15 +260,14 @@ const Footer = () => {
               component="div"
               sx={{ fontWeight: "bold" }}
             >
-              CONTACT US FOR MORE INFORMATION
+              CONNECT WITH NEXUS STAFFING SOLUTION
             </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Typography variant="h6">
               We welcome healthcare facilities and healthcare professionals
-              looking for employment opportunities into our trusted network. Get
-              in touch with us today to learn more about Ellsworth Healthcare
-              Staffing.
+              seeking employment opportunities into our trusted network. Contact
+              us now for more information about us.
             </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
@@ -312,15 +340,39 @@ const Footer = () => {
                 padding: "16px",
               }}
             >
-              <IconButton sx={styles.footerIcons}>
+              <IconButton
+                sx={styles.footerIcons}
+                onClick={() => {
+                  browserWindow.open(
+                    "https://www.facebook.com/100090927846452",
+                    "_blank"
+                  );
+                }}
+              >
                 <FacebookIcon />
               </IconButton>
 
-              <IconButton sx={styles.footerIcons}>
+              <IconButton
+                sx={styles.footerIcons}
+                onClick={() => {
+                  browserWindow.open(
+                    "https://instagram.com/nexus_staffing?igshid=ZDdkNTZiNTM= ",
+                    "_blank"
+                  );
+                }}
+              >
                 <InstagramIcon />
               </IconButton>
 
-              <IconButton sx={styles.footerIcons}>
+              <IconButton
+                sx={styles.footerIcons}
+                onClick={() => {
+                  browserWindow.open(
+                    "https://www.facebook.com/100090927846452",
+                    "_blank"
+                  );
+                }}
+              >
                 <LinkedinIcon />
               </IconButton>
             </Box>

@@ -17,7 +17,7 @@ const Card = ({ children, title, actionButton, sx, sxContent, sxActions }) => {
         />
       )}
       <CardContent sx={sxContent}>{children}</CardContent>
-      <CardActions sx={{ alignItems: "center", justifyContent: "center" }}>
+      <CardActions sx={{ alignItems: "flex-end", justifyContent: "center" }}>
         <Button size="small" variant="outlined" sx={sxActions}>
           {actionButton}
         </Button>

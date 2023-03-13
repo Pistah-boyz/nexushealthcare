@@ -1,6 +1,5 @@
 import React, { useState, useRef, Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import {
   AppBar,
   Box,
@@ -101,11 +100,11 @@ const navItems = [
         navlabel: "Apply Now",
         to: "/career/applynow",
       },
-      {
-        id: 2,
-        navlabel: "Job Board",
-        to: "/career/jobboard",
-      },
+      // {
+      //   id: 2,
+      //   navlabel: "Job Board",
+      //   to: "/career/jobboard",
+      // },
     ],
   },
   {
@@ -117,9 +116,9 @@ const navItems = [
 ];
 
 const drawerWidth = 240;
+const browserWindow = window;
 
 const AppHeaderBar = ({ window }) => {
-  const location = useLocation();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -161,11 +160,11 @@ const AppHeaderBar = ({ window }) => {
   };
 
   const handlePhoneNumberClick = () => {
-    location.href = "tel:" + "404-806-8164";
+    browserWindow.open("tel:" + "404-806-8164", "_self");
   };
 
   const handleMailClick = () => {
-    window.open("mailto:" + "info@nexusstaffingsolution.ca", "_blank");
+    browserWindow.open("mailto:" + "info@nexusstaffingsolution.ca", "_self");
   };
 
   return (
@@ -211,15 +210,36 @@ const AppHeaderBar = ({ window }) => {
           <Grid item xs={4}>
             <SlideComponent direction="left">
               <Box sx={{ display: "flex", mx: 20 }}>
-                <IconButton>
+                <IconButton
+                  onClick={() => {
+                    browserWindow.open(
+                      "https://www.facebook.com/100090927846452",
+                      "_blank"
+                    );
+                  }}
+                >
                   <FacebookIcon />
                 </IconButton>
 
-                <IconButton>
+                <IconButton
+                  onClick={() => {
+                    browserWindow.open(
+                      "https://instagram.com/nexus_staffing?igshid=ZDdkNTZiNTM= ",
+                      "_blank"
+                    );
+                  }}
+                >
                   <InstagramIcon />
                 </IconButton>
 
-                <IconButton>
+                <IconButton
+                  onClick={() => {
+                    browserWindow.open(
+                      "https://www.facebook.com/100090927846452",
+                      "_blank"
+                    );
+                  }}
+                >
                   <LinkedinIcon />
                 </IconButton>
               </Box>

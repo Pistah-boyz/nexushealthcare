@@ -27,13 +27,13 @@ const BackgroundComponent = () => {
         sx={{ color: COLORS.white }}
       >
         <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-          PUT OUR EXTENSIVE NETWORK OF PARTNERS AND RESOURCES TO WORK FOR YOU!
+          STAFFING SOLUTIONS FOR YOUR HEALTHCARE BUSINESS.
         </Typography>
         <Typography>
-          Whether you are interested in a temporary assignment, per diem work,
-          or a permanent role, our team is dedicated to learning who you are on
-          both a personal and professional level. Let Ellsworth Healthcare
-          Staffing streamline the process for you.
+          Whether you're interested in temporary work, per diem or full-time
+          employment, our team is committed in getting to know you on a personal
+          and professional level. The Nexus Stuffing Solution streamlines the
+          process completely for you.
         </Typography>
       </Container>
     </Box>

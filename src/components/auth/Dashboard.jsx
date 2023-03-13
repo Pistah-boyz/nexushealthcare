@@ -18,7 +18,7 @@ import { COLORS } from "../../ui/Theme/colors";
 import img2 from "../../images/action-bg.jpg";
 import MyLogo from "../../images/Nexus.png";
 import card1 from "../../images/card1.jpg";
-import card2 from "../../images/card2.png";
+import card2 from "../../images/card2.jpg";
 import card3 from "../../images/card3.jpg";
 import card4 from "../../images/card4.jpg";
 import card5 from "../../images/card5.jpg";
@@ -39,6 +39,7 @@ const styles = {
     background: COLORS.primary,
     color: COLORS.white,
     transition: "all .3s ease",
+    height: "100%",
 
     "&:hover": {
       transform: "translateY(-10px)",
@@ -85,10 +86,42 @@ const styles = {
 };
 
 const offers = [
-  { title: "STAFFING", subTitle: "VIEW SERVICES", img: card1 },
-  { title: "HEALTHCARE JOB SEEKERS", subTitle: "LEARN MORE", img: card2 },
-  { title: "HEALTHCARE FACILITIES", subTitle: "LEARN MORE", img: card3 },
-  { title: "APPLY NOW!", subTitle: "LETS GET STARTED", img: card4 },
+  {
+    title: "Cost-Effective Strаtеgіеѕ",
+    subTitle:
+      "ѕаvе thоuѕаndѕ оf dоllаrѕ еvеrу уеаr bу еlіmіnаtіng rесruіtmеnt fееѕ frоm your budgеt by avoiding аdvеrtіsements for рlасеmеnt аnd rеvіеwіng rеѕumеѕ аnd іntеrvіеwіng саndіdаtеѕ.",
+    img: card1,
+  },
+  {
+    title: "Exceptional Wages",
+    subTitle:
+      "You’ll be pleased to learn that Travel Nurses employees are some of the highest-paid health professionals in Canada.",
+    img: card2,
+  },
+  {
+    title: "24/7 Clinical Support",
+    subTitle:
+      "We are sincere in our effort to make this an incredible experience for you and that’s why we provide 24/7 clinical support.",
+    img: card3,
+  },
+  {
+    title: "Thorough Sсrееnіng Prосеѕѕ",
+    subTitle:
+      "Our рrе-еmрlоуmеnt ѕсrееnіng process іnсludеѕ соmреtеnсу tеѕtѕ, ѕkіllѕ сhесklіѕtѕ, аnd a thоrоugh bасkgrоund сhесk. Thіѕ dеtаіlеd рrосеѕѕ hеlрѕ uѕ ѕеlесt only thе tор hеаlthсаrе рrоfеѕѕіоnаlѕ fоr рlасеmеnt.",
+    img: card4,
+  },
+  {
+    title: "Cultural Safety",
+    subTitle:
+      "Systemic racism and discrimination towards people continues to be a significant barrier to accessing healthcare in many communities across Canada",
+    img: card5,
+  },
+  {
+    title: "Bonus Incentives",
+    subTitle:
+      "Travel Nurses family there are further advantages in the form of monetary bonuses for referrals",
+    img: card6,
+  },
 ];
 
 const Dashboard = () => {
@@ -102,7 +135,7 @@ const Dashboard = () => {
       <Box sx={styles.section}>
         <Grid container spacing={8}>
           <Grid item xs={12} sm={6} md={4}>
-            <Box sx={{ padding: "32px" }}>
+            <Box sx={{ padding: "32px", height: "100%" }}>
               <Typography
                 variant="h5"
                 component="div"
@@ -115,7 +148,10 @@ const Dashboard = () => {
               <Typography
                 variant="h6"
                 component="div"
-                sx={{ fontWeight: "bold" }}
+                sx={{
+                  fontWeight: "semibold",
+                  color: COLORS.secondary,
+                }}
               >
                 A Reliable Network of Medical Experts
               </Typography>
@@ -210,7 +246,7 @@ const Dashboard = () => {
         </SlideComponent>
         <Box sx={styles.padding}>
           <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-            OUR ORGANIZATION’S MISSION
+            OUR MISSION
           </Typography>
           <Typography variant="h6">
             Our goal is to fill healthcare institutions with qualified and
@@ -243,13 +279,17 @@ const Dashboard = () => {
 
       <Box sx={styles.section}>
         <Container maxWidth={"lg"} disableGutters={false}>
-          <Box sx={{ padding: "16px" }}>
-            <Typography variant="h3">WHY CHOOSE</Typography>
+          <Box
+            sx={{
+              padding: "16px",
+            }}
+          >
+            <Typography variant="h3">Why Choose Us</Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Grid container spacing={8}>
               {offers.map((val) => (
-                <Grid key={val.title} item xs={12} sm={12} md={6}>
+                <Grid key={val.title} item xs={12} sm={12} md={4}>
                   <Box className="flip-card">
                     <Box className="flip-card-inner">
                       <Box

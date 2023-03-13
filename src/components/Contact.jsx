@@ -27,7 +27,7 @@ import MyLogo from "../images/Nexus.png";
 import { BackgroundComponent } from "./auth/BackgroundComponent";
 import { SlideComponent } from "./SlideComponent";
 import card1 from "../images/card1.jpg";
-import card2 from "../images/card2.png";
+import card2 from "../images/card2.jpg";
 import card3 from "../images/card3.jpg";
 import card4 from "../images/card4.jpg";
 import card5 from "../images/card5.jpg";
@@ -128,6 +128,8 @@ const offers = [
   { title: "JOB BOARD", subTitle: "VIEW OPEN POSITIONS", img: card4 },
 ];
 
+const browserWindow = window;
+
 const Contact = () => {
   return (
     <>
@@ -164,15 +166,39 @@ const Contact = () => {
             </Typography>
           </Box>
           <Box sx={{ display: "flex", padding: "16px" }}>
-            <IconButton sx={styles.footerIcons}>
+            <IconButton
+              sx={styles.footerIcons}
+              onClick={() => {
+                browserWindow.open(
+                  "https://www.facebook.com/100090927846452",
+                  "_blank"
+                );
+              }}
+            >
               <FacebookIcon />
             </IconButton>
 
-            <IconButton sx={styles.footerIcons}>
+            <IconButton
+              sx={styles.footerIcons}
+              onClick={() => {
+                browserWindow.open(
+                  "https://instagram.com/nexus_staffing?igshid=ZDdkNTZiNTM= ",
+                  "_blank"
+                );
+              }}
+            >
               <InstagramIcon />
             </IconButton>
 
-            <IconButton sx={styles.footerIcons}>
+            <IconButton
+              sx={styles.footerIcons}
+              onClick={() => {
+                browserWindow.open(
+                  "https://www.facebook.com/100090927846452",
+                  "_blank"
+                );
+              }}
+            >
               <LinkedinIcon />
             </IconButton>
           </Box>
@@ -312,15 +338,39 @@ const Contact = () => {
                 padding: "16px",
               }}
             >
-              <IconButton sx={styles.footerIcons}>
+              <IconButton
+                sx={styles.footerIcons}
+                onClick={() => {
+                  browserWindow.open(
+                    "https://www.facebook.com/100090927846452",
+                    "_blank"
+                  );
+                }}
+              >
                 <FacebookIcon />
               </IconButton>
 
-              <IconButton sx={styles.footerIcons}>
+              <IconButton
+                sx={styles.footerIcons}
+                onClick={() => {
+                  browserWindow.open(
+                    "https://instagram.com/nexus_staffing?igshid=ZDdkNTZiNTM= ",
+                    "_blank"
+                  );
+                }}
+              >
                 <InstagramIcon />
               </IconButton>
 
-              <IconButton sx={styles.footerIcons}>
+              <IconButton
+                sx={styles.footerIcons}
+                onClick={() => {
+                  browserWindow.open(
+                    "https://www.facebook.com/100090927846452",
+                    "_blank"
+                  );
+                }}
+              >
                 <LinkedinIcon />
               </IconButton>
             </Box>

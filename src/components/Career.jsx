@@ -233,11 +233,11 @@ const Career = () => {
   return (
     <>
       <ScrollToTopOnMount />
-      <CommonBoxImg
+      {/* <CommonBoxImg
         img={img1}
         txt1="JOB BOARD"
         txt2="JOB BOARD REGISTERED NURSE CAREERS AND MORE ACROSS ATLANTA, GA"
-      />
+      /> */}
       <Typography component="div" sx={{ padding: "1rem" }}>
         <Typography
           component="div"
@@ -262,7 +262,7 @@ const Career = () => {
               of the team will reach out to you to discuss the next steps of
               your application.
             </Typography>
-            <Button sx={style.btn_1}>Apply Now</Button>
+            {/* <Button sx={style.btn_1}>Apply Now</Button> */}
           </Typography>
         </Typography>
       </Typography>
