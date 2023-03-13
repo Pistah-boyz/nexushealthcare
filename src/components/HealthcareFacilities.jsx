@@ -82,13 +82,15 @@ const styles = {
     justifyContent: "center",
   },
   svg_i: {
-    width: "100%",
-    height: "48px",
-    lineHeight: "55px",
-    marginRight: "1rem",
+    flexShrink: 0,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "50px",
+    height: "50px",
     borderRadius: "50%",
+    marginRight: "1rem",
     border: `1px solid ${COLORS.primary}`,
-    textAlign: "center",
     backgroundColor: `${COLORS.primary}`,
   },
   half_line: {
@@ -210,8 +212,11 @@ const HealthcareFacilities = () => {
         <div style={styles.half_line}></div>
         <Typography component="div" sx={styles.root_fcontainer}>
           <Grid container spacing={4}>
-            <Grid item xs={12} sm={4} sx={styles.imgContainer}>
-              <Typography component="div" sx={{ display: "flex" }}>
+            <Grid item xs={12} sm={4}>
+              <Typography
+                component="div"
+                sx={{ display: "flex", alignItems: "flex-start" }}
+              >
                 <Typography component="div" sx={styles.svg_i}>
                   <Group style={{ color: `${COLORS.white}` }} />
                 </Typography>
@@ -238,8 +243,11 @@ const HealthcareFacilities = () => {
                 </Typography>
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={4} sx={styles.imgContainer}>
-              <Typography component="div" sx={{ display: "flex" }}>
+            <Grid item xs={12} sm={4}>
+              <Typography
+                component="div"
+                sx={{ display: "flex", alignItems: "flex-start" }}
+              >
                 <Typography component="div" sx={styles.svg_i}>
                   <Person style={{ color: `${COLORS.white}` }} />
                 </Typography>
@@ -266,8 +274,11 @@ const HealthcareFacilities = () => {
                 </Typography>
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={4} sx={styles.imgContainer}>
-              <Typography component="div" sx={{ display: "flex" }}>
+            <Grid item xs={12} sm={4}>
+              <Typography
+                component="div"
+                sx={{ display: "flex", alignItems: "flex-start" }}
+              >
                 <Typography component="div" sx={styles.svg_i}>
                   <Group style={{ color: `${COLORS.white}` }} />
                 </Typography>
