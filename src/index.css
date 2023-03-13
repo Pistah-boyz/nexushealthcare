@@ -17,8 +17,18 @@
     width: 1140px;
   }
 }
-@media only screen and (max-width:1024px ),only screen and (max-width:1280px ){
+@media only screen and (max-width: 1024px),
+  only screen and (max-width: 1280px) {
   .c_mview {
     flex-direction: column !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .text_mvcontainer {
+    flex-direction: column !important;
+  }
+  .img_1{
+    width: 100% !important;
   }
 }

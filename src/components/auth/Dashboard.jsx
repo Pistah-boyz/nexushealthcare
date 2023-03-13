@@ -245,7 +245,7 @@ const Dashboard = () => {
           </Box>
         </SlideComponent>
         <Box sx={styles.padding}>
-          <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+          <Typography variant="h4" sx={{ fontWeight: "bold",textAlign:"center" }}>
             OUR MISSION
           </Typography>
           <Typography variant="h6">
@@ -284,7 +284,7 @@ const Dashboard = () => {
               padding: "16px",
             }}
           >
-            <Typography variant="h3">Why Choose Us</Typography>
+            <Typography variant="h3" sx={{textAlign:"center"}}>Why Choose Us</Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Grid container spacing={8}>
