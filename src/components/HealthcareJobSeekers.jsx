@@ -13,6 +13,7 @@ const styles = {
     height: "100%",
     backgroundColor: "#fff",
     padding: "4rem",
+    textAlign:"justify"
   },
   sectiondiv_2: {
     height: "100%",
