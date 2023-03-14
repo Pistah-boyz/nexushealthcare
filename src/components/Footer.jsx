@@ -193,7 +193,7 @@ const Footer = () => {
               </span>
             </Typography>
           </Box>
-          <Box sx={{ padding: "16px" }}>
+          <Box sx={{ padding: "16px", textAlign: "justify" }}>
             <Typography variant="h6">
               Nexus Staffing Solution is a leader in providing workforce
               solutions and staffing services to the healthcare industry. Our
@@ -263,7 +263,7 @@ const Footer = () => {
               CONNECT WITH NEXUS STAFFING SOLUTION
             </Typography>
           </Box>
-          <Box sx={{ padding: "16px" }}>
+          <Box sx={{ padding: "16px", textAlign: "justify" }}>
             <Typography variant="h6">
               We welcome healthcare facilities and healthcare professionals
               seeking employment opportunities into our trusted network. Contact

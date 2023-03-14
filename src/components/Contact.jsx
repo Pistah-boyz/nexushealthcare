@@ -145,7 +145,7 @@ const Contact = () => {
               <span style={{ fontWeight: "bold" }}>STAFFING</span>
             </Typography>
           </Box>
-          <Box sx={{ padding: "16px" }}>
+          <Box sx={{ padding: "16px",textAlign:"justify" }}>
             <Typography variant="h6">
               We welcome healthcare facilities and healthcare professionals
               looking for employment opportunities into our trusted network. Get
@@ -213,7 +213,7 @@ const Contact = () => {
               CONTACT US FOR MORE INFORMATION
             </Typography>
           </Box>
-          <Box sx={{ padding: "16px" }}>
+          <Box sx={{ padding: "16px",textAlign:"justify" }}>
             <Typography variant="h6">
               We welcome healthcare facilities and healthcare professionals
               looking for employment opportunities into our trusted network. Get
