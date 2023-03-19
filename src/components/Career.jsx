@@ -8,6 +8,10 @@ import {
   IconButton,
   Checkbox,
   FormControlLabel,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
 } from "@mui/material";
 import {
   CloudUpload,
@@ -16,7 +20,7 @@ import {
   Delete,
 } from "@mui/icons-material";
 import { useParams } from "react-router-dom";
-
+import useGoogleForm from "../customhooks/useGoogleForm";
 import CommonBoxImg from "./CommonBoxImg";
 import img1 from "../images/about_img1.jpg";
 import JobBoard from "./JobBoard";
@@ -103,12 +107,12 @@ const Career = () => {
     license: "",
     firstName: "",
     lastName: "",
-    city: "",
-    state: "",
+    subject: "",
+    province: "",
     email: "",
     phone: "",
     zipCode: "",
-    jobTitle: "",
+    jobTitle: "Ten",
   });
   const [errors, setErrors] = useState({});
   const inputRefResume = useRef(null);
@@ -133,11 +137,11 @@ const Career = () => {
     if (event.target.name === "lastName") {
       errors.lastName = "";
     }
-    if (event.target.name === "city") {
-      errors.city = "";
+    if (event.target.name === "subject") {
+      errors.subject = "";
     }
-    if (event.target.name === "state") {
-      errors.state = "";
+    if (event.target.name === "province") {
+      errors.province = "";
     }
     if (event.target.name === "email") {
       errors.email = "";
@@ -183,6 +187,7 @@ const Career = () => {
     }
   };
 
+  const [submitForm, submitting, success, error] = useGoogleForm();
   const handleSubmit = (event) => {
     event.preventDefault();
     let errors = {};
@@ -201,11 +206,11 @@ const Career = () => {
     if (!formValues.lastName) {
       errors.lastName = "Please enter your last name";
     }
-    if (!formValues.city) {
-      errors.city = "Please enter your city";
+    if (!formValues.subject) {
+      errors.subject = "Please enter your subject";
     }
-    if (!formValues.state) {
-      errors.state = "Please enter your state";
+    if (!formValues.province) {
+      errors.province = "Please enter your province";
     }
     if (!formValues.email) {
       errors.email = "Please enter your email";
@@ -223,10 +228,30 @@ const Career = () => {
     if (!agree) {
       errors.agree = "Please checked the agreed ";
     }
+    if (!formValues.jobTitle) {
+      errors.jobTitle = "Please select the option";
+    }
 
     setErrors(errors);
 
     if (Object.keys(errors).length === 0) {
+      const form = new FormData();
+      form.append("entry.512353282", formValues.jobTitle); // replace with actual field ID
+      form.append("entry.1164540781", formValues.email); // replace with actual field ID
+      form.append("entry.1167119534", formValues.firstName);
+      form.append("entry.1708130448", formValues.phone); // replace with actual field ID
+      form.append("entry.1921283200", formValues.lastName); // replace with actual field ID
+      form.append("entry.2132778193", formValues.province); // replace with actual field ID
+      form.append("entry.1364687315", formValues.subject);
+      form.append("entry.1305872078", formValues.subject);
+      form.append("entry.1057598733", formValues.resume); // replace with actual field ID
+      form.append("entry.384979576", formValues.certificate);
+      form.append("entry.149729992", formValues.license);
+      //form.append("file", attachment);
+      submitForm(
+        form,
+        "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd4gppWwK2wrNG7C2hpCLfn-wZAJ7vIMgn_brzmFCY3PndQQw/formResponse"
+      );
       // Submit the form data
     }
   };
@@ -454,32 +479,6 @@ const Career = () => {
                   <Paper className={style.paper}>
                     <TextField
                       fullWidth
-                      name="city"
-                      label="City"
-                      value={formValues.city}
-                      onChange={handleChange}
-                      error={Boolean(errors.city)}
-                      helperText={errors.city}
-                    />
-                  </Paper>
-                </Grid>
-                <Grid item xs={12} md={3}>
-                  <Paper className={style.paper}>
-                    <TextField
-                      fullWidth
-                      name="state"
-                      label="State"
-                      value={formValues.state}
-                      onChange={handleChange}
-                      error={Boolean(errors.state)}
-                      helperText={errors.state}
-                    />
-                  </Paper>
-                </Grid>
-                <Grid item xs={12} md={3}>
-                  <Paper className={style.paper}>
-                    <TextField
-                      fullWidth
                       name="email"
                       label="Email"
                       value={formValues.email}
@@ -507,6 +506,19 @@ const Career = () => {
                   <Paper className={style.paper}>
                     <TextField
                       fullWidth
+                      name="province"
+                      label="Province"
+                      value={formValues.province}
+                      onChange={handleChange}
+                      error={Boolean(errors.province)}
+                      helperText={errors.province}
+                    />
+                  </Paper>
+                </Grid>
+                <Grid item xs={12} md={3}>
+                  <Paper className={style.paper}>
+                    <TextField
+                      fullWidth
                       name="zipCode"
                       label="Zip Code"
                       value={formValues.zipCode}
@@ -520,6 +532,19 @@ const Career = () => {
                   <Paper className={style.paper}>
                     <TextField
                       fullWidth
+                      name="subject"
+                      label="Subject"
+                      value={formValues.subject}
+                      onChange={handleChange}
+                      error={Boolean(errors.subject)}
+                      helperText={errors.subject}
+                    />
+                  </Paper>
+                </Grid>
+                {/* <Grid item xs={12} md={3}>
+                  <Paper className={style.paper}>
+                    <TextField
+                      fullWidth
                       name="jobTitle"
                       label="Job Title"
                       value={formValues.jobTitle}
@@ -528,6 +553,26 @@ const Career = () => {
                       helperText={errors.jobTitle}
                     />
                   </Paper>
+                </Grid> */}
+                <Grid item xs={12} md={3}>
+                  {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
+                  <FormControl fullWidth>
+                    <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={formValues.jobTitle}
+                      name="jobTitle"
+                      label="Applied For"
+                      onChange={handleChange}
+                      helperText={errors.jobTitle}
+                      error={Boolean(formValues.jobTitle)}
+                    >
+                      <MenuItem value={10}>Ten</MenuItem>
+                      <MenuItem value={20}>Twenty</MenuItem>
+                      <MenuItem value={30}>Thirty</MenuItem>
+                    </Select>
+                  </FormControl>
                 </Grid>
                 <Grid item xs={12} md={12}>
                   <FormControlLabel

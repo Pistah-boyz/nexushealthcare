@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Box,
@@ -19,6 +19,7 @@ import {
   LinkedIn as LinkedinIcon,
 } from "@mui/icons-material";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
+import { useNavigate } from "react-router-dom";
 
 import { Container } from "../ui";
 import { COLORS } from "../ui/Theme/colors";
@@ -26,6 +27,7 @@ import { COLORS } from "../ui/Theme/colors";
 import MyLogo from "../images/Nexus.png";
 import { BackgroundComponent } from "./auth/BackgroundComponent";
 import { SlideComponent } from "./SlideComponent";
+import useGoogleForm from "../customhooks/useGoogleForm";
 import card1 from "../images/card1.jpg";
 import card2 from "../images/card2.jpg";
 import card3 from "../images/card3.jpg";
@@ -45,6 +47,7 @@ const styles = {
     maxHeight: "250px",
     borderRadius: "10px",
     background: "none",
+    cursor: "pointer",
 
     "&:hover .overlay": {
       backgroundColor: "rgb(0 65 101 / 30%)",
@@ -122,15 +125,59 @@ const styles = {
 };
 
 const offers = [
-  { title: "STAFFING", subTitle: "VIEW SERVICES", img: card1 },
-  { title: "CANDIDATES", subTitle: "LEARN MORE", img: card2 },
-  { title: "EMPLOYERS", subTitle: "LEARN MORE", img: card3 },
-  { title: "JOB BOARD", subTitle: "VIEW OPEN POSITIONS", img: card4 },
+  { title: "ABOUT US", subTitle: "LEARN MORE", img: card1, imgclick: "/about" },
+  {
+    title: "HEALTHCARE JOB SEEKERS",
+    subTitle: "LEARN MORE",
+    img: card2,
+    imgclick: "/healthcarejobseekers",
+  },
+  {
+    title: "HEALTH CARE FACILITES",
+    subTitle: "LEARN MORE",
+    img: card3,
+    imgclick: "/healthcarefacilities",
+  },
+  {
+    title: "CAREER",
+    subTitle: "VIEW OPEN POSITIONS",
+    img: card4,
+    imgclick: "/career/applynow",
+  },
 ];
 
 const browserWindow = window;
 
 const Footer = () => {
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    phonenumber: "",
+    message: "",
+  });
+  const handleChange = (event) => {
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value,
+    });
+  };
+  const [submitForm, submitting, success, error] = useGoogleForm();
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    const form = new FormData();
+    form.append("entry.12034936", formValues.name); // replace with actual field ID
+    form.append("entry.1875214811", formValues.email); // replace with actual field ID
+    form.append("entry.1039608660", formValues.Phone);
+    form.append("entry.1212326834", formValues.message); // replace with actual field ID
+
+    //form.append("file", attachment);
+    submitForm(
+      form,
+      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeakV2A-WNEUzJY7h1d-nlVsvPqgTLCrWfXtkobuekJrJFytQ/formResponse"
+    );
+  };
+  const navigate = useNavigate();
+
   return (
     <>
       <BackgroundComponent />
@@ -155,7 +202,10 @@ const Footer = () => {
               {offers.map((val) => (
                 <Grid key={val.title} item md={6}>
                   <SlideComponent direction="right">
-                    <Card sx={styles.offer}>
+                    <Card
+                      sx={styles.offer}
+                      onClick={() => navigate(val.imgclick)}
+                    >
                       <img src={val.img} style={styles.media} />
                       <Box className={"content"} style={styles.overlay}>
                         <Typography variant="h6">{val.title}</Typography>
@@ -206,13 +256,13 @@ const Footer = () => {
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <LocationIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              160 Clairemont Ave, Suite 200 Decatur, GA 30030
+              Suite 2020, 10060 Jasper Ave. Edmonton, AB T5J 3R8
             </Typography>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <PhoneIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              404-806-8164
+              +1(250)329-5833
             </Typography>
           </Box>
           <Box sx={{ display: "flex", padding: "16px" }}>
@@ -244,7 +294,7 @@ const Footer = () => {
               sx={styles.footerIcons}
               onClick={() => {
                 browserWindow.open(
-                  "https://www.facebook.com/100090927846452",
+                  "https://www.linkedin.com/company/nexus-staffing-solution/",
                   "_blank"
                 );
               }}
@@ -270,44 +320,74 @@ const Footer = () => {
               us now for more information about us.
             </Typography>
           </Box>
-          <Box sx={{ padding: "16px" }}>
+          <Box sx={{ padding: "16px", display: "flex" }}>
             <FormControl sx={{ width: "100%" }}>
               <TextField
                 id="name"
+                name="name"
                 label="Name"
                 variant="outlined"
                 fullWidth
                 sx={{ margin: "8px" }}
+                onChange={handleChange}
               />
               <TextField
                 id="email"
+                name="email"
                 label="Email"
                 variant="outlined"
                 fullWidth
                 sx={{ margin: "8px" }}
+                onChange={handleChange}
               />
               <TextField
                 id="phone"
+                name="phonenumber"
                 label="Phone"
                 type="number"
                 variant="outlined"
                 fullWidth
                 sx={{ margin: "8px" }}
+                onChange={handleChange}
               />
 
               <TextareaAutosize
                 aria-label="minimum height"
+                name="message"
                 minRows={3}
                 placeholder="Message"
                 style={{ width: "100%", minHeight: "70px", margin: "8px" }}
+                onChange={handleChange}
               />
               <Button
+                onClick={HandleSubmit}
                 variant="contained"
                 sx={{ margin: "8px", borderRadius: "10px", width: "150px" }}
               >
                 Send
               </Button>
             </FormControl>
+            {/* {success && (
+              <Typography variant="h6" fullWidth>
+                Form submitted successfully!
+              </Typography>
+            )}
+            {success && (
+              <Typography variant="h6" fullWidth>
+                Form Not submitted!
+              </Typography>
+            )} */}
+            {/* <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdPynGLp77FYXaxWrlnQGwYFR6cFM5IgcZwOfXMj0_ZH1G2Ew/viewform?embedded=true"
+              width="640"
+              height="656"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              display="flex"
+            >
+              Loading…
+            </iframe> */}
           </Box>
         </Grid>
       </Grid>

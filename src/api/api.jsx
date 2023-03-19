@@ -6,7 +6,7 @@ export const get = async (url) => {
 };
 
 export const post = async (url, payload) => {
-  return (await axios.get(url, payload)).data;
+  return (await axios.post(url, payload)).data;
 };
 
 export const put = async (url, payload) => {

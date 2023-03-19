@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import { Box, Typography, Grid } from "@mui/material";
 
 import Footer from "./Footer";
-import { Group, Person } from "@mui/icons-material";
 import img1 from "../images/slide3.jpg";
 import CommonBoxImg from "./CommonBoxImg";
 import { COLORS } from "../ui/Theme/colors";
@@ -14,7 +13,7 @@ const styles = {
     height: "100%",
     backgroundColor: "#fff",
     padding: "4rem",
-    textAlign:"justify"
+    textAlign: "justify",
   },
   sectiondiv_2: {
     height: "100%",
@@ -150,164 +149,6 @@ const HealthcareFacilities = () => {
             </Typography>
           </Grid>
         </Grid>
-        <div style={styles.half_line}></div>
-        <Typography component="div" sx={styles.img_container}>
-          <Typography
-            component="div"
-            sx={styles.textContainer}
-            className="text_mvcontainer"
-          >
-            <img
-              src={img1}
-              alt="Your image here"
-              style={styles.img_s}
-              className="img_1"
-            />
-
-            <Typography component="div" sx={styles.textbContainer}>
-              <Typography
-                variant="h3"
-                component="h3"
-                gutterBottom
-                sx={{
-                  fontSize: "2rem",
-                  fontWeight: "600",
-                  color: `${COLORS.primary}`,
-                }}
-              >
-                Prestigious Contract Opportunities in top health care centres
-              </Typography>
-              <Typography variant="body1" component="p" gutterBottom>
-                Your paragraph text here. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nulla quam velit, vulputate eu
-                pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac
-                blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend
-                tristique, tortor mauris molestie elit, et lacinia ipsum quam
-                nec dui. Quisque nec mauris sit amet elit iaculis pretium sit
-                amet quis magna. Aenean velit odio, elementum in tempus ut,
-                vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut
-                ullamcorper leo vel nisl tincidunt convallis. Donec elit mi,
-                tempor ac dignissim eu, hendrerit non est. Nulla sit amet est.
-                Praesent metus tellus, elementum eu, semper a, adipiscing nec,
-                purus. Cras risus ipsum, faucibus ut, ullamcorper id, varius ac,
-                leo. Suspendisse feugiat. Ut velit mauris, egestas sed, gravida
-                nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar.
-                Your paragraph text here. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Nulla quam velit, vulputate eu
-                pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac
-                blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend
-                tristique, tortor mauris molestie elit, et lacinia ipsum quam
-                nec dui. Quisque nec mauris sit amet elit iaculis pretium sit
-                amet quis magna. Aenean velit odio, elementum in tempus ut,
-                vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut
-                ullamcorper leo vel nisl tincidunt convallis. Donec elit mi,
-                tempor ac dignissim eu, hendrerit non est. Nulla sit amet est.
-                Praesent metus tellus, elementum eu, semper a, adipiscing nec,
-                purus. Cras risus ipsum, faucibus ut, ullamcorper id, varius ac,
-                leo. Suspendisse feugiat. Ut velit mauris, egestas sed, gravida
-                nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar.
-              </Typography>
-            </Typography>
-          </Typography>
-        </Typography>
-        <div style={styles.half_line}></div>
-        <Typography component="div" sx={styles.root_fcontainer}>
-          <Grid container spacing={4}>
-            <Grid item xs={12} sm={4}>
-              <Typography
-                component="div"
-                sx={{ display: "flex", alignItems: "flex-start" }}
-              >
-                <Typography component="div" sx={styles.svg_i}>
-                  <Group style={{ color: `${COLORS.white}` }} />
-                </Typography>
-                <Typography component="div">
-                  <Typography
-                    variant="h5"
-                    style={{
-                      color: "blue",
-                      fontWeight: "500",
-                      fontSize: "20px",
-                    }}
-                  >
-                    Register Nurse
-                  </Typography>
-                  <Typography
-                    component="p"
-                    style={{ textAlign: "justify", marginTop: "10px" }}
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    consequat bibendum eros, quis hendrerit ipsum pulvinar nec.
-                    Sed et mollis eros. Aliquam quis lacus nec quam facilisis
-                    bibendum vitae a dolor.
-                  </Typography>
-                </Typography>
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Typography
-                component="div"
-                sx={{ display: "flex", alignItems: "flex-start" }}
-              >
-                <Typography component="div" sx={styles.svg_i}>
-                  <Person style={{ color: `${COLORS.white}` }} />
-                </Typography>
-                <Typography component="div">
-                  <Typography
-                    variant="h5"
-                    style={{
-                      color: "blue",
-                      fontWeight: "500",
-                      fontSize: "20px",
-                    }}
-                  >
-                    Register Psychiatric Nurses
-                  </Typography>
-                  <Typography
-                    component="p"
-                    style={{ textAlign: "justify", marginTop: "10px" }}
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    consequat bibendum eros, quis hendrerit ipsum pulvinar nec.
-                    Sed et mollis eros. Aliquam quis lacus nec quam facilisis
-                    bibendum vitae a dolor.
-                  </Typography>
-                </Typography>
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Typography
-                component="div"
-                sx={{ display: "flex", alignItems: "flex-start" }}
-              >
-                <Typography component="div" sx={styles.svg_i}>
-                  <Group style={{ color: `${COLORS.white}` }} />
-                </Typography>
-                <Typography component="div">
-                  <Typography
-                    variant="h5"
-                    style={{
-                      color: "blue",
-                      fontWeight: "500",
-                      fontSize: "20px",
-                    }}
-                  >
-                    Licensed Practical Nurses
-                  </Typography>
-                  <Typography
-                    component="p"
-                    style={{ textAlign: "justify", marginTop: "10px" }}
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    consequat bibendum eros, quis hendrerit ipsum pulvinar nec.
-                    Sed et mollis eros. Aliquam quis lacus nec quam facilisis
-                    bibendum vitae a dolor.
-                  </Typography>
-                </Typography>
-              </Typography>
-            </Grid>
-          </Grid>
-        </Typography>
       </Typography>
       <Footer />
     </>

@@ -83,13 +83,19 @@ const styles = {
     backgroundAttachment: "fixed",
     boxShadow: "0 2px 5px -2px #000",
   },
+  backgroundlineear: {
+    background:
+      "linear-gradient(180deg, rgb(0 0 0 / 80%) 0%, rgba(0,0,0,0) 100%)",
+    width: "100%",
+    height: "100%",
+  },
 };
 
 const offers = [
   {
     title: "Cost-Effective Strаtеgіеѕ",
     subTitle:
-      "ѕаvе thоuѕаndѕ оf dоllаrѕ еvеrу уеаr bу еlіmіnаtіng rесruіtmеnt fееѕ frоm your budgеt by avoiding аdvеrtіsements for рlасеmеnt аnd rеvіеwіng rеѕumеѕ аnd іntеrvіеwіng саndіdаtеѕ.",
+      "Sаvе thоuѕаndѕ оf dоllаrѕ еvеrу уеаr bу еlіmіnаtіng rесruіtmеnt fееѕ frоm your budgеt by avoiding аdvеrtіsements for рlасеmеnt аnd rеvіеwіng rеѕumеѕ аnd іntеrvіеwіng саndіdаtеѕ.",
     img: card1,
   },
   {
@@ -245,7 +251,10 @@ const Dashboard = () => {
           </Box>
         </SlideComponent>
         <Box sx={styles.padding}>
-          <Typography variant="h4" sx={{ fontWeight: "bold",textAlign:"center" }}>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: "bold", textAlign: "center" }}
+          >
             OUR MISSION
           </Typography>
           <Typography variant="h6">
@@ -284,7 +293,9 @@ const Dashboard = () => {
               padding: "16px",
             }}
           >
-            <Typography variant="h3" sx={{textAlign:"center"}}>Why Choose Us</Typography>
+            <Typography variant="h3" sx={{ textAlign: "center" }}>
+              Why Choose Us
+            </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Grid container spacing={8}>
@@ -294,9 +305,30 @@ const Dashboard = () => {
                     <Box className="flip-card-inner">
                       <Box
                         className="flip-card-front"
-                        sx={{ backgroundImage: `url('${val.img}')` }}
+                        sx={{
+                          backgroundImage: `url('${val.img}')`,
+                          color: "black",
+                          opacity: "2",
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                        }}
                       >
-                        <Typography variant="h5">{val.title}</Typography>
+                        <Typography
+                          component="div"
+                          sx={styles.backgroundlineear}
+                        >
+                          <Typography
+                            variant="h5"
+                            sx={{
+                              color: "#fff",
+                              padding: "20px",
+                              fontSize: "18px",
+                            }}
+                          >
+                            {val.title}
+                          </Typography>
+                        </Typography>
                       </Box>
                       <Box className="flip-card-back">{val.subTitle}</Box>
                     </Box>

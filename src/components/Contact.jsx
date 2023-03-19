@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Box,
@@ -18,14 +18,15 @@ import {
   Twitter as TwitterIcon,
   LinkedIn as LinkedinIcon,
 } from "@mui/icons-material";
+import useGoogleForm from "../customhooks/useGoogleForm";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
-
+import { SlideComponent } from "./SlideComponent";
 import { Container } from "../ui";
 import { COLORS } from "../ui/Theme/colors";
 
 import MyLogo from "../images/Nexus.png";
 import { BackgroundComponent } from "./auth/BackgroundComponent";
-import { SlideComponent } from "./SlideComponent";
+// const [submitForm, submitting, success, error] = useGoogleForm("form_id_here");
 import card1 from "../images/card1.jpg";
 import card2 from "../images/card2.jpg";
 import card3 from "../images/card3.jpg";
@@ -131,6 +132,35 @@ const offers = [
 const browserWindow = window;
 
 const Contact = () => {
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    phonenumber: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    setFormValues({
+      ...formValues,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const [submitForm, submitting, success, error] = useGoogleForm();
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    const form = new FormData();
+    form.append("entry.12034936", formValues.name); // replace with actual field ID
+    form.append("entry.1875214811", formValues.email); // replace with actual field ID
+    form.append("entry.1039608660", formValues.Phone);
+    form.append("entry.1212326834", formValues.message); // replace with actual field ID
+
+    //form.append("file", attachment);
+    submitForm(
+      form,
+      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeakV2A-WNEUzJY7h1d-nlVsvPqgTLCrWfXtkobuekJrJFytQ/formResponse"
+    );
+  };
   return (
     <>
       <Grid container>
@@ -145,7 +175,7 @@ const Contact = () => {
               <span style={{ fontWeight: "bold" }}>STAFFING</span>
             </Typography>
           </Box>
-          <Box sx={{ padding: "16px",textAlign:"justify" }}>
+          <Box sx={{ padding: "16px", textAlign: "justify" }}>
             <Typography variant="h6">
               We welcome healthcare facilities and healthcare professionals
               looking for employment opportunities into our trusted network. Get
@@ -156,13 +186,13 @@ const Contact = () => {
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <LocationIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              160 Clairemont Ave, Suite 200 Decatur, GA 30030
+              Suite 2020, 10060 Jasper Ave. Edmonton, AB T5J 3R8
             </Typography>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <PhoneIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              404-806-8164
+              +1(250)329-5833
             </Typography>
           </Box>
           <Box sx={{ display: "flex", padding: "16px" }}>
@@ -194,7 +224,7 @@ const Contact = () => {
               sx={styles.footerIcons}
               onClick={() => {
                 browserWindow.open(
-                  "https://www.facebook.com/100090927846452",
+                  "https://www.linkedin.com/company/nexus-staffing-solution/",
                   "_blank"
                 );
               }}
@@ -213,7 +243,7 @@ const Contact = () => {
               CONTACT US FOR MORE INFORMATION
             </Typography>
           </Box>
-          <Box sx={{ padding: "16px",textAlign:"justify" }}>
+          <Box sx={{ padding: "16px", textAlign: "justify" }}>
             <Typography variant="h6">
               We welcome healthcare facilities and healthcare professionals
               looking for employment opportunities into our trusted network. Get
@@ -225,36 +255,45 @@ const Contact = () => {
             <FormControl sx={{ width: "100%" }}>
               <TextField
                 id="name"
+                name="name"
                 label="Name"
                 variant="outlined"
                 fullWidth
                 sx={{ margin: "8px" }}
+                onChange={handleChange}
               />
               <TextField
                 id="email"
+                name="email"
                 label="Email"
                 variant="outlined"
                 fullWidth
                 sx={{ margin: "8px" }}
+                onChange={handleChange}
               />
               <TextField
                 id="phone"
+                name="phonennumber"
                 label="Phone"
                 type="number"
                 variant="outlined"
                 fullWidth
                 sx={{ margin: "8px" }}
+                onChange={handleChange}
               />
 
               <TextareaAutosize
                 aria-label="minimum height"
                 minRows={3}
                 placeholder="Message"
+                name="message"
+                onChange={handleChange}
                 style={{ width: "100%", minHeight: "70px", margin: "8px" }}
               />
               <Button
                 variant="contained"
                 sx={{ margin: "8px", borderRadius: "10px", width: "150px" }}
+                onClick={HandleSubmit}
               >
                 Send
               </Button>

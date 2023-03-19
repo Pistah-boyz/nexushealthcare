@@ -160,7 +160,7 @@ const AppHeaderBar = ({ window }) => {
   };
 
   const handlePhoneNumberClick = () => {
-    browserWindow.open("tel:" + "404-806-8164", "_self");
+    browserWindow.open("tel:" + "+1(250)329-5833", "_self");
   };
 
   const handleMailClick = () => {
@@ -190,7 +190,7 @@ const AppHeaderBar = ({ window }) => {
                   sx={{ mx: 1, cursor: "pointer" }}
                   onClick={handlePhoneNumberClick}
                 >
-                  404-806-8164
+                  +1(250)329-5833
                 </Box>
                 <Email />
                 <Box
@@ -235,7 +235,7 @@ const AppHeaderBar = ({ window }) => {
                 <IconButton
                   onClick={() => {
                     browserWindow.open(
-                      "https://www.facebook.com/100090927846452",
+                      "https://www.linkedin.com/company/nexus-staffing-solution/",
                       "_blank"
                     );
                   }}
