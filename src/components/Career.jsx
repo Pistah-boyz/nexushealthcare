@@ -568,9 +568,13 @@ const Career = () => {
                       helperText={errors.jobTitle}
                       error={Boolean(formValues.jobTitle)}
                     >
-                      <MenuItem value={10}>Ten</MenuItem>
-                      <MenuItem value={20}>Twenty</MenuItem>
-                      <MenuItem value={30}>Thirty</MenuItem>
+                      <MenuItem value={10}>Registered Nurses</MenuItem>
+                      <MenuItem value={20}>Licensed Practical Nurses</MenuItem>
+                      <MenuItem value={30}>
+                        Health Care Aid/ Certified nursing assistant
+                      </MenuItem>
+                      <MenuItem value={40}>House Keeper</MenuItem>
+                      <MenuItem value={50}>Personal Support Worker</MenuItem>
                     </Select>
                   </FormControl>
                 </Grid>
