@@ -262,7 +262,7 @@ const Footer = () => {
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <PhoneIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              +1(250)329-5833
+              (778)229-6571
             </Typography>
           </Box>
           <Box sx={{ display: "flex", padding: "16px" }}>

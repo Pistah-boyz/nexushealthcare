@@ -124,9 +124,9 @@ const HealthcareJobSeekers = () => {
                 sx={styles.section_h6}
                 style={{ color: `${COLORS.teal}` }}
               >
-                Ellsworth Healthcare Staffing is a full-service healthcare
-                staffing agency committed to providing strategic solutions for
-                all medical staffing needs.
+                Nexus Staffing services is a full-service healthcare staffing
+                agency committed to providing strategic solutions for all
+                medical staffing needs.
               </Typography>
               <Typography component="p" sx={styles.section_p}>
                 Our team works around-the-clock to provide outstanding staffing
@@ -138,14 +138,14 @@ const HealthcareJobSeekers = () => {
                 of healthcare.
               </Typography>
               <Typography component="p" sx={styles.section_p}>
-                Ellsworth Healthcare Staffing was founded in Tucker, Georgia
-                with the mission of providing “Superior People and Superior
-                Service.” At Ellsworth, our employees, partner facilities, and
-                patients are our top priority. We offer swift scheduling and a
-                quick turnaround time to match qualified healthcare
-                professionals with assignments that match their interests, while
-                also giving our clients the employees they need to deliver
-                exceptional care to their own patients.
+                Nexus Staffing services was founded in Tucker, Georgia with the
+                mission of providing “Superior People and Superior Service.” At
+                Nexus, our employees, partner facilities, and patients are our
+                top priority. We offer swift scheduling and a quick turnaround
+                time to match qualified healthcare professionals with
+                assignments that match their interests, while also giving our
+                clients the employees they need to deliver exceptional care to
+                their own patients.
               </Typography>
             </Typography>
           </Grid>

@@ -50,31 +50,6 @@ const HomeSlider = () => {
           </div>
         </Slider>
       </Box>
-      {/* <Box sx={styles.sliderContainer}>
-        <Slider {...settings2}>
-          <div>
-            <div class="title">
-              <h1>
-                With Leading Career <span class="bold">Opportunities</span>
-              </h1>
-              <h3>Connecting Healthcare Jobseekers</h3>
-            </div>
-            <div class="content">
-              <p>
-                From hospital staffing to research laboratory work and
-                government positions, Ellsworth Healthcare Staffing finds the
-                perfect candidate for every role.
-              </p>{" "}
-              <a
-                href="https://ehstaffing.com/home-healthcare-agency-atlanta/"
-                tabindex="-1"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        </Slider>
-      </Box> */}
     </Box>
   );
 };

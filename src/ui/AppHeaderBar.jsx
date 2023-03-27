@@ -160,11 +160,11 @@ const AppHeaderBar = ({ window }) => {
   };
 
   const handlePhoneNumberClick = () => {
-    browserWindow.open("tel:" + "+1(250)329-5833", "_self");
+    browserWindow.open("tel:" + "(778)229-6571", "_self");
   };
 
   const handleMailClick = () => {
-    browserWindow.open("mailto:" + "info@nexusstaffingsolution.ca", "_self");
+    browserWindow.open("mailto:" + "info@nexusstaffingservices.ca", "_self");
   };
 
   return (
@@ -190,14 +190,14 @@ const AppHeaderBar = ({ window }) => {
                   sx={{ mx: 1, cursor: "pointer" }}
                   onClick={handlePhoneNumberClick}
                 >
-                  +1(250)329-5833
+                  (778)229-6571
                 </Box>
                 <Email />
                 <Box
                   sx={{ mx: 1, cursor: "pointer" }}
                   onClick={handleMailClick}
                 >
-                  info@nexusstaffingsolution.ca
+                  info@nexusstaffingservices.ca
                 </Box>
               </Box>
             </SlideComponent>

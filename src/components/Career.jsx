@@ -126,7 +126,7 @@ const Career = () => {
   const sendEmail = () => {
     emailjs
       .sendForm(
-        "arunkumar95@gmail.com",
+        "default_service",
         "contactarjunps@gmail.com",
         formRef.current,
         "40RepYz0ch588cm-N"
@@ -137,6 +137,7 @@ const Career = () => {
         },
         (error) => {
           console.log(error.text);
+          console.log(formRef);
         }
       );
   };
@@ -301,7 +302,7 @@ const Career = () => {
             </Typography>
             <Typography component="h4" sx={style.career_h4}>
               We invite you to take a look at the current career opportunities
-              available at Ellsworth Healthcare Staffing.
+              available at Nexus Staffing services.
             </Typography>
             <Typography component="p" sx={style.carrer_p}>
               Please include a copy of your resume as an attachment with your
@@ -579,7 +580,9 @@ const Career = () => {
                 <Grid item xs={12} md={3}>
                   {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
                   <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                    <InputLabel id="demo-simple-select-label">
+                      Apply For
+                    </InputLabel>
                     <Select
                       labelId="demo-simple-select-label"
                       id="demo-simple-select"

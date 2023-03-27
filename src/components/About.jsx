@@ -13,7 +13,7 @@ const styles = {
     height: "100%",
     backgroundColor: "#fff",
     padding: "4rem",
-    textAlign:"justify",
+    textAlign: "justify",
   },
   sectiondiv_2: {
     height: "100%",
@@ -98,16 +98,6 @@ const About = () => {
                 protocols to find quality candidates who will match its office
                 culture and provide valuable work.
               </Typography>
-              {/* <Typography component="p" sx={styles.section_p}>
-                Ellsworth Healthcare Staffing was founded in Tucker, Georgia
-                with the mission of providing “Superior People and Superior
-                Service.” At Ellsworth, our employees, partner facilities, and
-                patients are our top priority. We offer swift scheduling and a
-                quick turnaround time to match qualified healthcare
-                professionals with assignments that match their interests, while
-                also giving our clients the employees they need to deliver
-                exceptional care to their own patients.
-              </Typography> */}
             </Typography>
           </Grid>
         </Grid>

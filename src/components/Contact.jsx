@@ -19,6 +19,7 @@ import {
   LinkedIn as LinkedinIcon,
 } from "@mui/icons-material";
 import useGoogleForm from "../customhooks/useGoogleForm";
+import { useNavigate } from "react-router-dom";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 import { SlideComponent } from "./SlideComponent";
 import { Container } from "../ui";
@@ -46,6 +47,7 @@ const styles = {
     maxHeight: "250px",
     borderRadius: "10px",
     background: "none",
+    cursor: "pointer",
 
     "&:hover .overlay": {
       backgroundColor: "rgb(0 65 101 / 30%)",
@@ -123,10 +125,25 @@ const styles = {
 };
 
 const offers = [
-  { title: "STAFFING", subTitle: "VIEW SERVICES", img: card1 },
-  { title: "CANDIDATES", subTitle: "LEARN MORE", img: card2 },
-  { title: "EMPLOYERS", subTitle: "LEARN MORE", img: card3 },
-  { title: "JOB BOARD", subTitle: "VIEW OPEN POSITIONS", img: card4 },
+  { title: "ABOUT US", subTitle: "LEARN MORE", img: card1, imgclick: "/about" },
+  {
+    title: "HEALTHCARE JOB SEEKERS",
+    subTitle: "LEARN MORE",
+    img: card2,
+    imgclick: "/healthcarejobseekers",
+  },
+  {
+    title: "HEALTH CARE FACILITES",
+    subTitle: "LEARN MORE",
+    img: card3,
+    imgclick: "/healthcarefacilities",
+  },
+  {
+    title: "CAREER",
+    subTitle: "VIEW OPEN POSITIONS",
+    img: card4,
+    imgclick: "/career/applynow",
+  },
 ];
 
 const browserWindow = window;
@@ -161,6 +178,7 @@ const Contact = () => {
       "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeakV2A-WNEUzJY7h1d-nlVsvPqgTLCrWfXtkobuekJrJFytQ/formResponse"
     );
   };
+  const navigate = useNavigate();
   return (
     <>
       <Grid container>
@@ -171,16 +189,19 @@ const Contact = () => {
               component="div"
               sx={{ color: COLORS.WHITE }}
             >
-              NEXUS HEALTHCARE{" "}
-              <span style={{ fontWeight: "bold" }}>STAFFING</span>
+              <span style={{ fontWeight: "bold" }}>
+                NEXUS STAFFING SOLUTION
+              </span>
             </Typography>
           </Box>
           <Box sx={{ padding: "16px", textAlign: "justify" }}>
             <Typography variant="h6">
-              We welcome healthcare facilities and healthcare professionals
-              looking for employment opportunities into our trusted network. Get
-              in touch with us today to learn more about Ellsworth Healthcare
-              Staffing.
+              Nexus Staffing Solution is a leader in providing workforce
+              solutions and staffing services to the healthcare industry. Our
+              mission is to connect clients with qualified medical professionals
+              to ensure superior patient deliveries. A rewarding career path for
+              healthcare professionals. Staffing expertise in healthcare
+              facilities.
             </Typography>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
@@ -192,7 +213,7 @@ const Contact = () => {
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <PhoneIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              +1(250)329-5833
+              (778)229-6571
             </Typography>
           </Box>
           <Box sx={{ display: "flex", padding: "16px" }}>
@@ -240,15 +261,14 @@ const Contact = () => {
               component="div"
               sx={{ fontWeight: "bold" }}
             >
-              CONTACT US FOR MORE INFORMATION
+              CONNECT WITH NEXUS STAFFING SOLUTION
             </Typography>
           </Box>
           <Box sx={{ padding: "16px", textAlign: "justify" }}>
             <Typography variant="h6">
               We welcome healthcare facilities and healthcare professionals
-              looking for employment opportunities into our trusted network. Get
-              in touch with us today to learn more about Ellsworth Healthcare
-              Staffing.
+              seeking employment opportunities into our trusted network. Contact
+              us now for more information about us.
             </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
@@ -306,16 +326,16 @@ const Contact = () => {
         <Container maxWidth={"lg"} disableGutters={false}>
           <Box>
             <Typography variant="h3">
-              WHAT <span style={{ fontWeight: "bold" }}>WE OFFER</span>
+              <span style={{ fontWeight: "bold" }}>OUR SERVICES</span>
             </Typography>
             <hr />
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Typography variant="h6">
-              Ellsworth Healthcare Staffing offers a comprehensive suite of
-              services designed to support local healthcare facilities, connect
-              the best applicants with each opportunity, and deliver the best
-              care to patients across Atlanta.
+              The driving force behind the Nexus Staffing Solution initiative is
+              our commitment and compassion to serve our customers. We are proud
+              to serve, deliver care, and bridge the gap between healthcare
+              providers and facilities. ABOUT US
             </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
@@ -323,7 +343,10 @@ const Contact = () => {
               {offers.map((val) => (
                 <Grid key={val.title} item md={6}>
                   <SlideComponent direction="right">
-                    <Card sx={styles.offer}>
+                    <Card
+                      sx={styles.offer}
+                      onClick={() => navigate(val.imgclick)}
+                    >
                       <img src={val.img} style={styles.media} />
                       <Box className={"content"} style={styles.overlay}>
                         <Typography variant="h6">{val.title}</Typography>
