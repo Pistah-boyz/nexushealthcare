@@ -28,6 +28,7 @@ import Footer from "./Footer";
 import { COLORS } from "../ui/Theme/colors.js";
 import ScrollToTopOnMount from "./ScrollToTopMount";
 import { width } from "@mui/system";
+import emailjs from "@emailjs/browser";
 
 const style = {
   c_container: {
@@ -119,6 +120,26 @@ const Career = () => {
   const inputRefCertificate = useRef(null);
   const inputRefLicense = useRef(null);
   const [agree, setAgree] = useState(false);
+
+  const formRef = useRef(null);
+
+  const sendEmail = () => {
+    emailjs
+      .sendForm(
+        "arunkumar95@gmail.com",
+        "contactarjunps@gmail.com",
+        formRef.current,
+        "40RepYz0ch588cm-N"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   const handleAgreeChange = (event) => {
     setAgree(event.target.checked);
@@ -254,6 +275,7 @@ const Career = () => {
       );
       // Submit the form data
     }
+    sendEmail();
   };
   return (
     <>
@@ -294,7 +316,7 @@ const Career = () => {
       {jobBoard === "applynow" ? (
         <>
           <Typography component="div" sx={style.root}>
-            <form onSubmit={handleSubmit}>
+            <form ref={formRef} onSubmit={handleSubmit}>
               <Grid container justify="center" spacing={3} sx={style.formfield}>
                 <Grid item xs={12} sm={4}>
                   <input
