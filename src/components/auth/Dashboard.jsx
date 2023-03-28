@@ -174,7 +174,7 @@ const Dashboard = () => {
               sx={styles.card}
               sxContent={styles.cardContent}
               sxActions={styles.actionButton}
-              onClick={() => navigate("/healthcarejobseekers")}
+              cardClick={() => navigate("/healthcarejobseekers")}
             >
               <IconButton sx={styles.cardIcon}>
                 <PersonIcon fontSize="large" />
@@ -195,7 +195,9 @@ const Dashboard = () => {
               sx={styles.card}
               sxContent={styles.cardContent}
               sxActions={styles.actionButton}
-              onClick={() => navigate("/healthcarefacilities")}
+              cardClick={() => {
+                navigate("/healthcarefacilities");
+              }}
             >
               <IconButton sx={styles.cardIcon}>
                 <PersonIcon fontSize="large" />

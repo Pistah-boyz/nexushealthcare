@@ -7,7 +7,15 @@ import {
   Button,
 } from "@mui/material";
 
-const Card = ({ children, title, actionButton, sx, sxContent, sxActions }) => {
+const Card = ({
+  children,
+  title,
+  actionButton,
+  sx,
+  sxContent,
+  sxActions,
+  cardClick,
+}) => {
   return (
     <MuiCard sx={sx}>
       {title && (
@@ -18,7 +26,12 @@ const Card = ({ children, title, actionButton, sx, sxContent, sxActions }) => {
       )}
       <CardContent sx={sxContent}>{children}</CardContent>
       <CardActions sx={{ alignItems: "flex-end", justifyContent: "center" }}>
-        <Button size="small" variant="outlined" sx={sxActions}>
+        <Button
+          size="small"
+          variant="outlined"
+          sx={sxActions}
+          onClick={cardClick}
+        >
           {actionButton}
         </Button>
       </CardActions>
