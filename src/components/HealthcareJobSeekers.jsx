@@ -5,6 +5,7 @@ import { Group, Person } from "@mui/icons-material";
 
 import Footer from "./Footer";
 import img1 from "../images/about_img1.jpg";
+import img2 from "../images/card1.jpg";
 import CommonBoxImg from "./CommonBoxImg";
 import { COLORS } from "../ui/Theme/colors";
 import ScrollToTopOnMount from "./ScrollToTopMount";
@@ -58,6 +59,9 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     padding: "2rem",
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
   },
   textbContainer: {
     display: "flex",
@@ -67,8 +71,12 @@ const styles = {
     textAlign: "justify",
   },
   root_fcontainer: {
-    margin: "20px auto",
-    maxWidth: "960px",
+    margin: "60px auto",
+    marginLeft: "100px",
+    maxWidth: "100%",
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
   },
   imgContainer: {
     display: "flex",
@@ -105,9 +113,9 @@ const HealthcareJobSeekers = () => {
   return (
     <>
       <ScrollToTopOnMount />
-      {/* <CommonBoxImg img={img1} txt1="Healthcare Job Seekers" /> */}
+      <CommonBoxImg img={img1} txt1="FIND YOUR JOB" />
       <Typography component="div" sx={styles.root}>
-        <Grid container>
+        {/* <Grid container>
           <Grid>
             <Typography component="div" sx={styles.sectiondiv_1}>
               <Typography
@@ -149,7 +157,7 @@ const HealthcareJobSeekers = () => {
               </Typography>
             </Typography>
           </Grid>
-        </Grid>
+        </Grid> */}
         <div style={styles.half_line}></div>
         <Typography component="div" sx={styles.img_container}>
           <Typography
@@ -158,7 +166,7 @@ const HealthcareJobSeekers = () => {
             className="text_mvcontainer"
           >
             <img
-              src={img1}
+              src={img2}
               alt="Your image here"
               style={styles.img_s}
               className="img_1"
@@ -173,6 +181,9 @@ const HealthcareJobSeekers = () => {
                   fontSize: "2rem",
                   fontWeight: "600",
                   color: `${COLORS.primary}`,
+                  alignContent: "center",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
                 Prestigious Contract Opportunities in top health care centres
@@ -193,10 +204,13 @@ const HealthcareJobSeekers = () => {
         <div style={styles.half_line}></div>
         <Typography component="div" sx={styles.root_fcontainer}>
           <Grid container spacing={4}>
-            <Grid item xs={12} sm={3}>
+            <Grid item xs={12} sm={2}>
               <Typography
                 component="div"
-                sx={{ display: "flex", alignItems: "flex-start" }}
+                sx={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                }}
               >
                 <Typography component="div" sx={styles.svg_i}>
                   <Group style={{ color: `${COLORS.white}` }} />
@@ -223,7 +237,7 @@ const HealthcareJobSeekers = () => {
                 </Typography>
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={3}>
+            <Grid item xs={12} sm={2}>
               <Typography
                 component="div"
                 sx={{ display: "flex", alignItems: "flex-start" }}
@@ -240,20 +254,52 @@ const HealthcareJobSeekers = () => {
                       fontSize: "20px",
                     }}
                   >
-                    Registered Psychiatric Nurses
+                    Personal Support Worker
                   </Typography>
                   <Typography
                     component="p"
                     style={{ textAlign: "justify", marginTop: "10px" }}
                   >
-                    Registered psychiatric nurses provide assessments, nursing
-                    diagnoses, and evidenced-based nursing care to patients and
-                    clients with mental health disorders.
+                    Provide support for people who are ill, elderly or need help
+                    with daily tasks. You make sure your clients are
+                    comfortable, safe and enjoy emotional and physical
+                    well-being.
                   </Typography>
                 </Typography>
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={3}>
+            <Grid item xs={12} sm={2}>
+              <Typography
+                component="div"
+                sx={{ display: "flex", alignItems: "flex-start" }}
+              >
+                <Typography component="div" sx={styles.svg_i}>
+                  <Person style={{ color: `${COLORS.white}` }} />
+                </Typography>
+                <Typography component="div">
+                  <Typography
+                    variant="h5"
+                    style={{
+                      color: "blue",
+                      fontWeight: "500",
+                      fontSize: "20px",
+                    }}
+                  >
+                    House Keeper
+                  </Typography>
+                  <Typography
+                    component="p"
+                    style={{ textAlign: "justify", marginTop: "10px" }}
+                  >
+                    Perform custodial and housekeeping tasks. Maintain the
+                    facility in a clean, safe, and sanitary manner. Perform all
+                    tasks to assure that the facility reflects a high quality of
+                    care and appearance.
+                  </Typography>
+                </Typography>
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={2}>
               <Typography
                 component="div"
                 sx={{ display: "flex", alignItems: "flex-start" }}
@@ -283,7 +329,7 @@ const HealthcareJobSeekers = () => {
                 </Typography>
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={3}>
+            <Grid item xs={12} sm={2}>
               <Typography
                 component="div"
                 sx={{ display: "flex", alignItems: "flex-start" }}

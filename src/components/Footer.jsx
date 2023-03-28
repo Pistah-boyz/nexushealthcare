@@ -17,6 +17,7 @@ import {
   Instagram as InstagramIcon,
   Twitter as TwitterIcon,
   LinkedIn as LinkedinIcon,
+  Mail as MailIcon,
 } from "@mui/icons-material";
 import TextareaAutosize from "@mui/base/TextareaAutosize";
 import { useNavigate } from "react-router-dom";
@@ -125,7 +126,6 @@ const styles = {
 };
 
 const offers = [
-  { title: "ABOUT US", subTitle: "LEARN MORE", img: card1, imgclick: "/about" },
   {
     title: "HEALTHCARE JOB SEEKERS",
     subTitle: "LEARN MORE",
@@ -200,7 +200,7 @@ const Footer = () => {
           <Box sx={{ padding: "16px" }}>
             <Grid container spacing={8}>
               {offers.map((val) => (
-                <Grid key={val.title} item md={6}>
+                <Grid key={val.title} item md={4}>
                   <SlideComponent direction="right">
                     <Card
                       sx={styles.offer}
@@ -263,6 +263,12 @@ const Footer = () => {
             <PhoneIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
               +1(778)229-6571
+            </Typography>
+          </Box>
+          <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
+            <MailIcon />
+            <Typography variant="h5" sx={{ marginLeft: "8px" }}>
+              info@nexusstaffingservices.ca
             </Typography>
           </Box>
           <Box sx={{ display: "flex", padding: "16px" }}>
@@ -461,7 +467,7 @@ const Footer = () => {
       </Box>
       <Box sx={{ background: "#000", color: COLORS.white }}>
         <Container maxWidth={"lg"} disableGutters={false}>
-          <Typography>© 2023 Nexus Healthcare Staffing</Typography>
+          <Typography>© 2023 Nexus Healthcare Staffing Services</Typography>
         </Container>
       </Box>
     </>

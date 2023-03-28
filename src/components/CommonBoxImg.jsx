@@ -9,7 +9,7 @@ const CommonBoxImg = ({ img, txt1, txt2 }) => {
       backgroundSize: "cover",
       backgroundPosition: "center",
       position: "relative",
-      height: 400,
+      height: 600,
       "&::before": {
         content: "''",
         position: "absolute",
@@ -39,9 +39,9 @@ const CommonBoxImg = ({ img, txt1, txt2 }) => {
       <Box sx={styles.box_content}>
         <Box>
           <Typography
-            variant="h3"
+            variant="h2"
             color="white"
-            sx={{ textAlign: "center", fontWeight: 700, padding: "10px" }}
+            sx={{ textAlign: "left", fontWeight: 700, padding: "10px" }}
           >
             {txt1}
           </Typography>

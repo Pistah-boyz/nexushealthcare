@@ -3,10 +3,11 @@ import React, { useEffect } from "react";
 import { Box, Typography, Grid } from "@mui/material";
 
 import Footer from "./Footer";
-import img1 from "../images/slide3.jpg";
+import img1 from "../images/about_img1.jpg";
 import CommonBoxImg from "./CommonBoxImg";
 import { COLORS } from "../ui/Theme/colors";
 import ScrollToTopOnMount from "./ScrollToTopMount";
+import img2 from "../images/card4.jpg";
 
 const styles = {
   sectiondiv_1: {
@@ -20,6 +21,21 @@ const styles = {
     backgroundColor: "#4676b0",
     padding: "4rem",
     color: "#fff",
+  },
+  textContainer: {
+    display: "flex",
+    flexDirection: "row",
+    padding: "2rem",
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
+  },
+  textbContainer: {
+    display: "flex",
+    flexDirection: "column",
+    paddingLeft: "1rem",
+    marginLeft: "1rem",
+    textAlign: "justify",
   },
   section_h5: {
     fontSize: "20px !important",
@@ -52,18 +68,6 @@ const styles = {
   img_s: {
     width: "450px",
     height: "350px",
-  },
-  textContainer: {
-    display: "flex",
-    flexDirection: "row",
-    padding: "2rem",
-  },
-  textbContainer: {
-    display: "flex",
-    flexDirection: "column",
-    paddingLeft: "1rem",
-    marginLeft: "1rem",
-    textAlign: "justify",
   },
   root_fcontainer: {
     margin: "20px auto",
@@ -98,14 +102,65 @@ const styles = {
     width: "50%",
     margin: "0 auto",
   },
+  img_container: {
+    width: "100%",
+    display: "flex",
+    margin: "10px 0",
+  },
 };
 
 const HealthcareFacilities = () => {
   return (
     <>
       <ScrollToTopOnMount />
-      {/* <CommonBoxImg img={img1} txt1="Healthcare Facilities" /> */}
-      <Typography component="div" sx={styles.root}>
+      <CommonBoxImg img={img1} txt1="FIND A TOP HEALTHCARE STAFF" />
+      <Typography component="div" sx={styles.img_container}>
+        <Typography
+          component="div"
+          sx={styles.textContainer}
+          className="text_mvcontainer"
+        >
+          <img
+            src={img2}
+            alt="Your image here"
+            style={styles.img_s}
+            className="img_1"
+          />
+
+          <Typography component="div" sx={styles.textbContainer}>
+            <Typography
+              variant="h3"
+              component="h3"
+              gutterBottom
+              sx={{
+                fontSize: "2rem",
+                fontWeight: "600",
+                color: `${COLORS.primary}`,
+                alignContent: "center",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              Focus on your business, we are here to address your staffing needs
+            </Typography>
+            <Typography variant="body1" component="p" gutterBottom>
+              We use a screening procedure created by our licensing and
+              credentialing specialists to ensure that every nurse satisfies our
+              high quality requirements. Our top priority is to ensure that you
+              are satisfied, thus we make every attempt to match our efforts
+              with your procedures.
+            </Typography>
+            <Typography variant="body1" component="p" gutterBottom>
+              Whatever the reason, you require clinical staffing immediately. To
+              meet your staffing needs, no matter what they may be, Nexus
+              Staffing works around the clock to find you the best travel
+              nurses, travel therapists, allied personnel, and other clinical
+              professionals.
+            </Typography>
+          </Typography>
+        </Typography>
+      </Typography>
+      {/* <Typography component="div" sx={styles.root}>
         <Grid container>
           <Grid>
             <Typography component="div" sx={styles.sectiondiv_1}>
@@ -149,7 +204,7 @@ const HealthcareFacilities = () => {
             </Typography>
           </Grid>
         </Grid>
-      </Typography>
+      </Typography> */}
       <Footer />
     </>
   );

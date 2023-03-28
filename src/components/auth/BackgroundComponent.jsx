@@ -4,7 +4,7 @@ import { Box, Typography } from "@mui/material";
 import { Container } from "../../ui";
 
 import { COLORS } from "../../ui/Theme/colors";
-import img2 from "../../images/action-bg.jpg";
+import img2 from "../../images/action-bg1.jpg";
 
 const styles = {
   backgroundSection: {

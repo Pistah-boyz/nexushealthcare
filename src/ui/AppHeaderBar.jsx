@@ -90,23 +90,23 @@ const navItems = [
     to: "/career/applynow",
     submenu: [],
   },
-  {
-    id: 6,
-    navlabel: "Career",
-    to: "/career",
-    submenu: [
-      {
-        id: 1,
-        navlabel: "Apply Now",
-        to: "/career/applynow",
-      },
-      // {
-      //   id: 2,
-      //   navlabel: "Job Board",
-      //   to: "/career/jobboard",
-      // },
-    ],
-  },
+  // {
+  //   id: 6,
+  //   navlabel: "Career",
+  //   to: "/career",
+  //   submenu: [
+  //     {
+  //       id: 1,
+  //       navlabel: "Apply Now",
+  //       to: "/career/applynow",
+  //     },
+  //     // {
+  //     //   id: 2,
+  //     //   navlabel: "Job Board",
+  //     //   to: "/career/jobboard",
+  //     // },
+  //   ],
+  // },
   {
     id: 7,
     navlabel: "Contact",

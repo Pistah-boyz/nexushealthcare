@@ -17,6 +17,7 @@ import {
   Instagram as InstagramIcon,
   Twitter as TwitterIcon,
   LinkedIn as LinkedinIcon,
+  Mail as MailIcon,
 } from "@mui/icons-material";
 import useGoogleForm from "../customhooks/useGoogleForm";
 import { useNavigate } from "react-router-dom";
@@ -125,7 +126,6 @@ const styles = {
 };
 
 const offers = [
-  { title: "ABOUT US", subTitle: "LEARN MORE", img: card1, imgclick: "/about" },
   {
     title: "HEALTHCARE JOB SEEKERS",
     subTitle: "LEARN MORE",
@@ -213,7 +213,13 @@ const Contact = () => {
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <PhoneIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              (778)229-6571
+              +1(778)229-6571
+            </Typography>
+          </Box>
+          <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
+            <MailIcon />
+            <Typography variant="h5" sx={{ marginLeft: "8px" }}>
+              info@nexusstaffingservices.ca
             </Typography>
           </Box>
           <Box sx={{ display: "flex", padding: "16px" }}>
@@ -335,13 +341,13 @@ const Contact = () => {
               The driving force behind the Nexus Staffing services initiative is
               our commitment and compassion to serve our customers. We are proud
               to serve, deliver care, and bridge the gap between healthcare
-              providers and facilities. ABOUT US
+              providers and facilities.
             </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Grid container spacing={8}>
               {offers.map((val) => (
-                <Grid key={val.title} item md={6}>
+                <Grid key={val.title} item md={4}>
                   <SlideComponent direction="right">
                     <Card
                       sx={styles.offer}

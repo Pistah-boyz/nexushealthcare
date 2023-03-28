@@ -161,7 +161,7 @@ const Dashboard = () => {
               >
                 A Reliable Network of Medical Experts
               </Typography>
-              <Typography variant="body2">
+              <Typography variant="body1" sx={{ fontSize: "15px" }}>
                 We believe and emphasis on the statement of “In staffing, the
                 right person is recruited for the right jobs, therefore it leads
                 to maximum productivity and higher performance.
@@ -170,10 +170,11 @@ const Dashboard = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <Card
-              actionButton={"LearMore"}
+              actionButton={"Learn More"}
               sx={styles.card}
               sxContent={styles.cardContent}
               sxActions={styles.actionButton}
+              onClick={() => navigate("/healthcarejobseekers")}
             >
               <IconButton sx={styles.cardIcon}>
                 <PersonIcon fontSize="large" />
@@ -190,10 +191,11 @@ const Dashboard = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
             <Card
-              actionButton={"LearMore"}
+              actionButton={"Learn More"}
               sx={styles.card}
               sxContent={styles.cardContent}
               sxActions={styles.actionButton}
+              onClick={() => navigate("/healthcarefacilities")}
             >
               <IconButton sx={styles.cardIcon}>
                 <PersonIcon fontSize="large" />
@@ -202,8 +204,9 @@ const Dashboard = () => {
                 HEALTHCARE FACILITIES
               </Typography>
               <Typography variant="body2">
-                Our mission is to find the ideal applicant for every need, from
-                hospital staffing to research laboratory employment.
+                Our mission is to find the ideal applicant for every need,
+                starting from house keeping to hospital staffing to research
+                laboratory employment.
               </Typography>
             </Card>
           </Grid>
@@ -224,7 +227,7 @@ const Dashboard = () => {
         </SlideComponent>
         <SlideComponent direction="down">
           <Box sx={styles.padding}>
-            <Typography variant="h6" sx={{ color: "#88c036" }}>
+            <Typography variant="h6" sx={{ color: "#00b812" }}>
               Nexus staffing services provides staffing services for medical
               facilities including hospitals and nursing homes that need to fill
               open positions in their establishments. We also have experienced
