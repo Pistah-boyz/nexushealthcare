@@ -73,7 +73,7 @@ const About = () => {
                 sx={styles.section_h6}
                 style={{ color: `${COLORS.teal}` }}
               >
-                Nexus Staffing Solution is a staffing agency developed in
+                Nexus Staffing services is a staffing agency developed in
                 response to meet the staffing needs of the health care system
                 across Canada. Nexus helps nurses and health care teams who
                 travel to fill in temporary nursing and other health care

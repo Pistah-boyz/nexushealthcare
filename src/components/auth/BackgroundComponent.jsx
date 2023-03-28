@@ -27,12 +27,12 @@ const BackgroundComponent = () => {
         sx={{ color: COLORS.white }}
       >
         <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-          STAFFING SOLUTIONS FOR YOUR HEALTHCARE BUSINESS.
+          STAFFING SERVICES FOR YOUR HEALTHCARE BUSINESS.
         </Typography>
         <Typography>
           Whether you're interested in temporary work, per diem or full-time
           employment, our team is committed in getting to know you on a personal
-          and professional level. The Nexus Stuffing Solution streamlines the
+          and professional level. The Nexus Staffing Services streamlines the
           process completely for you.
         </Typography>
       </Container>

@@ -191,7 +191,7 @@ const Footer = () => {
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Typography variant="h6">
-              The driving force behind the Nexus Staffing Solution initiative is
+              The driving force behind the Nexus Staffing Services initiative is
               our commitment and compassion to serve our customers. We are proud
               to serve, deliver care, and bridge the gap between healthcare
               providers and facilities.
@@ -239,13 +239,13 @@ const Footer = () => {
               sx={{ color: COLORS.WHITE }}
             >
               <span style={{ fontWeight: "bold" }}>
-                NEXUS STAFFING SOLUTION
+                NEXUS STAFFING SERVICES
               </span>
             </Typography>
           </Box>
           <Box sx={{ padding: "16px", textAlign: "justify" }}>
             <Typography variant="h6">
-              Nexus Staffing Solution is a leader in providing workforce
+              Nexus Staffing Services is a leader in providing workforce
               solutions and staffing services to the healthcare industry. Our
               mission is to connect clients with qualified medical professionals
               to ensure superior patient deliveries. A rewarding career path for
@@ -262,7 +262,7 @@ const Footer = () => {
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <PhoneIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              (778)229-6571
+              +1(778)229-6571
             </Typography>
           </Box>
           <Box sx={{ display: "flex", padding: "16px" }}>
@@ -310,7 +310,7 @@ const Footer = () => {
               component="div"
               sx={{ fontWeight: "bold" }}
             >
-              CONNECT WITH NEXUS STAFFING SOLUTION
+              CONNECT WITH NEXUS STAFFING SERVICES
             </Typography>
           </Box>
           <Box sx={{ padding: "16px", textAlign: "justify" }}>

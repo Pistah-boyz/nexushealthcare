@@ -190,13 +190,13 @@ const Contact = () => {
               sx={{ color: COLORS.WHITE }}
             >
               <span style={{ fontWeight: "bold" }}>
-                NEXUS STAFFING SOLUTION
+                NEXUS STAFFING SERVICES
               </span>
             </Typography>
           </Box>
           <Box sx={{ padding: "16px", textAlign: "justify" }}>
             <Typography variant="h6">
-              Nexus Staffing Solution is a leader in providing workforce
+              Nexus Staffing services is a leader in providing workforce
               solutions and staffing services to the healthcare industry. Our
               mission is to connect clients with qualified medical professionals
               to ensure superior patient deliveries. A rewarding career path for
@@ -261,7 +261,7 @@ const Contact = () => {
               component="div"
               sx={{ fontWeight: "bold" }}
             >
-              CONNECT WITH NEXUS STAFFING SOLUTION
+              CONNECT WITH NEXUS STAFFING SERVICES
             </Typography>
           </Box>
           <Box sx={{ padding: "16px", textAlign: "justify" }}>
@@ -332,7 +332,7 @@ const Contact = () => {
           </Box>
           <Box sx={{ padding: "16px" }}>
             <Typography variant="h6">
-              The driving force behind the Nexus Staffing Solution initiative is
+              The driving force behind the Nexus Staffing services initiative is
               our commitment and compassion to serve our customers. We are proud
               to serve, deliver care, and bridge the gap between healthcare
               providers and facilities. ABOUT US

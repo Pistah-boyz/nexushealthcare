@@ -160,7 +160,7 @@ const AppHeaderBar = ({ window }) => {
   };
 
   const handlePhoneNumberClick = () => {
-    browserWindow.open("tel:" + "(778)229-6571", "_self");
+    browserWindow.open("tel:" + "+1(778)229-6571", "_self");
   };
 
   const handleMailClick = () => {
@@ -190,7 +190,7 @@ const AppHeaderBar = ({ window }) => {
                   sx={{ mx: 1, cursor: "pointer" }}
                   onClick={handlePhoneNumberClick}
                 >
-                  (778)229-6571
+                  +1(778)229-6571
                 </Box>
                 <Email />
                 <Box

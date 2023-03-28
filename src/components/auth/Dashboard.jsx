@@ -148,7 +148,7 @@ const Dashboard = () => {
                 sx={{ color: COLORS.primary }}
               >
                 <span style={{ fontWeight: "bold" }}>
-                  NEXUS STAFFING SOLUTION
+                  NEXUS STAFFING SERVICES
                 </span>
               </Typography>
               <Typography
@@ -225,7 +225,7 @@ const Dashboard = () => {
         <SlideComponent direction="down">
           <Box sx={styles.padding}>
             <Typography variant="h6" sx={{ color: "#88c036" }}>
-              Nexus staffing solution provides staffing solutions for medical
+              Nexus staffing services provides staffing services for medical
               facilities including hospitals and nursing homes that need to fill
               open positions in their establishments. We also have experienced
               health care recruiters with a background in hiring for hospitals
@@ -239,8 +239,8 @@ const Dashboard = () => {
           <Box sx={styles.padding}>
             <SlideComponent direction="down">
               <Typography variant="h6">
-                Dedicated to providing strategic staffing solutions for Canadian
-                healthcare facilities and patients, Nexus Staffing Solution is a
+                Dedicated to providing strategic staffing services for Canadian
+                healthcare facilities and patients, Nexus Staffing Services is a
                 full-service healthcare staffing business. To deliver
                 exceptional service and high-quality treatment, our team is on
                 the clock. Our goal is to use our industry expertise to create
