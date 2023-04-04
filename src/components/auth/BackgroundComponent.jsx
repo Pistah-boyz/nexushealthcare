@@ -10,7 +10,7 @@ const styles = {
   backgroundSection: {
     position: "relative",
     overflow: "hidden",
-    padding: " 32rem 0 4rem",
+    padding: "32rem 1rem 4rem",
     background: `url(${img2}) center center no-repeat`,
     backgroundSize: "cover",
     backgroundAttachment: "fixed",

@@ -182,7 +182,7 @@ const Contact = () => {
   return (
     <>
       <Grid container>
-        <Grid item md={6} sx={styles.address}>
+        <Grid item xs={12} md={6} sx={styles.address}>
           <Box sx={{ padding: "16px" }}>
             <Typography
               variant="h5"
@@ -260,7 +260,7 @@ const Contact = () => {
             </IconButton>
           </Box>
         </Grid>
-        <Grid item md={6} sx={styles.contact}>
+        <Grid item xs={12} md={6} sx={styles.contact}>
           <Box sx={{ padding: "16px" }}>
             <Typography
               variant="h5"

@@ -30,7 +30,6 @@ import {
 } from "@mui/icons-material";
 import { Logo } from "../components/auth/Logo";
 import { SlideComponent } from "../components/SlideComponent";
-import { color } from "@mui/system";
 
 const styles = {
   headerBox: {
@@ -39,6 +38,7 @@ const styles = {
     justifyContent: "center",
     fontSize: "24px",
     cursor: "pointer",
+    padding: "16px 0px",
   },
   headerBoxIcon: {
     display: "flex",
@@ -143,7 +143,7 @@ const AppHeaderBar = ({ window }) => {
       <List>
         {navItems.map(({ id, navlabel, to }) => (
           <ListItem key={id} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton sx={{ textAlign: "left" }}>
               <Link to={to} className="navbar-link_mobile">
                 {navlabel}
               </Link>
@@ -253,8 +253,8 @@ const AppHeaderBar = ({ window }) => {
           <Toolbar
             sx={{
               justifyContent: {
-                xs: "flex-end",
-                sm: "flex-end",
+                xs: "flex-start",
+                sm: "flex-start",
                 md: "center",
                 lg: "center",
               },

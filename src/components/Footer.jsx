@@ -89,12 +89,12 @@ const styles = {
     borderRadius: "10px",
   },
   address: {
-    padding: "40px",
+    padding: { xs: "0px", sm: "0px", md: "24px", lg: "40px" },
     background: "#4676b0",
     color: COLORS.white,
   },
   contact: {
-    padding: "40px",
+    padding: { xs: "0px", sm: "0px", md: "24px", lg: "40px" },
   },
   footerIcons: {
     color: COLORS.white,
@@ -230,8 +230,8 @@ const Footer = () => {
         </Container>
       </Box>
 
-      <Grid container>
-        <Grid item md={6} sx={styles.address}>
+      <Grid container sx={{ width: "100%" }}>
+        <Grid item xs={12} md={6} sx={styles.address}>
           <Box sx={{ padding: "16px" }}>
             <Typography
               variant="h5"
@@ -309,7 +309,7 @@ const Footer = () => {
             </IconButton>
           </Box>
         </Grid>
-        <Grid item md={6} sx={styles.contact}>
+        <Grid item xs={12} md={6} sx={styles.contact}>
           <Box sx={{ padding: "16px" }}>
             <Typography
               variant="h5"
@@ -373,27 +373,6 @@ const Footer = () => {
                 Send
               </Button>
             </FormControl>
-            {/* {success && (
-              <Typography variant="h6" fullWidth>
-                Form submitted successfully!
-              </Typography>
-            )}
-            {success && (
-              <Typography variant="h6" fullWidth>
-                Form Not submitted!
-              </Typography>
-            )} */}
-            {/* <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdPynGLp77FYXaxWrlnQGwYFR6cFM5IgcZwOfXMj0_ZH1G2Ew/viewform?embedded=true"
-              width="640"
-              height="656"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              display="flex"
-            >
-              Loading…
-            </iframe> */}
           </Box>
         </Grid>
       </Grid>
