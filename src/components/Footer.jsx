@@ -182,10 +182,10 @@ const Footer = () => {
       email: "",
       phonenumber: "",
       message: "",
-    })
-    setTimeout(()=>{
-      setSuccessMsgShow(false);
-    },3000)
+    });
+    // setTimeout(()=>{
+    //   setSuccessMsgShow(false);
+    // },3000)
   };
   const navigate = useNavigate();
 
@@ -344,7 +344,7 @@ const Footer = () => {
                 component="div"
                 sx={{ textAlign: "center", color: COLORS.success }}
               >
-                Thank you, your application is successfully submitted
+                Thanks for contacting us. We will get back to you shortly.
               </Typography>
             ) : null}
             <FormControl sx={{ width: "100%" }}>

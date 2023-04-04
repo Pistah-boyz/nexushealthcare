@@ -294,9 +294,9 @@ const Career = () => {
       inputRefLicense.current.value = "";
       inputRefResume.current.value = "";
       setAgree(false);
-      setTimeout(()=>{
-        setSuccessMsgShow(false);
-      },3000)
+      // setTimeout(()=>{
+      //   setSuccessMsgShow(false);
+      // },3000)
     }
     sendEmail();
   };

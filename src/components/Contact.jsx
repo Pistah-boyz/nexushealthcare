@@ -183,10 +183,10 @@ const Contact = () => {
       email: "",
       phonenumber: "",
       message: "",
-    })
-    setTimeout(()=>{
-      setSuccessMsgShow(false);
-    },3000)
+    });
+    // setTimeout(()=>{
+    //   setSuccessMsgShow(false);
+    // },3000)
   };
   const navigate = useNavigate();
   return (
@@ -289,14 +289,14 @@ const Contact = () => {
             </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
-          {successMsgShow ? (
-            <Typography
-              component="div"
-              sx={{ textAlign: "center", color: COLORS.success }}
-            >
-              Thank you, your application is successfully submitted
-            </Typography>
-          ) : null}
+            {successMsgShow ? (
+              <Typography
+                component="div"
+                sx={{ textAlign: "center", color: COLORS.success }}
+              >
+                Thanks for contacting us. We will get back to you shortly.
+              </Typography>
+            ) : null}
             <FormControl sx={{ width: "100%" }}>
               <TextField
                 id="name"
