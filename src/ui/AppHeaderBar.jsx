@@ -188,7 +188,7 @@ const AppHeaderBar = ({ window }) => {
             <SlideComponent direction="right">
               <Box sx={styles.headerBoxIcon}>
                 <Box sx={{ display: "flex", paddingBottom: "10px" }}>
-                  <Phone />
+                  <Phone fontSize="large" sx={{ color: "#1877F2" }} />
                   <Box
                     sx={{
                       mx: 1,
@@ -196,6 +196,7 @@ const AppHeaderBar = ({ window }) => {
                       display: "flex",
                       textAlign: "center",
                       alignItems: "center",
+                      fontSize: "16px",
                     }}
                     onClick={handlePhoneNumberClick}
                   >
@@ -203,7 +204,7 @@ const AppHeaderBar = ({ window }) => {
                   </Box>
                 </Box>
                 <Box sx={{ display: "flex" }}>
-                  <Email />
+                  <Email fontSize="large" sx={{ color: "#1877F2" }} />
                   <Box
                     sx={{
                       mx: 1,
@@ -211,6 +212,7 @@ const AppHeaderBar = ({ window }) => {
                       display: "flex",
                       textAlign: "center",
                       alignItems: "center",
+                      fontSize: "16px",
                     }}
                     onClick={handleMailClick}
                   >

@@ -74,9 +74,9 @@ const styles = {
   textbContainer: {
     display: "flex",
     flexDirection: "column",
-    paddingLeft: "1rem",
-    marginLeft: "1rem",
-    textAlign: "justify",
+    paddingLeft: { sm: "0px", md: "2rem", xs: "0px" },
+    marginLeft: { sm: "2rem", md: "1rem", xs: "0px" },
+    textAlign: "left",
   },
   root_fcontainer: {
     margin: "60px auto",
@@ -236,7 +236,7 @@ const HealthcareJobSeekers = () => {
                     gutterBottom
                     variant="h6"
                     component="div"
-                    sx={{ textAlign: "center" }}
+                    sx={{ textAlign: "center", fontWeight: 600 }}
                   >
                     Registered Nurse
                   </Typography>
@@ -246,6 +246,65 @@ const HealthcareJobSeekers = () => {
                     Registered Nurse provides care for patients utilizing the
                     nursing process of assessment, planning, intervention,
                     implementation, and evaluation.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={2}>
+              <Card sx={{ width: "100%", height: "100%" }}>
+                <CardContent>
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <IconButton>
+                      <Group
+                        fontSize="large"
+                        style={{
+                          color: `${COLORS.secondary}`,
+                        }}
+                      />
+                    </IconButton>
+                  </Box>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{ textAlign: "center", fontWeight: 600 }}
+                  >
+                    Licensed Practical Nurses
+                  </Typography>
+                  <Divider />
+                  <Typography variant="body2" sx={{ marginTop: "20px" }}>
+                    Travel nursing is a popular career path that LPNs may
+                    consider going into once they have gained some experience
+                    and are ready to travel.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={2}>
+              <Card sx={{ width: "100%", height: "100%" }}>
+                <CardContent>
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <IconButton>
+                      <Group
+                        fontSize="large"
+                        style={{
+                          color: `${COLORS.secondary}`,
+                        }}
+                      />
+                    </IconButton>
+                  </Box>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{ textAlign: "center", fontWeight: 600 }}
+                  >
+                    Registered Health Care Aide
+                  </Typography>
+                  <Divider />
+                  <Typography variant="body2" sx={{ marginTop: "20px" }}>
+                    Travel nurses are RNs from various clinical backgrounds who
+                    work for independent staffing agencies.
                   </Typography>
                 </CardContent>
               </Card>
@@ -267,7 +326,7 @@ const HealthcareJobSeekers = () => {
                     gutterBottom
                     variant="h6"
                     component="div"
-                    sx={{ textAlign: "center" }}
+                    sx={{ textAlign: "center", fontWeight: 600 }}
                   >
                     Personal Support Worker
                   </Typography>
@@ -298,7 +357,7 @@ const HealthcareJobSeekers = () => {
                     gutterBottom
                     variant="h6"
                     component="div"
-                    sx={{ textAlign: "center" }}
+                    sx={{ textAlign: "center", fontWeight: 600 }}
                   >
                     House Keeper
                   </Typography>
@@ -312,65 +371,7 @@ const HealthcareJobSeekers = () => {
                 </CardContent>
               </Card>
             </Grid>
-            <Grid item xs={12} sm={12} md={2}>
-              <Card sx={{ width: "100%", height: "100%" }}>
-                <CardContent>
-                  <Box sx={{ display: "flex", justifyContent: "center" }}>
-                    <IconButton>
-                      <Group
-                        fontSize="large"
-                        style={{
-                          color: `${COLORS.secondary}`,
-                        }}
-                      />
-                    </IconButton>
-                  </Box>
-                  <Typography
-                    gutterBottom
-                    variant="h6"
-                    component="div"
-                    sx={{ textAlign: "center" }}
-                  >
-                    Licensed Practical Nurses
-                  </Typography>
-                  <Divider />
-                  <Typography variant="body2" sx={{ marginTop: "20px" }}>
-                    Travel nursing is a popular career path that LPNs may
-                    consider going into once they have gained some experience
-                    and are ready to travel.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={12} md={2}>
-              <Card sx={{ width: "100%", height: "100%" }}>
-                <CardContent>
-                  <Box sx={{ display: "flex", justifyContent: "center" }}>
-                    <IconButton>
-                      <Group
-                        fontSize="large"
-                        style={{
-                          color: `${COLORS.secondary}`,
-                        }}
-                      />
-                    </IconButton>
-                  </Box>
-                  <Typography
-                    gutterBottom
-                    variant="h6"
-                    component="div"
-                    sx={{ textAlign: "center" }}
-                  >
-                    Registered Health Care Aide
-                  </Typography>
-                  <Divider />
-                  <Typography variant="body2" sx={{ marginTop: "20px" }}>
-                    Travel nurses are RNs from various clinical backgrounds who
-                    work for independent staffing agencies.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+
             <Grid item xs={12} sm={1}></Grid>
           </Grid>
         </Box>

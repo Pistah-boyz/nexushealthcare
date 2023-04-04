@@ -33,9 +33,9 @@ const styles = {
   textbContainer: {
     display: "flex",
     flexDirection: "column",
-    paddingLeft: "1rem",
-    marginLeft: "1rem",
-    textAlign: "justify",
+    paddingLeft: { sm: "0px", md: "2rem", xs: "0px" },
+    marginLeft: { sm: "2rem", md: "1rem", xs: "0px" },
+    textAlign: "left",
   },
   section_h5: {
     fontSize: "20px !important",
