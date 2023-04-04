@@ -207,8 +207,7 @@ const Dashboard = () => {
               </Typography>
               <Typography variant="body2">
                 Our mission is to find the ideal applicant for every need,
-                starting from house keeping to hospital staffing to research
-                laboratory employment.
+                starting from house keeping staff to registered nurses.
               </Typography>
             </Card>
           </Grid>

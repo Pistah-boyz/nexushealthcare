@@ -4,7 +4,7 @@ import { Box, Typography } from "@mui/material";
 import { Container } from "../../ui";
 
 import { COLORS } from "../../ui/Theme/colors";
-import img2 from "../../images/action-bg1.jpg";
+import img2 from "../../images/slide3.jpg";
 
 const styles = {
   backgroundSection: {
@@ -15,6 +15,18 @@ const styles = {
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
     boxShadow: "0 2px 5px -2px #000",
+    "&::before": {
+      content: "''",
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      background: "rgba(0, 0, 0, 0.5)",
+      PointerEvent: "none",
+      // filter: brightness(0.8),
+      // transition: "opacity 0.5s ease",
+    },
   },
 };
 
@@ -24,12 +36,22 @@ const BackgroundComponent = () => {
       <Container
         maxWidth={"md"}
         disableGutters={false}
-        sx={{ color: COLORS.white }}
+        sx={{
+          color: COLORS.white,
+          // position: "absolute",
+          // zIndex: 2,
+          // top: "70%",
+          // left: "50%",
+          //transform: "translate(-50%, -50%)",
+          backdropFilter: "brightness(1)",
+          // marginRight: { xs: "1rem" },
+          // marginLeft: { xs: "1rem" },
+        }}
       >
-        <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+        <Typography variant="h3" sx={{ fontWeight: "bold" }}>
           STAFFING SERVICES FOR YOUR HEALTHCARE BUSINESS.
         </Typography>
-        <Typography>
+        <Typography variant="h6">
           Whether you're interested in temporary work, per diem or full-time
           employment, our team is committed in getting to know you on a personal
           and professional level. The Nexus Staffing Services streamlines the

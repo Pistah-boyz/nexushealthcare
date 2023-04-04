@@ -12,7 +12,7 @@ import {
 import { Group, Person } from "@mui/icons-material";
 
 import Footer from "./Footer";
-import img1 from "../images/about_img1.jpg";
+import img1 from "../images/action-bg1.jpg";
 import img2 from "../images/card1.jpg";
 import CommonBoxImg from "./CommonBoxImg";
 import { COLORS } from "../ui/Theme/colors";
@@ -175,9 +175,9 @@ const HealthcareJobSeekers = () => {
           >
             <img
               src={img2}
+              className="img_1"
               alt="Your image here"
               style={styles.img_s}
-              className="img_1"
             />
 
             <Typography component="div" sx={styles.textbContainer}>
@@ -219,14 +219,22 @@ const HealthcareJobSeekers = () => {
           <Grid container spacing={4}>
             <Grid item xs={12} sm={12} md={1}></Grid>
             <Grid item xs={12} sm={12} md={2}>
-              <Card sx={{ width: "100%", height: "100%" }}>
+              <Card
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  // backgroundColor: `${COLORS.primary}`,
+                  background: COLORS.primary,
+                  color: COLORS.white,
+                }}
+              >
                 <CardContent>
                   <Box sx={{ display: "flex", justifyContent: "center" }}>
                     <IconButton>
                       <Group
                         fontSize="large"
                         style={{
-                          color: `${COLORS.secondary}`,
+                          color: `${COLORS.white}`,
                         }}
                       />
                     </IconButton>
@@ -240,7 +248,11 @@ const HealthcareJobSeekers = () => {
                   >
                     Registered Nurse
                   </Typography>
-                  <Divider />
+                  <Divider
+                    sx={{
+                      background: `${COLORS.white}`,
+                    }}
+                  />
                   {/* <Divider sx={{ display: "none" }} /> */}
                   <Typography variant="body2" sx={{ marginTop: "20px" }}>
                     Registered Nurse provides care for patients utilizing the
@@ -251,14 +263,21 @@ const HealthcareJobSeekers = () => {
               </Card>
             </Grid>
             <Grid item xs={12} sm={12} md={2}>
-              <Card sx={{ width: "100%", height: "100%" }}>
+              <Card
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  background: COLORS.primary,
+                  color: COLORS.white,
+                }}
+              >
                 <CardContent>
                   <Box sx={{ display: "flex", justifyContent: "center" }}>
                     <IconButton>
                       <Group
                         fontSize="large"
                         style={{
-                          color: `${COLORS.secondary}`,
+                          color: `${COLORS.white}`,
                         }}
                       />
                     </IconButton>
@@ -271,7 +290,11 @@ const HealthcareJobSeekers = () => {
                   >
                     Licensed Practical Nurses
                   </Typography>
-                  <Divider />
+                  <Divider
+                    sx={{
+                      background: `${COLORS.white}`,
+                    }}
+                  />
                   <Typography variant="body2" sx={{ marginTop: "20px" }}>
                     Travel nursing is a popular career path that LPNs may
                     consider going into once they have gained some experience
@@ -281,14 +304,21 @@ const HealthcareJobSeekers = () => {
               </Card>
             </Grid>
             <Grid item xs={12} sm={12} md={2}>
-              <Card sx={{ width: "100%", height: "100%" }}>
+              <Card
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  background: COLORS.primary,
+                  color: COLORS.white,
+                }}
+              >
                 <CardContent>
                   <Box sx={{ display: "flex", justifyContent: "center" }}>
                     <IconButton>
                       <Group
                         fontSize="large"
                         style={{
-                          color: `${COLORS.secondary}`,
+                          color: `${COLORS.white}`,
                         }}
                       />
                     </IconButton>
@@ -301,7 +331,11 @@ const HealthcareJobSeekers = () => {
                   >
                     Registered Health Care Aide
                   </Typography>
-                  <Divider />
+                  <Divider
+                    sx={{
+                      background: `${COLORS.white}`,
+                    }}
+                  />
                   <Typography variant="body2" sx={{ marginTop: "20px" }}>
                     Travel nurses are RNs from various clinical backgrounds who
                     work for independent staffing agencies.
@@ -310,14 +344,21 @@ const HealthcareJobSeekers = () => {
               </Card>
             </Grid>
             <Grid item xs={12} sm={12} md={2}>
-              <Card sx={{ width: "100%", height: "100%" }}>
+              <Card
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  background: COLORS.primary,
+                  color: COLORS.white,
+                }}
+              >
                 <CardContent>
                   <Box sx={{ display: "flex", justifyContent: "center" }}>
                     <IconButton>
                       <Person
                         fontSize="large"
                         style={{
-                          color: `${COLORS.secondary}`,
+                          color: `${COLORS.white}`,
                         }}
                       />
                     </IconButton>
@@ -330,7 +371,11 @@ const HealthcareJobSeekers = () => {
                   >
                     Personal Support Worker
                   </Typography>
-                  <Divider />
+                  <Divider
+                    sx={{
+                      background: `${COLORS.white}`,
+                    }}
+                  />
                   <Typography variant="body2" sx={{ marginTop: "20px" }}>
                     Provide support for people who are ill, elderly or need help
                     with daily tasks. You make sure your clients are
@@ -341,14 +386,21 @@ const HealthcareJobSeekers = () => {
               </Card>
             </Grid>
             <Grid item xs={12} sm={12} md={2}>
-              <Card sx={{ width: "100%", height: "100%" }}>
+              <Card
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  background: COLORS.primary,
+                  color: COLORS.white,
+                }}
+              >
                 <CardContent>
                   <Box sx={{ display: "flex", justifyContent: "center" }}>
                     <IconButton>
                       <Person
                         fontSize="large"
                         style={{
-                          color: `${COLORS.secondary}`,
+                          color: `${COLORS.white}`,
                         }}
                       />
                     </IconButton>
@@ -361,7 +413,11 @@ const HealthcareJobSeekers = () => {
                   >
                     House Keeper
                   </Typography>
-                  <Divider />
+                  <Divider
+                    sx={{
+                      background: `${COLORS.white}`,
+                    }}
+                  />
                   <Typography variant="body2" sx={{ marginTop: "20px" }}>
                     Perform custodial and housekeeping tasks. Maintain the
                     facility in a clean, safe, and sanitary manner. Perform all
