@@ -155,7 +155,7 @@ const Contact = () => {
     phonenumber: "",
     message: "",
   });
-
+  const [successMsgShow, setSuccessMsgShow] = useState(false);
   const handleChange = (event) => {
     setFormValues({
       ...formValues,
@@ -177,6 +177,16 @@ const Contact = () => {
       form,
       "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeakV2A-WNEUzJY7h1d-nlVsvPqgTLCrWfXtkobuekJrJFytQ/formResponse"
     );
+    setSuccessMsgShow(true);
+    setFormValues({
+      name: "",
+      email: "",
+      phonenumber: "",
+      message: "",
+    })
+    setTimeout(()=>{
+      setSuccessMsgShow(false);
+    },3000)
   };
   const navigate = useNavigate();
   return (
@@ -279,6 +289,14 @@ const Contact = () => {
             </Typography>
           </Box>
           <Box sx={{ padding: "16px" }}>
+          {successMsgShow ? (
+            <Typography
+              component="div"
+              sx={{ textAlign: "center", color: COLORS.success }}
+            >
+              Thank you, your application is successfully submitted
+            </Typography>
+          ) : null}
             <FormControl sx={{ width: "100%" }}>
               <TextField
                 id="name"
@@ -286,6 +304,7 @@ const Contact = () => {
                 label="Name"
                 variant="outlined"
                 fullWidth
+                value={formValues.name}
                 sx={{ margin: "8px" }}
                 onChange={handleChange}
               />
@@ -295,14 +314,16 @@ const Contact = () => {
                 label="Email"
                 variant="outlined"
                 fullWidth
+                value={formValues.email}
                 sx={{ margin: "8px" }}
                 onChange={handleChange}
               />
               <TextField
                 id="phone"
-                name="phonennumber"
+                name="phonenumber"
                 label="Phone"
-                type="number"
+                type="text"
+                value={formValues.phonenumber}
                 variant="outlined"
                 fullWidth
                 sx={{ margin: "8px" }}
@@ -314,6 +335,7 @@ const Contact = () => {
                 minRows={3}
                 placeholder="Message"
                 name="message"
+                value={formValues.message}
                 onChange={handleChange}
                 style={{ width: "100%", minHeight: "70px", margin: "8px" }}
               />

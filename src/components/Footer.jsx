@@ -155,6 +155,7 @@ const Footer = () => {
     phonenumber: "",
     message: "",
   });
+  const [successMsgShow, setSuccessMsgShow] = useState(false);
   const handleChange = (event) => {
     setFormValues({
       ...formValues,
@@ -175,6 +176,16 @@ const Footer = () => {
       form,
       "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeakV2A-WNEUzJY7h1d-nlVsvPqgTLCrWfXtkobuekJrJFytQ/formResponse"
     );
+    setSuccessMsgShow(true);
+    setFormValues({
+      name: "",
+      email: "",
+      phonenumber: "",
+      message: "",
+    })
+    setTimeout(()=>{
+      setSuccessMsgShow(false);
+    },3000)
   };
   const navigate = useNavigate();
 
@@ -327,13 +338,22 @@ const Footer = () => {
               us now for more information about us.
             </Typography>
           </Box>
-          <Box sx={{ padding: "16px", display: "flex" }}>
+          <Box sx={{ padding: "16px" }}>
+            {successMsgShow ? (
+              <Typography
+                component="div"
+                sx={{ textAlign: "center", color: COLORS.success }}
+              >
+                Thank you, your application is successfully submitted
+              </Typography>
+            ) : null}
             <FormControl sx={{ width: "100%" }}>
               <TextField
                 id="name"
                 name="name"
                 label="Name"
                 variant="outlined"
+                value={formValues.name}
                 fullWidth
                 sx={{ margin: "8px" }}
                 onChange={handleChange}
@@ -343,6 +363,7 @@ const Footer = () => {
                 name="email"
                 label="Email"
                 variant="outlined"
+                value={formValues.email}
                 fullWidth
                 sx={{ margin: "8px" }}
                 onChange={handleChange}
@@ -351,7 +372,8 @@ const Footer = () => {
                 id="phone"
                 name="phonenumber"
                 label="Phone"
-                type="number"
+                type="text"
+                value={formValues.phonenumber}
                 variant="outlined"
                 fullWidth
                 sx={{ margin: "8px" }}
@@ -363,6 +385,7 @@ const Footer = () => {
                 name="message"
                 minRows={3}
                 placeholder="Message"
+                value={formValues.message}
                 style={{ width: "100%", minHeight: "70px", margin: "8px" }}
                 onChange={handleChange}
               />

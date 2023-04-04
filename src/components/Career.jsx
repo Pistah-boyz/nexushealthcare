@@ -120,6 +120,7 @@ const Career = () => {
   const inputRefCertificate = useRef(null);
   const inputRefLicense = useRef(null);
   const [agree, setAgree] = useState(false);
+  const [successMsgShow, setSuccessMsgShow] = useState(false);
 
   const formRef = useRef(null);
 
@@ -228,9 +229,9 @@ const Career = () => {
     if (!formValues.lastName) {
       errors.lastName = "Please enter your last name";
     }
-    if (!formValues.subject) {
-      errors.subject = "Please enter your subject";
-    }
+    // if (!formValues.subject) {
+    //   errors.subject = "Please enter your subject";
+    // }
     if (!formValues.province) {
       errors.province = "Please enter your province";
     }
@@ -241,9 +242,10 @@ const Career = () => {
     }
     if (!formValues.phone) {
       errors.phone = "Please enter your phone number";
-    } else if (!/^\d{10}$/.test(formValues.phone)) {
-      errors.phone = "Please enter a 10-digit phone number";
     }
+    //else if (!/^\d{10}$/.test(formValues.phone)) {
+    //   errors.phone = "Please enter a 10-digit phone number";
+    // }
     if (!formValues.zipCode) {
       errors.zipCode = "Please enter your zip code";
     }
@@ -274,7 +276,27 @@ const Career = () => {
         form,
         "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd4gppWwK2wrNG7C2hpCLfn-wZAJ7vIMgn_brzmFCY3PndQQw/formResponse"
       );
-      // Submit the form data
+      setSuccessMsgShow(true);
+      setFormValues({
+        resume: "",
+        certificate: "",
+        license: "",
+        firstName: "",
+        lastName: "",
+        subject: "",
+        province: "",
+        email: "",
+        phone: "",
+        zipCode: "",
+        jobTitle: "",
+      });
+      inputRefCertificate.current.value = "";
+      inputRefLicense.current.value = "";
+      inputRefResume.current.value = "";
+      setAgree(false);
+      setTimeout(()=>{
+        setSuccessMsgShow(false);
+      },3000)
     }
     sendEmail();
   };
@@ -317,6 +339,14 @@ const Career = () => {
       {jobBoard === "applynow" ? (
         <>
           <Typography component="div" sx={style.root}>
+            {successMsgShow ? (
+              <Typography
+                component="div"
+                sx={{ textAlign: "center", color: COLORS.success }}
+              >
+                Thank you, your application is successfully submitted
+              </Typography>
+            ) : null}
             <form ref={formRef} onSubmit={handleSubmit}>
               <Grid container justify="center" spacing={3} sx={style.formfield}>
                 <Grid item xs={12} sm={4}>
@@ -517,7 +547,6 @@ const Career = () => {
                       fullWidth
                       name="phone"
                       label="Phone"
-                      type="tel"
                       value={formValues.phone}
                       onChange={handleChange}
                       error={Boolean(errors.phone)}
@@ -559,8 +588,6 @@ const Career = () => {
                       label="Subject"
                       value={formValues.subject}
                       onChange={handleChange}
-                      error={Boolean(errors.subject)}
-                      helperText={errors.subject}
                     />
                   </Paper>
                 </Grid>

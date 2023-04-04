@@ -30,7 +30,7 @@ import {
 } from "@mui/icons-material";
 import { Logo } from "../components/auth/Logo";
 import { SlideComponent } from "../components/SlideComponent";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const styles = {
   headerBox: {
