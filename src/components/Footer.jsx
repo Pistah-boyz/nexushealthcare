@@ -256,7 +256,8 @@ const Footer = () => {
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <LocationIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              Suite 2020, 10060 Jasper Ave. Edmonton, AB T5J 3R8
+              Suite 2020, Rice Howard Place, 10060 Jasper Avenue Tower1.
+              Edmonton, AB T5J 3R8.
             </Typography>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
@@ -281,7 +282,7 @@ const Footer = () => {
                 );
               }}
             >
-              <FacebookIcon />
+              <FacebookIcon fontSize="large" />
             </IconButton>
 
             <IconButton
@@ -293,7 +294,7 @@ const Footer = () => {
                 );
               }}
             >
-              <InstagramIcon />
+              <InstagramIcon fontSize="large" />
             </IconButton>
 
             <IconButton
@@ -305,7 +306,7 @@ const Footer = () => {
                 );
               }}
             >
-              <LinkedinIcon />
+              <LinkedinIcon fontSize="large" />
             </IconButton>
           </Box>
         </Grid>
@@ -414,7 +415,7 @@ const Footer = () => {
                   );
                 }}
               >
-                <FacebookIcon />
+                <FacebookIcon fontSize="large" />
               </IconButton>
 
               <IconButton
@@ -426,7 +427,7 @@ const Footer = () => {
                   );
                 }}
               >
-                <InstagramIcon />
+                <InstagramIcon fontSize="large" />
               </IconButton>
 
               <IconButton
@@ -438,7 +439,7 @@ const Footer = () => {
                   );
                 }}
               >
-                <LinkedinIcon />
+                <LinkedinIcon fontSize="large" />
               </IconButton>
             </Box>
           </SlideComponent>

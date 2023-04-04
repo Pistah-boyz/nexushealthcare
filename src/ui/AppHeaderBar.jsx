@@ -30,6 +30,7 @@ import {
 } from "@mui/icons-material";
 import { Logo } from "../components/auth/Logo";
 import { SlideComponent } from "../components/SlideComponent";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const styles = {
   headerBox: {
@@ -41,11 +42,12 @@ const styles = {
     padding: "16px 0px",
   },
   headerBoxIcon: {
-    display: "flex",
+    // display: "flex",
     alignItems: "center",
     justifyContent: "center",
     fontSize: "0.85rem",
     fontWeight: "500",
+    marginLeft: "4rem",
   },
   menu: {
     "& .MuiPaper-root": {
@@ -185,19 +187,35 @@ const AppHeaderBar = ({ window }) => {
           <Grid item xs={4}>
             <SlideComponent direction="right">
               <Box sx={styles.headerBoxIcon}>
-                <Phone />
-                <Box
-                  sx={{ mx: 1, cursor: "pointer" }}
-                  onClick={handlePhoneNumberClick}
-                >
-                  +1(778)229-6571
+                <Box sx={{ display: "flex", paddingBottom: "10px" }}>
+                  <Phone />
+                  <Box
+                    sx={{
+                      mx: 1,
+                      cursor: "pointer",
+                      display: "flex",
+                      textAlign: "center",
+                      alignItems: "center",
+                    }}
+                    onClick={handlePhoneNumberClick}
+                  >
+                    +1(778)229-6571
+                  </Box>
                 </Box>
-                <Email />
-                <Box
-                  sx={{ mx: 1, cursor: "pointer" }}
-                  onClick={handleMailClick}
-                >
-                  info@nexusstaffingservices.ca
+                <Box sx={{ display: "flex" }}>
+                  <Email />
+                  <Box
+                    sx={{
+                      mx: 1,
+                      cursor: "pointer",
+                      display: "flex",
+                      textAlign: "center",
+                      alignItems: "center",
+                    }}
+                    onClick={handleMailClick}
+                  >
+                    info@nexusstaffingservices.ca
+                  </Box>
                 </Box>
               </Box>
             </SlideComponent>
@@ -218,7 +236,8 @@ const AppHeaderBar = ({ window }) => {
                     );
                   }}
                 >
-                  <FacebookIcon />
+                  {/* <FontAwesomeIcon icon="fa-brands fa-facebook-f" /> */}
+                  <FacebookIcon fontSize="large" sx={{ color: "#1877F2" }} />
                 </IconButton>
 
                 <IconButton
@@ -229,7 +248,7 @@ const AppHeaderBar = ({ window }) => {
                     );
                   }}
                 >
-                  <InstagramIcon />
+                  <InstagramIcon fontSize="large" sx={{ color: "#E4405F" }} />
                 </IconButton>
 
                 <IconButton
@@ -240,7 +259,7 @@ const AppHeaderBar = ({ window }) => {
                     );
                   }}
                 >
-                  <LinkedinIcon />
+                  <LinkedinIcon fontSize="large" sx={{ color: "#0A66C2" }} />
                 </IconButton>
               </Box>
             </SlideComponent>

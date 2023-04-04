@@ -182,7 +182,7 @@ const Contact = () => {
   return (
     <>
       <Grid container>
-        <Grid item xs={12} md={6} sx={styles.address}>
+        <Grid item md={6} sx={styles.address}>
           <Box sx={{ padding: "16px" }}>
             <Typography
               variant="h5"
@@ -207,7 +207,8 @@ const Contact = () => {
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
             <LocationIcon />
             <Typography variant="h5" sx={{ marginLeft: "8px" }}>
-              Suite 2020, 10060 Jasper Ave. Edmonton, AB T5J 3R8
+              Suite 2020, Rice Howard Place, 10060 Jasper Avenue Tower1.
+              Edmonton, AB T5J 3R8.
             </Typography>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
@@ -232,7 +233,7 @@ const Contact = () => {
                 );
               }}
             >
-              <FacebookIcon />
+              <FacebookIcon fontSize="large" />
             </IconButton>
 
             <IconButton
@@ -244,7 +245,7 @@ const Contact = () => {
                 );
               }}
             >
-              <InstagramIcon />
+              <InstagramIcon fontSize="large" />
             </IconButton>
 
             <IconButton
@@ -256,11 +257,11 @@ const Contact = () => {
                 );
               }}
             >
-              <LinkedinIcon />
+              <LinkedinIcon fontSize="large" />
             </IconButton>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} sx={styles.contact}>
+        <Grid item md={6} sx={styles.contact}>
           <Box sx={{ padding: "16px" }}>
             <Typography
               variant="h5"
@@ -415,7 +416,7 @@ const Contact = () => {
                   );
                 }}
               >
-                <FacebookIcon />
+                <FacebookIcon fontSize="large" />
               </IconButton>
 
               <IconButton
@@ -427,7 +428,7 @@ const Contact = () => {
                   );
                 }}
               >
-                <InstagramIcon />
+                <InstagramIcon fontSize="large" />
               </IconButton>
 
               <IconButton
@@ -439,7 +440,7 @@ const Contact = () => {
                   );
                 }}
               >
-                <LinkedinIcon />
+                <LinkedinIcon fontSize="large" />
               </IconButton>
             </Box>
           </SlideComponent>
@@ -447,7 +448,7 @@ const Contact = () => {
       </Box>
       <Box sx={{ background: "#000", color: COLORS.white }}>
         <Container maxWidth={"lg"} disableGutters={false}>
-          <Typography>© 2023 Nexus Healthcare Staffing</Typography>
+          <Typography>© 2023 Nexus Healthcare Staffing Services</Typography>
         </Container>
       </Box>
     </>

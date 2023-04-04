@@ -608,7 +608,7 @@ const Career = () => {
                     control={
                       <Checkbox checked={agree} onChange={handleAgreeChange} />
                     }
-                    label="I agreed that my submitted data is beging collected and stored."
+                    label="I agree that my submitted data is being collected and stored."
                   />
                   {errors.agree ? (
                     <Typography

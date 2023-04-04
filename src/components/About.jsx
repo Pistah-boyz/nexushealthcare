@@ -84,7 +84,7 @@ const About = () => {
                 advanced practice nurses, physician assistants, dentists, and
                 other support staff including certified nursing assistants.
               </Typography>
-              <Typography component="p" sx={styles.section_p}>
+              <Typography component="h3" variant="h6" sx={styles.section_p}>
                 We believe and emphasize the statement “In staffing, the right
                 person is recruited for the right jobs, therefore it leads to
                 maximum productivity and higher performance. It helps in

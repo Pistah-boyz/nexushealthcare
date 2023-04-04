@@ -139,6 +139,7 @@ const HealthcareFacilities = () => {
                 alignContent: "center",
                 justifyContent: "center",
                 alignItems: "center",
+                paddingTop: "40px",
               }}
             >
               Focus on your business, we are here to address your staffing needs
