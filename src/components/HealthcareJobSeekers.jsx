@@ -1,6 +1,13 @@
 import React, { useEffect } from "react";
 
-import { Box, Typography, Grid } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Grid,
+  Card,
+  IconButton,
+  CardContent,
+} from "@mui/material";
 import { Group, Person } from "@mui/icons-material";
 
 import Footer from "./Footer";
@@ -202,164 +209,133 @@ const HealthcareJobSeekers = () => {
           </Typography>
         </Typography>
         <div style={styles.half_line}></div>
-        <Typography component="div" sx={styles.root_fcontainer}>
+        <Box sx={{ padding: "72px" }}>
           <Grid container spacing={4}>
+            <Grid item xs={12} sm={1}></Grid>
             <Grid item xs={12} sm={2}>
-              <Typography
-                component="div"
-                sx={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                }}
-              >
-                <Typography component="div" sx={styles.svg_i}>
-                  <Group style={{ color: `${COLORS.white}` }} />
-                </Typography>
-                <Typography component="div">
+              <Card sx={{ width: "100%" }}>
+                <CardContent>
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <IconButton>
+                      <Group fontSize="large" />
+                    </IconButton>
+                  </Box>
+
                   <Typography
                     variant="h5"
-                    style={{
-                      color: "blue",
-                      fontWeight: "500",
-                      fontSize: "20px",
-                    }}
+                    component="div"
+                    sx={{ textAlign: "center" }}
                   >
                     Registered Nurse
                   </Typography>
-                  <Typography
-                    component="p"
-                    style={{ textAlign: "justify", marginTop: "10px" }}
-                  >
+                  <Typography variant="body2">
                     Registered Nurse provides care for patients utilizing the
                     nursing process of assessment, planning, intervention,
                     implementation, and evaluation.
                   </Typography>
-                </Typography>
-              </Typography>
+                </CardContent>
+              </Card>
             </Grid>
             <Grid item xs={12} sm={2}>
-              <Typography
-                component="div"
-                sx={{ display: "flex", alignItems: "flex-start" }}
-              >
-                <Typography component="div" sx={styles.svg_i}>
-                  <Person style={{ color: `${COLORS.white}` }} />
-                </Typography>
-                <Typography component="div">
+              <Card>
+                <CardContent>
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <IconButton>
+                      <Person fontSize="large" />
+                    </IconButton>
+                  </Box>
+
                   <Typography
                     variant="h5"
-                    style={{
-                      color: "blue",
-                      fontWeight: "500",
-                      fontSize: "20px",
-                    }}
+                    component="div"
+                    sx={{ textAlign: "center" }}
                   >
                     Personal Support Worker
                   </Typography>
-                  <Typography
-                    component="p"
-                    style={{ textAlign: "justify", marginTop: "10px" }}
-                  >
+                  <Typography variant="body2">
                     Provide support for people who are ill, elderly or need help
                     with daily tasks. You make sure your clients are
                     comfortable, safe and enjoy emotional and physical
                     well-being.
                   </Typography>
-                </Typography>
-              </Typography>
+                </CardContent>
+              </Card>
             </Grid>
             <Grid item xs={12} sm={2}>
-              <Typography
-                component="div"
-                sx={{ display: "flex", alignItems: "flex-start" }}
-              >
-                <Typography component="div" sx={styles.svg_i}>
-                  <Person style={{ color: `${COLORS.white}` }} />
-                </Typography>
-                <Typography component="div">
+              <Card>
+                <CardContent>
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <IconButton>
+                      <Person fontSize="large" />
+                    </IconButton>
+                  </Box>
+
                   <Typography
                     variant="h5"
-                    style={{
-                      color: "blue",
-                      fontWeight: "500",
-                      fontSize: "20px",
-                    }}
+                    component="div"
+                    sx={{ textAlign: "center" }}
                   >
                     House Keeper
                   </Typography>
-                  <Typography
-                    component="p"
-                    style={{ textAlign: "justify", marginTop: "10px" }}
-                  >
+                  <Typography variant="body2">
                     Perform custodial and housekeeping tasks. Maintain the
                     facility in a clean, safe, and sanitary manner. Perform all
                     tasks to assure that the facility reflects a high quality of
                     care and appearance.
                   </Typography>
-                </Typography>
-              </Typography>
+                </CardContent>
+              </Card>
             </Grid>
             <Grid item xs={12} sm={2}>
-              <Typography
-                component="div"
-                sx={{ display: "flex", alignItems: "flex-start" }}
-              >
-                <Typography component="div" sx={styles.svg_i}>
-                  <Group style={{ color: `${COLORS.white}` }} />
-                </Typography>
-                <Typography component="div">
+              <Card>
+                <CardContent>
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <IconButton>
+                      <Group fontSize="large" />
+                    </IconButton>
+                  </Box>
+
                   <Typography
                     variant="h5"
-                    style={{
-                      color: "blue",
-                      fontWeight: "500",
-                      fontSize: "20px",
-                    }}
+                    component="div"
+                    sx={{ textAlign: "center" }}
                   >
                     Licensed Practical Nurses
                   </Typography>
-                  <Typography
-                    component="p"
-                    style={{ textAlign: "justify", marginTop: "10px" }}
-                  >
+                  <Typography variant="body2">
                     Travel nursing is a popular career path that LPNs may
                     consider going into once they have gained some experience
                     and are ready to travel.
                   </Typography>
-                </Typography>
-              </Typography>
+                </CardContent>
+              </Card>
             </Grid>
             <Grid item xs={12} sm={2}>
-              <Typography
-                component="div"
-                sx={{ display: "flex", alignItems: "flex-start" }}
-              >
-                <Typography component="div" sx={styles.svg_i}>
-                  <Group style={{ color: `${COLORS.white}` }} />
-                </Typography>
-                <Typography component="div">
+              <Card>
+                <CardContent>
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <IconButton>
+                      <Group fontSize="large" />
+                    </IconButton>
+                  </Box>
+
                   <Typography
                     variant="h5"
-                    style={{
-                      color: "blue",
-                      fontWeight: "500",
-                      fontSize: "20px",
-                    }}
+                    component="div"
+                    sx={{ textAlign: "center" }}
                   >
                     Registered Health Care Aide
                   </Typography>
-                  <Typography
-                    component="p"
-                    style={{ textAlign: "justify", marginTop: "10px" }}
-                  >
+                  <Typography variant="body2">
                     Travel nurses are RNs from various clinical backgrounds who
                     work for independent staffing agencies.
                   </Typography>
-                </Typography>
-              </Typography>
+                </CardContent>
+              </Card>
             </Grid>
+            <Grid item xs={12} sm={1}></Grid>
           </Grid>
-        </Typography>
+        </Box>
       </Typography>
       <Footer />
     </>
