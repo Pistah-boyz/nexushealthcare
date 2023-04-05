@@ -16,7 +16,7 @@ const styles = {
     margin: "auto",
     overflow: "hidden",
     position: "relative",
-    height: { sm: "450px", md: "600px", xs: "350px" },
+    // height: { sm: "550px", md: "600px", xs: "500px" },
   },
 };
 

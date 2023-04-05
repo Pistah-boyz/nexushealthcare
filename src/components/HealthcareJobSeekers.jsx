@@ -62,6 +62,7 @@ const styles = {
   img_s: {
     width: "450px",
     height: "350px",
+    display: { sm: "block", md: "block", xs: "none" },
   },
   textContainer: {
     display: "flex",
@@ -173,11 +174,12 @@ const HealthcareJobSeekers = () => {
             sx={styles.textContainer}
             className="text_mvcontainer"
           >
-            <img
+            <Box
+              component="img"
               src={img2}
               className="img_1"
               alt="Your image here"
-              style={styles.img_s}
+              sx={styles.img_s}
             />
 
             <Typography component="div" sx={styles.textbContainer}>
@@ -192,7 +194,7 @@ const HealthcareJobSeekers = () => {
                   alignContent: "center",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingTop: "40px",
+                  paddingTop: "15px",
                 }}
               >
                 Prestigious Contract Opportunities in top health care centres

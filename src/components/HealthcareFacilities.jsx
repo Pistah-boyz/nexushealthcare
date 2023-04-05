@@ -68,6 +68,7 @@ const styles = {
   img_s: {
     width: "450px",
     height: "350px",
+    display: { sm: "block", md: "block", xs: "none" },
   },
   root_fcontainer: {
     margin: "20px auto",
@@ -120,10 +121,11 @@ const HealthcareFacilities = () => {
           sx={styles.textContainer}
           className="text_mvcontainer"
         >
-          <img
+          <Box
+            component="img"
             src={img2}
             alt="Your image here"
-            style={styles.img_s}
+            sx={styles.img_s}
             className="img_1"
           />
 
@@ -139,7 +141,7 @@ const HealthcareFacilities = () => {
                 alignContent: "center",
                 justifyContent: "center",
                 alignItems: "center",
-                paddingTop: "40px",
+                paddingTop: "15px",
               }}
             >
               Focus on your business, we are here to address your staffing needs
