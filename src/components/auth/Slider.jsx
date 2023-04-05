@@ -11,8 +11,12 @@ import slide4 from "../../images/slide4.jpg";
 
 const styles = {
   sliderContainer: {
-    display: "flex",
+    width: "100%",
+    maxWidth: "100%",
     margin: "auto",
+    overflow: "hidden",
+    position: "relative",
+    height: { sm: "450px", md: "600px", xs: "350px" },
   },
 };
 
@@ -34,19 +38,51 @@ const HomeSlider = () => {
 
   return (
     <Box>
-      <Box>
+      <Box sx={styles.sliderContainer}>
         <Slider {...settings1}>
           <div>
-            <img src={slide1} />
+            <img
+              src={slide1}
+              alt="Slide 1"
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            />
           </div>
           <div>
-            <img src={slide2} />
+            <img
+              src={slide2}
+              alt="Slide 2"
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            />
           </div>
           <div>
-            <img src={slide3} />
+            <img
+              src={slide3}
+              alt="Slide 3"
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            />
           </div>
           <div>
-            <img src={slide4} />
+            <img
+              src={slide4}
+              alt="Slide 4"
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+              }}
+            />
           </div>
         </Slider>
       </Box>
