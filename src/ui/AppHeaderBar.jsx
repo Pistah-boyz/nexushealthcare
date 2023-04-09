@@ -31,7 +31,6 @@ import {
 import { Logo } from "../components/auth/Logo";
 import { SlideComponent } from "../components/SlideComponent";
 
-
 const styles = {
   headerBox: {
     display: "flex",

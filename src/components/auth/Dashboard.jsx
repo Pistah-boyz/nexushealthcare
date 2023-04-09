@@ -95,7 +95,7 @@ const offers = [
   {
     title: "Cost-Effective Strаtеgіеѕ",
     subTitle:
-      "Sаvе thоuѕаndѕ оf dоllаrѕ еvеrу уеаr bу еlіmіnаtіng rесruіtmеnt fееѕ frоm your budgеt by avoiding аdvеrtіsements for рlасеmеnt аnd rеvіеwіng rеѕumеѕ аnd іntеrvіеwіng саndіdаtеѕ.",
+      "Save your time and effort every year by avoiding advertisements for placement, reviewing resumes and interviewing candidates.",
     img: card1,
   },
   {
@@ -119,7 +119,7 @@ const offers = [
   {
     title: "Cultural Safety",
     subTitle:
-      "Systemic racism and discrimination towards people continues to be a significant barrier to accessing healthcare in many communities across Canada",
+      "We show respect for culture and identity. We incorporate the person’s needs and rights, and is free of discrimination.",
     img: card5,
   },
   {
@@ -163,8 +163,8 @@ const Dashboard = () => {
               </Typography>
               <Typography variant="body1" sx={{ fontSize: "15px" }}>
                 We believe and emphasis on the statement of “In staffing, the
-                right person is recruited for the right jobs, therefore it leads
-                to maximum productivity and higher performance.
+                right person is recruited for the right job, therefore it
+                leadenvis to maximum productivity and higher performance.
               </Typography>
             </Box>
           </Grid>
@@ -207,7 +207,7 @@ const Dashboard = () => {
               </Typography>
               <Typography variant="body2">
                 Our mission is to find the ideal applicant for every need,
-                starting from house keeping staff to registered nurses.
+                starting from environmental services staff to registered nurses.
               </Typography>
             </Card>
           </Grid>
@@ -243,13 +243,13 @@ const Dashboard = () => {
           <Box sx={styles.padding}>
             <SlideComponent direction="down">
               <Typography variant="h6">
-                Dedicated to providing strategic staffing services for Canadian
+                Dedicated in providing strategic staffing services for Canadian
                 healthcare facilities and patients, Nexus Staffing Services is a
-                full-service healthcare staffing business. To deliver
+                full-service provider of medical staffing. To deliver
                 exceptional service and high-quality treatment, our team is on
                 the clock. Our goal is to use our industry expertise to create
-                top-notch customer service, satisfying outcomes for our staff,
-                and to the larger healthcare community.
+                top-notch client service, satisfying outcomes for our staff, and
+                to the larger healthcare community.
               </Typography>
             </SlideComponent>
           </Box>
@@ -263,8 +263,8 @@ const Dashboard = () => {
           </Typography>
           <Typography variant="h6">
             Our goal is to fill healthcare institutions with qualified and
-            effective personnel who can provide effective help to their
-            patients. By making sure that their healthcare team only consists of
+            competant professionas who can help their patients in an effective
+            manner. By making sure that their healthcare team only consists of
             the most skilled employees, we also work to boost people&#39;s
             health.
           </Typography>

@@ -219,7 +219,7 @@ const HealthcareJobSeekers = () => {
           }}
         >
           <Grid container spacing={4}>
-            <Grid item xs={12} sm={12} md={1}></Grid>
+            {/* <Grid item xs={12} sm={12} md={1}></Grid> */}
             <Grid item xs={12} sm={12} md={2}>
               <Card
                 sx={{
@@ -290,7 +290,7 @@ const HealthcareJobSeekers = () => {
                     component="div"
                     sx={{ textAlign: "center", fontWeight: 600 }}
                   >
-                    Licensed Practical Nurses
+                    LPNs/RPNs
                   </Typography>
                   <Divider
                     sx={{
@@ -341,6 +341,48 @@ const HealthcareJobSeekers = () => {
                   <Typography variant="body2" sx={{ marginTop: "20px" }}>
                     Travel nurses are RNs from various clinical backgrounds who
                     work for independent staffing agencies.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={2}>
+              <Card
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  background: COLORS.primary,
+                  color: COLORS.white,
+                }}
+              >
+                <CardContent>
+                  <Box sx={{ display: "flex", justifyContent: "center" }}>
+                    <IconButton>
+                      <Group
+                        fontSize="large"
+                        style={{
+                          color: `${COLORS.white}`,
+                        }}
+                      />
+                    </IconButton>
+                  </Box>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{ textAlign: "center", fontWeight: 600 }}
+                  >
+                    Social worker/social worker assistant
+                  </Typography>
+                  <Divider
+                    sx={{
+                      background: `${COLORS.white}`,
+                    }}
+                  />
+                  <Typography variant="body2" sx={{ marginTop: "20px" }}>
+                    Social workers and social worker assistants help
+                    individuals, families, and communities cope with challenges
+                    and improve their well-being through counseling, advocacy,
+                    and access to resources.
                   </Typography>
                 </CardContent>
               </Card>
@@ -413,7 +455,7 @@ const HealthcareJobSeekers = () => {
                     component="div"
                     sx={{ textAlign: "center", fontWeight: 600 }}
                   >
-                    House Keeper
+                    Environmental Services
                   </Typography>
                   <Divider
                     sx={{
@@ -430,7 +472,7 @@ const HealthcareJobSeekers = () => {
               </Card>
             </Grid>
 
-            <Grid item xs={12} sm={1}></Grid>
+            {/* <Grid item xs={12} sm={1}></Grid> */}
           </Grid>
         </Box>
       </Typography>

@@ -156,9 +156,9 @@ const HealthcareFacilities = () => {
             <Typography variant="body1" component="p" gutterBottom>
               Whatever the reason, you require clinical staffing immediately. To
               meet your staffing needs, no matter what they may be, Nexus
-              Staffing works around the clock to find you the best travel
-              nurses, travel therapists, allied personnel, and other clinical
-              professionals.
+              Staffing Services works around the clock to find you the best
+              travel nurses, travel therapists, allied personnel, and other
+              clinical professionals.
             </Typography>
           </Typography>
         </Typography>

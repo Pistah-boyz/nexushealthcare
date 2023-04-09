@@ -166,15 +166,15 @@ const Footer = () => {
   const HandleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData();
-    form.append("entry.12034936", formValues.name); // replace with actual field ID
-    form.append("entry.1875214811", formValues.email); // replace with actual field ID
-    form.append("entry.1039608660", formValues.Phone);
-    form.append("entry.1212326834", formValues.message); // replace with actual field ID
+    form.append("entry.126826999", formValues.name); // replace with actual field ID
+    form.append("entry.1611322527", formValues.email); // replace with actual field ID
+    form.append("entry.1326265683", formValues.phonenumber);
+    form.append("entry.1380593640", formValues.message); // replace with actual field ID
 
     //form.append("file", attachment);
     submitForm(
       form,
-      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeakV2A-WNEUzJY7h1d-nlVsvPqgTLCrWfXtkobuekJrJFytQ/formResponse"
+      " https://docs.google.com/forms/u/3/d/e/1FAIpQLSdDwGiOt4lRDoUg-1EGTg78H4jOwpnsoiCOv43HpSpQuFeusw/formResponse"
     );
     setSuccessMsgShow(true);
     setFormValues({
@@ -259,9 +259,8 @@ const Footer = () => {
               Nexus Staffing Services is a leader in providing workforce
               solutions and staffing services to the healthcare industry. Our
               mission is to connect clients with qualified medical professionals
-              to ensure superior patient deliveries. A rewarding career path for
-              healthcare professionals. Staffing expertise in healthcare
-              facilities.
+              to ensure quality patient deliveries and provide a rewarding
+              career path for healthcare professionals.
             </Typography>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center", padding: "16px" }}>
@@ -457,7 +456,7 @@ const Footer = () => {
                 sx={styles.footerIcons}
                 onClick={() => {
                   browserWindow.open(
-                    "https://www.facebook.com/100090927846452",
+                    "https://www.linkedin.com/company/nexus-staffing-solution/",
                     "_blank"
                   );
                 }}
@@ -470,7 +469,7 @@ const Footer = () => {
       </Box>
       <Box sx={{ background: "#000", color: COLORS.white }}>
         <Container maxWidth={"lg"} disableGutters={false}>
-          <Typography>© 2023 Nexus Healthcare Staffing Services</Typography>
+          <Typography>© 2023 Nexus Staffing Services Ltd.</Typography>
         </Container>
       </Box>
     </>

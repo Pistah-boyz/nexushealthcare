@@ -75,28 +75,27 @@ const About = () => {
               >
                 Nexus Staffing services is a staffing agency developed in
                 response to meet the staffing needs of the health care system
-                across Canada. Nexus helps nurses and health care teams who
-                travel to fill in temporary nursing and other health care
-                positions on a short term or long term contract basis. While
-                travel nursing traditionally refers specifically to the nursing
-                profession, it can also be used as a blanket term to refer to
-                nursing and allied healthcare professionals, physicians,
-                advanced practice nurses, physician assistants, dentists, and
-                other support staff including certified nursing assistants.
+                across Canada. Nexus Staffing Services helps nurses and health
+                care teams who travel to fill in temporary nursing and other
+                health care positions on a short term or long term contract
+                basis. While travel nursing traditionally refers specifically to
+                the nursing profession, it can also be used as a blanket term to
+                refer to nursing and allied healthcare professionals,
+                physicians, advanced practice nurses, physician assistants,
+                dentists, and other support staff including certified nursing
+                assistants.
               </Typography>
               <Typography component="h3" variant="h6" sx={styles.section_p}>
                 We believe and emphasize the statement “In staffing, the right
-                person is recruited for the right jobs, therefore it leads to
+                person is recruited for the Right job, therefore it leads to
                 maximum productivity and higher performance. It helps in
                 promoting the optimum utilization of human resources through
                 various aspects. Job satisfaction and morale of the workers
                 increases through the recruitment of the right person”. The
-                staffing process involves locating, selecting, hiring, and
-                maintaining a professional relationship with potential and
-                current workers. Human resources staff members are usually in
-                charge of creating and implementing a company’s staffing
-                protocols to find quality candidates who will match its office
-                culture and provide valuable work.
+                staffing process involves selecting, hiring, and maintaining a
+                professional relationship with potential and current candidates.
+                Our HR team implements a unique technique to find the right
+                candidate who will match the culture and provide valuable work.
               </Typography>
             </Typography>
           </Grid>
